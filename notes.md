@@ -62,3 +62,14 @@ conn.commit()
 cursor.close()
 conn.close()
 ```
+
+### dataset structure ###
+```
+root ---> year ---> month ---> employee
+```
+
+
+### process ###
+
+load excel file -> clean, transform -> save into csv's -> connect to db and load.
+
