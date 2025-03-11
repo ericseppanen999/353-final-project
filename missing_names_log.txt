@@ -1,0 +1,21 @@
+2025-03-11 00:05:28,970 - WARNING - Missing month/year in file: Timekeeping\2003\06-03\HSU S 06-03.xls
+2025-03-11 00:06:56,954 - WARNING - Missing month/year in file: Timekeeping\2006\08-06\BRENEIS C 08-06.xls
+2025-03-11 00:07:03,267 - WARNING - Missing month/year in file: Timekeeping\2006\10-06\BRENEIS C 10-06.xls
+2025-03-11 00:07:05,579 - WARNING - Missing month/year in file: Timekeeping\2006\11-06\BRENEIS C 11-06.xls
+2025-03-11 00:07:06,163 - WARNING - Missing month/year in file: Timekeeping\2006\11-06\LEBLANC R 11-06.xls
+2025-03-11 00:07:07,511 - WARNING - Missing month/year in file: Timekeeping\2006\12-06\BRENNEIS C 12-06.xls
+2025-03-11 00:07:26,857 - WARNING - Missing month/year in file: Timekeeping\2007\09-07\VUKOJEVIC V 09-07.xls
+2025-03-11 00:12:14,237 - WARNING - Missing month/year in file: Timekeeping\2014\07-14\CHIVERS J 07-14.xls
+2025-03-11 00:12:16,840 - WARNING - Missing month/year in file: Timekeeping\2014\08-14\CHIVERS J 08-14.xls
+2025-03-11 00:13:05,772 - WARNING - Missing month/year in file: Timekeeping\2015\11-15\CHIVERS J 11-15.xls
+2025-03-11 00:13:28,183 - WARNING - Missing month/year in file: Timekeeping\2016\04-16\VUKOJEVIC 04-16.xls
+2025-03-11 00:13:30,774 - WARNING - Missing month/year in file: Timekeeping\2016\05-16\VUKOJEVIC 05-16.xls
+2025-03-11 00:19:00,899 - WARNING - Missing name in file: Timekeeping\2019\04-19\BOLIN A 04-19.xlsx
+2025-03-11 00:19:00,900 - WARNING - Missing month/year in file: Timekeeping\2019\04-19\BOLIN A 04-19.xlsx
+2025-03-11 00:20:21,972 - WARNING - Missing name in file: Timekeeping\2019\09-19\1712 Hawksley Hours 09-19.xlsx
+2025-03-11 00:20:21,973 - WARNING - Missing month/year in file: Timekeeping\2019\09-19\1712 Hawksley Hours 09-19.xlsx
+2025-03-11 00:26:18,044 - WARNING - Missing name in file: Timekeeping\2022\02-22\Feb summary.xlsx
+2025-03-11 00:26:18,044 - WARNING - Missing month/year in file: Timekeeping\2022\02-22\Feb summary.xlsx
+2025-03-11 00:28:26,264 - WARNING - Missing month/year in file: Timekeeping\2022\12-22\CHAN A 12-22.xlsx
+2025-03-11 00:28:29,700 - WARNING - Missing month/year in file: Timekeeping\2022\12-22\MITCHELL A 12-22.xlsx
+2025-03-11 00:28:53,076 - WARNING - Missing month/year in file: Timekeeping\2023\02-23\CHAN A 02-23.xlsx
