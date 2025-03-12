@@ -1,310 +1,312 @@
 import pandas as pd
-import re
+import sqlite3
 import os
+import re
 import glob
-import logging
 from datetime import datetime
 
-# ----- Logging configuration -----
-error_logger = logging.getLogger("error_logger")
-error_logger.setLevel(logging.ERROR)
-error_handler = logging.FileHandler("error_log.txt", mode='w')
-error_formatter = logging.Formatter("%(asctime)s - %(levelname)s - %(message)s")
-error_handler.setFormatter(error_formatter)
-error_logger.addHandler(error_handler)
-
-missing_logger = logging.getLogger("missing_logger")
-missing_logger.setLevel(logging.WARNING)
-missing_handler = logging.FileHandler("missing_names_log.txt", mode='w')
-missing_formatter = logging.Formatter("%(asctime)s - %(levelname)s - %(message)s")
-missing_handler.setFormatter(missing_formatter)
-missing_logger.addHandler(missing_handler)
-
-# ----- Helper functions -----
-def parse_hours(val):
+# ----- Helper: Revised filename parser -----
+def parse_filename(filename):
     """
-    Convert a cell value into hours (float).
-      - Blank or 'x' => 0.0
-      - Numeric string => float(val)
-      - Negative values => clamp to 0.0
+    Parse the filename to extract employee name and month/year.
+    Assumes filenames are like:
+      "Allan_Seppanen_May_2021_projects.csv" or
+      "Vanessa_Tam_December_2024_summary.csv"
+    This function removes the trailing '_projects' or '_summary' and then checks if the penultimate
+    token is a valid month name (or a number between 1 and 12). If so, it uses the last two tokens
+    as the month and year and the rest as the employee name.
     """
-    if pd.isnull(val):
-        return 0.0
-    s = str(val).strip().lower()
-    if s in ["", "x"]:
-        return 0.0
-    try:
-        f = float(s)
-        return f if f >= 0 else 0.0
-    except ValueError:
-        return 0.0
-
-def drop_if_both_empty(df_in: pd.DataFrame) -> pd.DataFrame:
-    """
-    Drop rows if BOTH 'PROJECT NO' and 'PROJECT NAME' are empty.
-    Empty means: NaN, blank string, or "0"/"0.0".
-    """
-    if df_in.empty:
-        return df_in
-    needed_cols = ["PROJECT NO", "PROJECT NAME"]
-    for col in needed_cols:
-        if col not in df_in.columns:
-            return df_in
-
-    def is_invalid(val):
-        if pd.isnull(val):
-            return True
-        s = str(val).strip()
-        return s in ["", "0", "0.0"]
-
-    mask = ~((df_in["PROJECT NO"].apply(is_invalid)) &
-             (df_in["PROJECT NAME"].apply(is_invalid)))
-    return df_in[mask].copy()
-
-def process_file(file_path, input_base, output_base):
-    metrics = {
-        "file": file_path,
-        "missing_name": 0,
-        "missing_date": 0,
-        "project_rows": 0,
-        "summary_rows": 0,
-        "has_summary": 0
+    valid_months = {
+        "january", "february", "march", "april", "may", "june",
+        "july", "august", "september", "october", "november", "december"
     }
-    try:
-        # Open the Excel file to extract raw info.
-        with pd.ExcelFile(file_path) as xls:
-            df_raw = pd.read_excel(xls, sheet_name="Sheet1", header=None, dtype=str)
-        # Candidate locations for employee name (row, col):
-        # Priority order: Q3 (2,16), Q2 (1,16), R3 (2,17), O3 (2,14)
-        candidates = [(2, 16), (1, 16), (2, 17), (2, 14)]
-        employee_name_raw = None
-        candidate_row = None
-        for row_idx, col_idx in candidates:
-            if df_raw.shape[0] > row_idx and df_raw.shape[1] > col_idx:
-                candidate = df_raw.iloc[row_idx, col_idx]
-                if pd.notnull(candidate) and str(candidate).strip() != "":
-                    employee_name_raw = candidate
-                    candidate_row = row_idx
-                    break
-
-        # For month/year, first try AJ3 (row 3, index 2, col 35), then AJ2 (row 2, index 1, col 35)
-        month_year_raw = None
-        if df_raw.shape[1] > 35:
-            month_year_raw = df_raw.iloc[2, 35]
-        if pd.isnull(month_year_raw) or str(month_year_raw).strip() == "":
-            if df_raw.shape[0] > 1 and df_raw.shape[1] > 35:
-                month_year_raw = df_raw.iloc[1, 35]
-
-        employee_name = str(employee_name_raw).strip() if employee_name_raw is not None else "Unknown"
-        month_year = str(month_year_raw).strip() if pd.notnull(month_year_raw) and str(month_year_raw).strip() != "" else "Unknown"
-        if employee_name == "Unknown":
-            metrics["missing_name"] = 1
-            missing_logger.warning(f"Missing name in file: {file_path}")
-        if month_year == "Unknown":
-            metrics["missing_date"] = 1
-            missing_logger.warning(f"Missing month/year in file: {file_path}")
-        print(f"Detected Name = {employee_name}, Month/Year = {month_year}")
-
-        # Determine header row for timecard table.
-        # We'll try row 4 (index 3): if that row has at least 5 cells that are purely numeric, we assume it's the header; else use row 5 (index 4).
-        header_row_candidate = 3
-        with pd.ExcelFile(file_path) as xls:
-            temp_df = pd.read_excel(xls, sheet_name="Sheet1", header=None, dtype=str)
-        if temp_df.shape[0] > header_row_candidate:
-            row_contents = temp_df.iloc[header_row_candidate]
-            numeric_count = sum(bool(re.match(r'^\d+$', str(x).strip())) for x in row_contents)
-            header_row = header_row_candidate if numeric_count >= 5 else 4
+    
+    base = os.path.basename(filename)
+    # Remove suffix like "_projects.csv", "_summary.csv", etc.
+    base = re.sub(r'(_(projects|summary))?\.xls(x)?$', '', base, flags=re.IGNORECASE)
+    base = re.sub(r'(_(projects|summary))?\.csv$', '', base, flags=re.IGNORECASE)
+    parts = base.split('_')
+    
+    if len(parts) >= 3:
+        candidate = parts[-2].lower()
+        if candidate in valid_months:
+            employee_name = " ".join(parts[:-2])
+            month_year = parts[-2] + " " + parts[-1]
         else:
-            header_row = 4
+            try:
+                month_num = int(candidate)
+                if 1 <= month_num <= 12:
+                    employee_name = " ".join(parts[:-2])
+                    month_name = datetime(1900, month_num, 1).strftime("%B")
+                    month_year = month_name + " " + parts[-1]
+                else:
+                    employee_name = " ".join(parts[:-1])
+                    month_year = parts[-1]
+            except ValueError:
+                employee_name = " ".join(parts[:-1])
+                month_year = parts[-1]
+    else:
+        employee_name = "Unknown"
+        month_year = "Unknown"
+    return (employee_name, month_year)
 
-        # 2) Read timecard table using the determined header row.
-        with pd.ExcelFile(file_path) as xls:
-            df = pd.read_excel(xls, sheet_name="Sheet1", header=header_row, dtype=str)
+def id_hash(employee_name):
+    # Compute a stable integer hash for the employee name.
+    return hash(employee_name) % 1000000
 
-        # 3) Limit to the first 36 columns.
-        NUM_COLS_TO_KEEP = 36
-        df = df.iloc[:, :NUM_COLS_TO_KEEP]
+def clean_project_no(project_no):
+    """
+    Remove all non-digit characters and leading zeros.
+    Convert to integer if possible.
+    """
+    # Remove non-digit characters.
+    digits = re.sub(r'\D', '', str(project_no))
+    if digits == "":
+        return None
+    # Convert to integer to remove any leading zeros.
+    return int(digits)
 
-        # 4) Assign expected column names.
-        expected_cols = (
-            ["PROJECT NO", "PROJECT NAME", "WORK CODE"] +
-            [str(i) for i in range(1, 32)] +
-            ["TOTAL", "DESCRIPTION / COMMENTS"]
-        )
-        df.columns = expected_cols[: df.shape[1]]
+def drop_tables_if_exists(db_path):
+    conn = sqlite3.connect(db_path)
+    cur = conn.cursor()
+    cur.execute("DROP TABLE IF EXISTS employees")
+    cur.execute("DROP TABLE IF EXISTS projects")
+    cur.execute("DROP TABLE IF EXISTS time_entries")
+    cur.execute("DROP TABLE IF EXISTS non_billable_entries")
+    conn.commit()
+    conn.close()
+    print("Tables dropped successfully.")
 
-        # 5) Convert day columns (and TOTAL if present) to numeric hours.
-        day_cols = [c for c in df.columns if c.isdigit()]
-        for c in day_cols:
-            df[c] = df[c].apply(parse_hours)
-        if "TOTAL" in df.columns:
-            df["TOTAL"] = df["TOTAL"].apply(parse_hours)
+# ----- Loader for Project CSVs (Billable Hours) -----
+def load_projects_csv_to_db(csv_file, db_path):
+    employee_name, month_year = parse_filename(csv_file)
+    print(f"[Projects] Parsed from filename: Employee = {employee_name}, Month/Year = {month_year}")
 
-        # 6) Split data at the row where "PROJECT NAME" contains "subtotal".
-        if "PROJECT NAME" not in df.columns:
-            raise ValueError("PROJECT NAME column is missing; layout might differ.")
-        subtotal_idx = df[df["PROJECT NAME"].str.contains("subtotal", case=False, na=False)].index
-        if len(subtotal_idx) > 0:
-            subrow = subtotal_idx[0]
-            project_data = df.iloc[:subrow].copy()
-            summary_data = df.iloc[subrow + 1 :].copy()
-        else:
-            project_data = df.copy()
-            summary_data = pd.DataFrame()
+    conn = sqlite3.connect(db_path)
+    cur = conn.cursor()
 
-        # 7) Drop rows if BOTH 'PROJECT NO' and 'PROJECT NAME' are empty.
-        project_data = drop_if_both_empty(project_data)
-        summary_data = drop_if_both_empty(summary_data)
+    cur.execute("""
+    CREATE TABLE IF NOT EXISTS employees (
+        employee_id INTEGER PRIMARY KEY,
+        name TEXT NOT NULL UNIQUE
+    )
+    """)
+    # Update projects table so that project_no is stored as an INTEGER.
+    cur.execute("""
+    CREATE TABLE IF NOT EXISTS projects (
+        project_no INTEGER PRIMARY KEY,
+        project_name TEXT NOT NULL
+    )
+    """)
+    # Update time_entries table so that project_no is an INTEGER.
+    cur.execute("""
+    CREATE TABLE IF NOT EXISTS time_entries (
+        entry_id INTEGER PRIMARY KEY AUTOINCREMENT,
+        employee_id INTEGER,
+        project_no INTEGER,
+        work_code TEXT,
+        date DATE,
+        hours_worked DECIMAL,
+        FOREIGN KEY (employee_id) REFERENCES employees(employee_id),
+        FOREIGN KEY (project_no) REFERENCES projects(project_no)
+    )
+    """)
+    cur.execute("CREATE INDEX IF NOT EXISTS idx_time_entries_employee_date ON time_entries(employee_id, date)")
+    cur.execute("CREATE INDEX IF NOT EXISTS idx_time_entries_project_date ON time_entries(project_no, date)")
+    conn.commit()
 
-        # 8) EXTRA HANDLING FOR SUMMARY DATA:
-        if not summary_data.empty:
-            summary_data.reset_index(drop=True, inplace=True)
-            # (A) Remove rows starting at the first row where column A contains "total".
-            col0 = summary_data.columns[0]
-            total_idx = summary_data[ summary_data[col0].fillna("")
-                                       .str.lower().str.strip().str.contains("total", na=False)
-                                     ].index
-            if not total_idx.empty:
-                cutoff = total_idx[0]
-                summary_data = summary_data.iloc[:cutoff].copy()
-            # (B) Collapse the first three columns into one column titled "non-billable".
-            if len(summary_data.columns) >= 3:
-                c0, c1, c2 = summary_data.columns[0], summary_data.columns[1], summary_data.columns[2]
-                summary_data["non-billable"] = (
-                    summary_data[c0].fillna("") + " " +
-                    summary_data[c1].fillna("") + " " +
-                    summary_data[c2].fillna("")
-                ).str.strip()
-                summary_data.drop(columns=[c0, c1, c2], inplace=True)
-                new_cols = ["non-billable"] + [col for col in summary_data.columns if col != "non-billable"]
-                summary_data = summary_data[new_cols]
+    employee_id = id_hash(employee_name)
+    cur.execute("INSERT OR IGNORE INTO employees(employee_id, name) VALUES(?, ?)", (employee_id, employee_name))
+    conn.commit()
+    cur.execute("SELECT employee_id FROM employees WHERE name=?", (employee_name,))
+    employee_id = cur.fetchone()[0]
 
-        # 9) EXTRA HANDLING FOR PROJECT DATA:
-        # Drop the second row (index 1) from project_data because it is an extra title row.
-        if not project_data.empty and len(project_data) > 1:
-            project_data = project_data.drop(project_data.index[0]).copy()
+    df = pd.read_csv(csv_file)
+    # Expected columns: PROJECT NO, PROJECT NAME, WORK CODE, "1", ... "31", TOTAL, DESCRIPTION / COMMENTS.
+    for idx, row in df.iterrows():
+        raw_project_no = row["PROJECT NO"]
+        cleaned_project_no = clean_project_no(raw_project_no)
+        if cleaned_project_no is None:
+            print(f"Skipping row {idx} due to invalid project number: {raw_project_no}")
+            continue
+        
+        project_name = str(row["PROJECT NAME"]).strip()
+        work_code = str(row["WORK CODE"]).strip()
+        
+        cur.execute("INSERT OR IGNORE INTO projects(project_no, project_name) VALUES(?, ?)",
+                    (cleaned_project_no, project_name))
+        for day in range(1, 32):
+            col = str(day)
+            try:
+                hours = float(row[col])
+            except (ValueError, TypeError):
+                hours = 0.0
+            if hours > 0:
+                try:
+                    entry_date = datetime.strptime(f"{day} {month_year}", "%d %B %Y").date()
+                except Exception as e:
+                    print(f"Error parsing date from '{month_year}' and day {day}: {e}")
+                    continue
+                cur.execute("""
+                INSERT INTO time_entries(employee_id, project_no, work_code, date, hours_worked)
+                VALUES(?, ?, ?, ?, ?)
+                """, (employee_id, cleaned_project_no, work_code, entry_date.isoformat(), hours))
+    conn.commit()
+    conn.close()
+    print(f"[Projects] Data from {csv_file} loaded into the database.")
 
-        metrics["project_rows"] = len(project_data)
-        metrics["summary_rows"] = len(summary_data)
-        if not summary_data.empty:
-            metrics["has_summary"] = 1
+# ----- Loader for Summary CSVs (Non-Billable Hours) -----
+def load_summary_csv_to_db(csv_file, db_path):
+    employee_name, month_year = parse_filename(csv_file)
+    print(f"[Summary] Parsed from filename: Employee = {employee_name}, Month/Year = {month_year}")
 
-        # 10) Construct output paths preserving the input folder structure.
-        rel_path = os.path.relpath(file_path, input_base)
-        subdir = os.path.dirname(rel_path)
-        proj_out_folder = os.path.join(output_base, subdir, "Projects")
-        sum_out_folder = os.path.join(output_base, subdir, "Summaries")
-        os.makedirs(proj_out_folder, exist_ok=True)
-        os.makedirs(sum_out_folder, exist_ok=True)
+    conn = sqlite3.connect(db_path)
+    cur = conn.cursor()
 
-        file_safe_name = re.sub(r"\W+", "_", employee_name)
-        file_safe_month = re.sub(r"\W+", "_", month_year)
-        base_name = f"{file_safe_name}_{file_safe_month}"
-        projects_csv = os.path.join(proj_out_folder, f"{base_name}_projects.csv")
-        summary_csv = os.path.join(sum_out_folder, f"{base_name}_summary.csv")
+    cur.execute("""
+    CREATE TABLE IF NOT EXISTS non_billable_entries (
+        entry_id INTEGER PRIMARY KEY AUTOINCREMENT,
+        employee_id INTEGER,
+        category TEXT,
+        date DATE,
+        hours_worked DECIMAL,
+        FOREIGN KEY (employee_id) REFERENCES employees(employee_id)
+    )
+    """)
+    conn.commit()
 
-        project_data.to_csv(projects_csv, index=False)
-        if not summary_data.empty:
-            summary_data.to_csv(summary_csv, index=False)
-            print(f"[SAVED] {projects_csv}")
-            print(f"[SAVED] {summary_csv}")
-        else:
-            print(f"[SAVED] {projects_csv} (no summary rows)")
+    employee_id = id_hash(employee_name)
+    cur.execute("INSERT OR IGNORE INTO employees(employee_id, name) VALUES(?, ?)", (employee_id, employee_name))
+    conn.commit()
+    cur.execute("SELECT employee_id FROM employees WHERE name=?", (employee_name,))
+    employee_id = cur.fetchone()[0]
 
-        return metrics
-    except Exception as e:
-        error_logger.error(f"Error processing {file_path}: {e}")
-        raise
+    df = pd.read_csv(csv_file)
+    # The summary CSV is expected to have a column "non-billable" (the collapsed category)
+    # plus columns "1" to "31" for day-wise non-billable hours.
+    for idx, row in df.iterrows():
+        category = str(row["non-billable"]).strip()
+        # Skip rows that are aggregate totals.
+        if "total" in category.lower():
+            continue
+        for day in range(1, 32):
+            col = str(day)
+            try:
+                hours = float(row[col])
+            except (ValueError, TypeError):
+                hours = 0.0
+            if hours > 0:
+                try:
+                    entry_date = datetime.strptime(f"{day} {month_year}", "%d %B %Y").date()
+                except Exception as e:
+                    print(f"Error parsing date from '{month_year}' and day {day}: {e}")
+                    continue
+                cur.execute("""
+                INSERT INTO non_billable_entries(employee_id, category, date, hours_worked)
+                VALUES(?, ?, ?, ?)
+                """, (employee_id, category, entry_date.isoformat(), hours))
+    conn.commit()
+    conn.close()
+    print(f"[Summary] Data from {csv_file} loaded into the database.")
 
-# ----- MAIN LOOP: Process every employee file from 2003 to 2024.
-input_directory = "Timekeeping"
-output_base = "Cleaned_Timekeeping"
+# ----- Main Loop -----
+input_directory = "Cleaned_Timekeeping"
+db_path = "timekeeping.db"
+min_year = 2003
+max_year = 2024
 
-total_files = 0
-successful_files = 0
-error_files = 0
-errored_files = []
-missing_name_count = 0
-missing_date_count = 0
-total_project_rows = 0
-total_summary_rows = 0
-files_with_summary = 0
+drop_tables_if_exists(db_path)
 
-all_files = []
+project_files = []
+summary_files = []
+
+# Gather all CSV files from Cleaned_Timekeeping/<year>/<month>/Projects/ and /Summaries/
 for year_folder in os.listdir(input_directory):
     if not year_folder.isdigit():
         continue
     year = int(year_folder)
-    if year < 2003 or year > 2024:
+    if year < min_year or year > max_year:
         continue
     year_path = os.path.join(input_directory, year_folder)
     if not os.path.isdir(year_path):
         continue
+    # Projects
     for month_folder in os.listdir(year_path):
-        month_path = os.path.join(year_path, month_folder)
-        if not os.path.isdir(month_path):
-            continue
-        for file in glob.glob(os.path.join(month_path, "*.xls*")):
-            if "~$" in os.path.basename(file).lower():
-                continue
-            all_files.append(file)
+        projects_folder = os.path.join(year_path, month_folder, "Projects")
+        if os.path.isdir(projects_folder):
+            for file in glob.glob(os.path.join(projects_folder, "*.csv")):
+                if "~$" in os.path.basename(file).lower() or "unknown" in os.path.basename(file).lower():
+                    continue
+                project_files.append(file)
+    # Summaries
+    for month_folder in os.listdir(year_path):
+        summaries_folder = os.path.join(year_path, month_folder, "Summaries")
+        if os.path.isdir(summaries_folder):
+            for file in glob.glob(os.path.join(summaries_folder, "*.csv")):
+                if "~$" in os.path.basename(file).lower() or "unknown" in os.path.basename(file).lower():
+                    continue
+                summary_files.append(file)
 
-print(f"Total files found: {len(all_files)}")
+print(f"Total project files found: {len(project_files)}")
+print(f"Total summary files found: {len(summary_files)}")
 
-# Process files sequentially.
-for file in all_files:
-    total_files += 1
-    try:
-        metrics = process_file(file, input_directory, output_base)
-        successful_files += 1
-        if metrics["missing_name"]:
-            missing_name_count += 1
-        if metrics["missing_date"]:
-            missing_date_count += 1
-        total_project_rows += metrics["project_rows"]
-        total_summary_rows += metrics["summary_rows"]
-        files_with_summary += metrics["has_summary"]
-    except Exception as exc:
-        error_files += 1
-        errored_files.append(file)
-        print(f"Error processing {file}: {exc}")
+for file in project_files:
+    load_projects_csv_to_db(file, db_path)
 
-print("\n----- Processing Summary -----")
-print(f"Total files processed: {total_files}")
-print(f"Successfully processed: {successful_files}")
-print(f"Files with errors: {error_files}")
-if errored_files:
-    print("Errored files:")
-    for f in errored_files:
-        print("  ", f)
-print(f"Files with missing name: {missing_name_count}")
-print(f"Files with missing month/year: {missing_date_count}")
-print(f"Total project rows processed: {total_project_rows}")
-print(f"Total summary rows processed: {total_summary_rows}")
-print(f"Files with summary rows: {files_with_summary}")
+for file in summary_files:
+    load_summary_csv_to_db(file, db_path)
 
-# ----- Processing Summary Log -----
-# Create a folder for processing summaries.
-processing_summary_folder = "Processing_Summaries"
-os.makedirs(processing_summary_folder, exist_ok=True)
-timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-summary_filename = f"processing_summary_{timestamp}.txt"
-summary_filepath = os.path.join(processing_summary_folder, summary_filename)
+# ----- Print Tables at the End -----
+conn = sqlite3.connect(db_path)
+print("\n=== Employees Table ===")
+df_emp = pd.read_sql_query("SELECT * FROM employees", conn)
+print(df_emp)
+print("\n=== Projects Table ===")
+df_proj = pd.read_sql_query("SELECT * FROM projects", conn)
+print(df_proj)
+print("\n=== Time Entries Table ===")
+df_time = pd.read_sql_query("SELECT * FROM time_entries", conn)
+print(df_time)
+print("\n=== Non-Billable Entries Table ===")
+df_nb = pd.read_sql_query("SELECT * FROM non_billable_entries", conn)
+print(df_nb)
 
-with open(summary_filepath, "w") as f:
-    f.write("----- Processing Summary -----\n")
-    f.write(f"Timestamp: {datetime.now()}\n")
-    f.write(f"Total files processed: {total_files}\n")
-    f.write(f"Successfully processed: {successful_files}\n")
-    f.write(f"Files with errors: {error_files}\n")
-    if errored_files:
-        f.write("Errored files:\n")
-        for ef in errored_files:
-            f.write(f"  {ef}\n")
-    f.write(f"Files with missing name: {missing_name_count}\n")
-    f.write(f"Files with missing month/year: {missing_date_count}\n")
-    f.write(f"Total project rows processed: {total_project_rows}\n")
-    f.write(f"Total summary rows processed: {total_summary_rows}\n")
-    f.write(f"Files with summary rows: {files_with_summary}\n")
+# Example: Top 5 Projects by total billable hours.
+df_top_proj = pd.read_sql_query("""
+    SELECT T.project_no, P.project_name, SUM(T.hours_worked) AS total_hours
+    FROM time_entries T
+    JOIN projects P ON T.project_no = P.project_no
+    GROUP BY T.project_no
+    ORDER BY total_hours DESC
+""", conn)
+print("\n=== Top 5 Projects by Hours ===")
+print(df_top_proj)
+df_top_proj.to_csv("top_projects.csv", index=False)
+print("\nTop projects data has been written to 'top_projects.csv'.")
 
-print(f"Processing summary saved to {summary_filepath}")
+# Example: Top 5 Employees by total hours (billable + non-billable).
+df_top_emp = pd.read_sql_query("""
+    SELECT E.name, SUM(T.hours_worked) AS total_hours
+    FROM time_entries T
+    JOIN employees E ON T.employee_id = E.employee_id
+    GROUP BY E.name
+    ORDER BY total_hours DESC
+    LIMIT 10
+""", conn)
+
+df_top_nonbillable = pd.read_sql_query("""
+    SELECT E.name, SUM(N.hours_worked) AS total_hours
+    FROM non_billable_entries N
+    JOIN employees E ON N.employee_id = E.employee_id
+    GROUP BY E.name
+    ORDER BY total_hours DESC
+    LIMIT 10
+""", conn)
+
+print("\n=== Top 5 Employees by Hours ===")
+print(df_top_emp)
+
+print("\n=== Top 5 Employees by Non-Billable Hours ===")
+print(df_top_nonbillable)
+
+conn.close()
