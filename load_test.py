@@ -3,7 +3,37 @@ import sqlite3
 import os
 import re
 import glob
+import logging
 from datetime import datetime
+import sys
+
+# Configure logging for missing project numbers.
+logging.basicConfig(
+    filename='missing_projects.log',
+    level=logging.WARNING,
+    format='%(asctime)s - %(levelname)s - %(message)s',
+    filemode='a'
+)
+
+# ----- Validate and Parse Command Line Arguments -----
+if len(sys.argv) < 3:
+    print("Usage: python scriptname.py <start_year> <end_year>")
+    sys.exit(1)
+
+try:
+    min_year = int(sys.argv[1])
+    max_year = int(sys.argv[2])
+except ValueError:
+    print("Error: Start and end year must be integers.")
+    sys.exit(1)
+
+if not (2003 <= min_year <= 2024) or not (2003 <= max_year <= 2024):
+    print("Error: Years must be between 2003 and 2024.")
+    sys.exit(1)
+
+if min_year > max_year:
+    print("Error: Start year must be less than or equal to end year.")
+    sys.exit(1)
 
 # ----- Helper: Revised filename parser -----
 def parse_filename(filename):
@@ -59,23 +89,24 @@ def clean_project_no(project_no):
     Remove all non-digit characters and leading zeros.
     Convert to integer.
     """
-    # Remove any characters that are not digits.
     digits = re.sub(r'\D', '', str(project_no))
     if not digits:
         return None
-    # Convert to integer to remove any leading zeros.
-    return int(digits)
+    digits = int(digits)
+    if digits > 9999:
+        digits = digits // 10
+    return digits
 
 def drop_tables_if_exists(db_path):
     conn = sqlite3.connect(db_path)
     cur = conn.cursor()
     cur.execute("DROP TABLE IF EXISTS employees")
-    cur.execute("DROP TABLE IF EXISTS projects")
+    # Do not drop the projects table since it is loaded by a separate script.
     cur.execute("DROP TABLE IF EXISTS time_entries")
     cur.execute("DROP TABLE IF EXISTS non_billable_entries")
     conn.commit()
     conn.close()
-    print("Tables dropped successfully.")
+    print("Tables dropped successfully (excluding projects).")
 
 # ----- Loader for Project CSVs (Billable Hours) -----
 def load_projects_csv_to_db(csv_file, db_path):
@@ -91,14 +122,8 @@ def load_projects_csv_to_db(csv_file, db_path):
         name TEXT NOT NULL UNIQUE
     )
     """)
-    # Store project_no as INTEGER.
-    cur.execute("""
-    CREATE TABLE IF NOT EXISTS projects (
-        project_no INTEGER PRIMARY KEY,
-        project_name TEXT NOT NULL
-    )
-    """)
-    # Store project_no as INTEGER.
+    
+    # Projects table assumed to be pre-loaded in a separate script.
     cur.execute("""
     CREATE TABLE IF NOT EXISTS time_entries (
         entry_id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -133,8 +158,14 @@ def load_projects_csv_to_db(csv_file, db_path):
         project_name = str(row["PROJECT NAME"]).strip()
         work_code = str(row["WORK CODE"]).strip()
         
-        cur.execute("INSERT OR IGNORE INTO projects(project_no, project_name) VALUES(?, ?)",
-                    (cleaned_project_no, project_name))
+        # Check if the project exists in the projects table.
+        cur.execute("SELECT project_no FROM projects WHERE project_no = ?", (cleaned_project_no,))
+        if cur.fetchone() is None:
+            msg = f"Row {idx}: Project number {cleaned_project_no} ({project_name}) not found in projects table."
+            logging.warning(msg)
+            print(f"Skipping row {idx}: Project number {cleaned_project_no} ({project_name}) not found in projects table.")
+            continue
+
         for day in range(1, 32):
             col = str(day)
             try:
@@ -207,11 +238,9 @@ def load_summary_csv_to_db(csv_file, db_path):
     conn.close()
     print(f"[Summary] Data from {csv_file} loaded into the database.")
 
-# ----- Main Loop -----
+# ----- Main Processing Loop -----
 input_directory = "Cleaned_Timekeeping"
 db_path = "timekeeping.db"
-min_year = 2024
-max_year = 2024
 
 drop_tables_if_exists(db_path)
 
@@ -254,57 +283,4 @@ for file in project_files:
 for file in summary_files:
     load_summary_csv_to_db(file, db_path)
 
-# ----- Print Tables at the End -----
-conn = sqlite3.connect(db_path)
-print("\n=== Employees Table ===")
-df_emp = pd.read_sql_query("SELECT * FROM employees", conn)
-print(df_emp)
-print("\n=== Projects Table ===")
-df_proj = pd.read_sql_query("SELECT * FROM projects", conn)
-print(df_proj)
-print("\n=== Time Entries Table ===")
-df_time = pd.read_sql_query("SELECT * FROM time_entries", conn)
-print(df_time)
-print("\n=== Non-Billable Entries Table ===")
-df_nb = pd.read_sql_query("SELECT * FROM non_billable_entries", conn)
-print(df_nb)
-
-# Example: Top 5 Projects by total billable hours.
-df_top_proj = pd.read_sql_query("""
-    SELECT T.project_no, P.project_name, SUM(T.hours_worked) AS total_hours
-    FROM time_entries T
-    JOIN projects P ON T.project_no = P.project_no
-    GROUP BY T.project_no
-    ORDER BY total_hours DESC
-""", conn)
-print("\n=== Top 5 Projects by Hours ===")
-print(df_top_proj)
-df_top_proj.to_csv("top_projects.csv", index=False)
-print("\nTop projects data has been written to 'top_projects.csv'.")
-
-# Example: Top 5 Employees by total hours (billable + non-billable).
-df_top_emp = pd.read_sql_query("""
-    SELECT E.name, SUM(T.hours_worked) AS total_hours
-    FROM time_entries T
-    JOIN employees E ON T.employee_id = E.employee_id
-    GROUP BY E.name
-    ORDER BY total_hours DESC
-    LIMIT 10
-""", conn)
-
-df_top_nonbillable = pd.read_sql_query("""
-    SELECT E.name, SUM(N.hours_worked) AS total_hours
-    FROM non_billable_entries N
-    JOIN employees E ON N.employee_id = E.employee_id
-    GROUP BY E.name
-    ORDER BY total_hours DESC
-    LIMIT 10
-""", conn)
-
-print("\n=== Top 5 Employees by Hours ===")
-print(df_top_emp)
-
-print("\n=== Top 5 Employees by Non-Billable Hours ===")
-print(df_top_nonbillable)
-
-conn.close()
+print("Processing complete.")
