@@ -3,6 +3,5 @@ pandas
 numpy
 pyxlsb
 streamlit
-sqlite3
 matplotlib 
 plotly 
