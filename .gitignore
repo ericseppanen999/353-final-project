@@ -8,3 +8,5 @@ Cleaned_Timekeeping/*
 ._*
 .Spotlight-V100
 .Trashes
+
+__pycache__/
