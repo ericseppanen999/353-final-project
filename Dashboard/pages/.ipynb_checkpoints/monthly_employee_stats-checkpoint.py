@@ -13,7 +13,7 @@ st.write("Insights into Monthly Productivity Trends & Performance")
 
 
 df_employees = pd.read_sql("SELECT employee_id, name FROM Employees", conn)
-df_time = pd.read_sql("SELECT employee_id, date, hours_worked FROM time_entries", conn)
+df_time = pd.read_sql("SELECT employee_id, date, hours_worked, work_code FROM time_entries", conn)
 
 
 df_time["date"] =pd.to_datetime(df_time["date"])
@@ -43,4 +43,17 @@ fig1 = px.bar(employee_hours, x="name", y="hours_worked", title=f"Total Work Hou
               labels={"hours_worked": "Hours Worked", "name": "Employee"},
               color="hours_worked", color_continuous_scale="Blues")
 st.plotly_chart(fig1)
+
+
+
+
+# Aggregate Work Hours by Work Type
+work_type_hours = filtered_df.groupby("work_code")["hours_worked"].sum().reset_index()
+
+# Pie Chart: Work Type Breakdown
+st.subheader(f"Work Type Breakdown for {selected_month}")
+fig2 = px.pie(work_type_hours, names="work_code", values="hours_worked", 
+              title=f"Work Type Breakdown for {selected_month}", 
+              labels={"work_code": "Work Type", "hours_worked": "Total Hours"})
+st.plotly_chart(fig2)
 
