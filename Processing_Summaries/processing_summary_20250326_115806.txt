@@ -1,0 +1,12 @@
+----- Processing Summary -----
+Timestamp: 2025-03-26 11:58:06.284003
+Total files processed: 7000
+Successfully processed: 6999
+Files with errors: 1
+Errored files:
+  Timekeeping\2021\05-21\RAMSAY D 05-21 .xls.xlsb
+Files with missing name: 0
+Files with missing month/year: 1
+Total project rows processed: 51179
+Total summary rows processed: 65079
+Files with summary rows: 6953

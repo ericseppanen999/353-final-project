@@ -98,7 +98,8 @@ def query_top_projects_by_month(conn):
     SELECT strftime('%Y-%m', date) as month, project_no, SUM(hours_worked) as total_hours
     FROM time_entries
     GROUP BY month, project_no
-    ORDER BY month, total_hours DESC
+    ORDER BY total_hours DESC
+    LIMIT 10
     """
     df = pd.read_sql_query(query, conn)
     print("\n=== Project Hours by Month (sorted by month then hours) ===")
@@ -133,6 +134,17 @@ def query_highest_daily_hours(conn):
     print("\n=== Top 5 Days with Highest Billable Hours per Employee ===")
     print(df)
 
+def test(conn):
+    query= """
+    SELECT *
+    FROM time_entries T JOIN employees E on T.employee_id = E.employee_id
+    WHERE E.name = 'Sophie Vanasse' AND T.date='2021-02-17'    
+    """
+    df= pd.read_sql_query(query, conn)
+    print("\n=== Test ===")
+    print(df)
+
+
 def query_common_work_codes(conn):
     query = """
     SELECT work_code, COUNT(*) as frequency, SUM(hours_worked) as total_hours
@@ -159,29 +171,41 @@ def query_company_monthly_trend(conn):
     print("\n=== Company Monthly Trend (Total Hours) ===")
     print(df)
 
+def inspect_simin_lotfi(conn):
+    query="""
+    SELECT *    
+    FROM time_entries T JOIN employees E on T.employee_id = E.employee_id
+    WHERE E.name = 'Simin Lotfi'
+    """
+    df= pd.read_sql_query(query, conn)
+    print("\n=== Simin Lotfi ===")
+    print(df)
+
 def main():
     db_path = "timekeeping.db"
     conn = sqlite3.connect(db_path)
     
     # Basic table queries.
-    query_employees(conn)
-    query_projects(conn)
-    query_time_entries(conn)
-    query_nonbillable_entries(conn)
+    #query_employees(conn)
+    #query_projects(conn)
+    #query_time_entries(conn)
+    #query_nonbillable_entries(conn)
     
     # Summary queries.
-    query_top_projects(conn)
-    query_top_employees(conn)
+    #query_top_projects(conn)
+    #query_top_employees(conn)
     
     # Extended and insightful queries.
     query_hours_by_employee_and_month(conn)
     query_billable_vs_nonbillable_by_employee(conn)
     query_top_projects_by_month(conn)
     query_avg_daily_hours_by_employee(conn)
-    query_highest_daily_hours(conn)
-    query_common_work_codes(conn)
+    #query_highest_daily_hours(conn)
+    #query_common_work_codes(conn)
     query_company_monthly_trend(conn)
-    
+    #test(conn)
+    inspect_simin_lotfi(conn)
+
     conn.close()
 
 if __name__ == "__main__":

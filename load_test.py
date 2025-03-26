@@ -160,12 +160,13 @@ def load_projects_csv_to_db(csv_file, db_path):
         
         # Check if the project exists in the projects table.
         cur.execute("SELECT project_no FROM projects WHERE project_no = ?", (cleaned_project_no,))
+        """
         if cur.fetchone() is None:
             msg = f"Row {idx}: Project number {cleaned_project_no} ({project_name}) not found in projects table."
             logging.warning(msg)
             print(f"Skipping row {idx}: Project number {cleaned_project_no} ({project_name}) not found in projects table.")
             continue
-
+        """
         for day in range(1, 32):
             col = str(day)
             try:

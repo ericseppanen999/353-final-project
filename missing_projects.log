@@ -8396,3 +8396,1305 @@
 2025-03-22 19:12:13,394 - WARNING - Row 0: Project number 2205 (Rize SFU Lot 36 & 37) not found in projects table.
 2025-03-22 19:12:13,395 - WARNING - Row 1: Project number 1702 (Mosaic Emery Phase 2) not found in projects table.
 2025-03-22 19:12:13,418 - WARNING - Row 0: Project number 2302 (Qualex Kingsway) not found in projects table.
+2025-03-24 23:18:29,743 - WARNING - Row 0: Project number 2302 (Kingsway) not found in projects table.
+2025-03-24 23:18:29,744 - WARNING - Row 1: Project number 1712 (Hawksley Amenity Extra) not found in projects table.
+2025-03-24 23:18:29,746 - WARNING - Row 2: Project number 1712 (Hawksley) not found in projects table.
+2025-03-24 23:18:29,751 - WARNING - Row 7: Project number 2310 (Whistler-Lake Placid Road) not found in projects table.
+2025-03-24 23:18:29,789 - WARNING - Row 1: Project number 2009 (Sooke Church Rd) not found in projects table.
+2025-03-24 23:18:29,789 - WARNING - Row 2: Project number 2009 (Sooke Church Rd) not found in projects table.
+2025-03-24 23:18:29,792 - WARNING - Row 3: Project number 2009 (Sooke Church Rd) not found in projects table.
+2025-03-24 23:18:29,792 - WARNING - Row 4: Project number 2009 (Sooke Church Rd) not found in projects table.
+2025-03-24 23:18:29,792 - WARNING - Row 5: Project number 2009 (Sooke Church Rd) not found in projects table.
+2025-03-24 23:18:29,792 - WARNING - Row 6: Project number 2009 (Sooke Church Rd) not found in projects table.
+2025-03-24 23:18:29,793 - WARNING - Row 7: Project number 2009 (Sooke Church Rd) not found in projects table.
+2025-03-24 23:18:29,793 - WARNING - Row 8: Project number 2009 (Sooke Church Rd) not found in projects table.
+2025-03-24 23:18:29,793 - WARNING - Row 9: Project number 2009 (Sooke Church Rd) not found in projects table.
+2025-03-24 23:18:29,831 - WARNING - Row 0: Project number 1712 (HAWKSLEY) not found in projects table.
+2025-03-24 23:18:29,832 - WARNING - Row 1: Project number 1712 (HAWKSLEY) not found in projects table.
+2025-03-24 23:18:29,834 - WARNING - Row 2: Project number 1712 (HAWKSLEY) not found in projects table.
+2025-03-24 23:18:29,835 - WARNING - Row 3: Project number 1712 (HAWKSLEY) not found in projects table.
+2025-03-24 23:18:29,835 - WARNING - Row 4: Project number 1712 (HAWKSLEY) not found in projects table.
+2025-03-24 23:18:29,836 - WARNING - Row 5: Project number 1712 (HAWKSLEY) not found in projects table.
+2025-03-24 23:18:29,836 - WARNING - Row 6: Project number 1712 (HAWKSLEY) not found in projects table.
+2025-03-24 23:18:29,836 - WARNING - Row 7: Project number 1712 (HAWKSLEY) not found in projects table.
+2025-03-24 23:18:29,837 - WARNING - Row 8: Project number 1712 (HAWKSLEY) not found in projects table.
+2025-03-24 23:18:29,837 - WARNING - Row 9: Project number 1712 (HAWKSLEY - Amen) not found in projects table.
+2025-03-24 23:18:29,838 - WARNING - Row 10: Project number 1712 (HAWKSLEY - Amen) not found in projects table.
+2025-03-24 23:18:29,838 - WARNING - Row 11: Project number 1712 (HAWKSLEY - Amen) not found in projects table.
+2025-03-24 23:18:29,838 - WARNING - Row 12: Project number 1712 (HAWKSLEY - Amen) not found in projects table.
+2025-03-24 23:18:29,839 - WARNING - Row 13: Project number 1712 (HAWKSLEY - Amen) not found in projects table.
+2025-03-24 23:18:29,839 - WARNING - Row 14: Project number 1712 (HAWKSLEY - Amen) not found in projects table.
+2025-03-24 23:18:29,865 - WARNING - Row 0: Project number 2302 (701 Kingsway Qualex) not found in projects table.
+2025-03-24 23:18:29,865 - WARNING - Row 1: Project number 2205 (SFU Lot 36 & 37) not found in projects table.
+2025-03-24 23:18:29,867 - WARNING - Row 2: Project number 2201 (Emery Phase 4) not found in projects table.
+2025-03-24 23:18:29,871 - WARNING - Row 6: Project number 2302 (Qualex Kingsway) not found in projects table.
+2025-03-24 23:18:29,871 - WARNING - Row 7: Project number 1702 (Lynn Parkside) not found in projects table.
+2025-03-24 23:18:29,872 - WARNING - Row 9: Project number 2401 (Cambie Station 2.0) not found in projects table.
+2025-03-24 23:18:29,873 - WARNING - Row 12: Project number 2309 (Rize East 10th) not found in projects table.
+2025-03-24 23:18:29,873 - WARNING - Row 13: Project number 1904 (Seasons) not found in projects table.
+2025-03-24 23:18:29,874 - WARNING - Row 16: Project number 2310 (Whistler Placid Lake Road) not found in projects table.
+2025-03-24 23:18:29,874 - WARNING - Row 17: Project number 2209 (Church Road) not found in projects table.
+2025-03-24 23:18:29,904 - WARNING - Row 1: Project number 1904 (Qualex - Regan Ave) not found in projects table.
+2025-03-24 23:18:29,904 - WARNING - Row 2: Project number 2008 (Mosaic - SFU - Lot 24) not found in projects table.
+2025-03-24 23:18:29,910 - WARNING - Row 6: Project number 2201 (Mosaic - Emery IV) not found in projects table.
+2025-03-24 23:18:29,910 - WARNING - Row 7: Project number 2205 (Rize - SFU - Lots 36 & 37) not found in projects table.
+2025-03-24 23:18:29,910 - WARNING - Row 8: Project number 2207 (Qualex - Fraser @ 11th) not found in projects table.
+2025-03-24 23:18:29,911 - WARNING - Row 9: Project number 2302 (Qualex - Kingsway) not found in projects table.
+2025-03-24 23:18:29,911 - WARNING - Row 10: Project number 2303 (Mosaic - 200th Langley) not found in projects table.
+2025-03-24 23:18:29,911 - WARNING - Row 11: Project number 2306 (Qualex - 33rd & Mackenzie) not found in projects table.
+2025-03-24 23:18:29,911 - WARNING - Row 12: Project number 2307 (Mosaic - 200th Langley) not found in projects table.
+2025-03-24 23:18:29,943 - WARNING - Row 0: Project number 2302 (Qualex KIngsway) not found in projects table.
+2025-03-24 23:18:29,947 - WARNING - Row 2: Project number 2401 (Cambie Station 2.0) not found in projects table.
+2025-03-24 23:18:30,019 - WARNING - Row 0: Project number 2309 (Rize East 10th Ave) not found in projects table.
+2025-03-24 23:18:30,020 - WARNING - Row 1: Project number 2308 (Qualex - East 6th) not found in projects table.
+2025-03-24 23:18:30,022 - WARNING - Row 2: Project number 2302 (Qualex Kingsway) not found in projects table.
+2025-03-24 23:18:30,022 - WARNING - Row 3: Project number 2310 (Lake Placid Road) not found in projects table.
+2025-03-24 23:18:30,054 - WARNING - Row 0: Project number 1712 (Hawksley) not found in projects table.
+2025-03-24 23:18:30,105 - WARNING - Row 1: Project number 2009 (CHURCH Street  extras) not found in projects table.
+2025-03-24 23:18:30,105 - WARNING - Row 2: Project number 2009 (Church Rd Sooke - Aragon) not found in projects table.
+2025-03-24 23:18:30,108 - WARNING - Row 3: Project number 2012 (Sprice Street) not found in projects table.
+2025-03-24 23:18:30,109 - WARNING - Row 4: Project number 2310 (Whistler Lake Placid Road) not found in projects table.
+2025-03-24 23:18:30,150 - WARNING - Row 4: Project number 1904 (1904 Qualex Regan Ave) not found in projects table.
+2025-03-24 23:18:30,151 - WARNING - Row 5: Project number 2201 (2201 Emery Phase 4) not found in projects table.
+2025-03-24 23:18:30,186 - WARNING - Row 1: Project number 2106 (Arbutus & 35th) not found in projects table.
+2025-03-24 23:18:30,188 - WARNING - Row 2: Project number 2309 (E 10th Ave) not found in projects table.
+2025-03-24 23:18:30,258 - WARNING - Row 1: Project number 2009 (Sooke) not found in projects table.
+2025-03-24 23:18:30,258 - WARNING - Row 2: Project number 2205 (SFU) not found in projects table.
+2025-03-24 23:18:30,260 - WARNING - Row 3: Project number 2302 (Kingsway) not found in projects table.
+2025-03-24 23:18:30,290 - WARNING - Row 0: Project number 2106 (IPL Arbutus & 35th) not found in projects table.
+2025-03-24 23:18:30,291 - WARNING - Row 1: Project number 2008 (Mosaic SFU) not found in projects table.
+2025-03-24 23:18:30,293 - WARNING - Row 2: Project number 2303 (Mosaic Langley) not found in projects table.
+2025-03-24 23:18:30,293 - WARNING - Row 3: Project number 2302 (Qualex Kingsway) not found in projects table.
+2025-03-24 23:18:30,296 - WARNING - Row 6: Project number 2310 (Whistler Lake Placid) not found in projects table.
+2025-03-24 23:18:30,331 - WARNING - Row 1: Project number 2310 (Whistler - Lake Placid Road) not found in projects table.
+2025-03-24 23:18:30,333 - WARNING - Row 3: Project number 2302 (Qualex Kingsway) not found in projects table.
+2025-03-24 23:18:30,369 - WARNING - Row 0: Project number 1702 (Lynn Parkside) not found in projects table.
+2025-03-24 23:18:30,370 - WARNING - Row 1: Project number 1712 (Hawksley) not found in projects table.
+2025-03-24 23:18:30,376 - WARNING - Row 4: Project number 1904 (Regan - Seasons) not found in projects table.
+2025-03-24 23:18:30,377 - WARNING - Row 6: Project number 2009 (Church road) not found in projects table.
+2025-03-24 23:18:30,413 - WARNING - Row 0: Project number 1712 (BPP Lot 6 Area 3) not found in projects table.
+2025-03-24 23:18:30,414 - WARNING - Row 1: Project number 2308 (Qualex 830 & 840 East 6th. Ave) not found in projects table.
+2025-03-24 23:18:30,415 - WARNING - Row 2: Project number 2008 (Mosaic Lot 24 SFU) not found in projects table.
+2025-03-24 23:18:30,415 - WARNING - Row 3: Project number 2309 (Rize E 10th Ave) not found in projects table.
+2025-03-24 23:18:30,452 - WARNING - Row 2: Project number 2009 (Aragon Church Rd Sooke) not found in projects table.
+2025-03-24 23:18:30,452 - WARNING - Row 3: Project number 2303 (Mosaic 200th St Langley) not found in projects table.
+2025-03-24 23:18:30,488 - WARNING - Row 2: Project number 2205 (Rize SFU Parcel) not found in projects table.
+2025-03-24 23:18:30,489 - WARNING - Row 4: Project number 1904 (Qualex Regan) not found in projects table.
+2025-03-24 23:18:30,491 - WARNING - Row 5: Project number 2009 (Church Road Sooke) not found in projects table.
+2025-03-24 23:18:30,521 - WARNING - Row 0: Project number 1712 (Hawksley) not found in projects table.
+2025-03-24 23:18:30,522 - WARNING - Row 1: Project number 2106 (Arbutus) not found in projects table.
+2025-03-24 23:18:30,523 - WARNING - Row 3: Project number 2205 (Rize SFU Lot 36 & 37) not found in projects table.
+2025-03-24 23:18:30,548 - WARNING - Row 0: Project number 2205 (Rize SFU 36 & 37) not found in projects table.
+2025-03-24 23:18:30,549 - WARNING - Row 1: Project number 2106 (Arbutus & 35th) not found in projects table.
+2025-03-24 23:18:30,551 - WARNING - Row 2: Project number 1904 (Qualex Regan Ave) not found in projects table.
+2025-03-24 23:18:30,552 - WARNING - Row 4: Project number 2301 (Lotus Mission) not found in projects table.
+2025-03-24 23:18:30,552 - WARNING - Row 5: Project number 2306 (Qualex 33rd & Mackenzie) not found in projects table.
+2025-03-24 23:18:30,552 - WARNING - Row 6: Project number 2008 (Mosaic SFU Lot 24) not found in projects table.
+2025-03-24 23:18:30,553 - WARNING - Row 7: Project number 1702 (Mosaic Emery Phase 2) not found in projects table.
+2025-03-24 23:18:30,553 - WARNING - Row 8: Project number 2308 (Qualex-6th-ave) not found in projects table.
+2025-03-24 23:18:30,554 - WARNING - Row 9: Project number 2201 (Emery Phase 4) not found in projects table.
+2025-03-24 23:18:30,554 - WARNING - Row 11: Project number 2309 (Rize E10th Ave) not found in projects table.
+2025-03-24 23:18:30,579 - WARNING - Row 0: Project number 2008 (SFU LOT 24) not found in projects table.
+2025-03-24 23:18:30,586 - WARNING - Row 4: Project number 1702 (Emery Phase 2) not found in projects table.
+2025-03-24 23:18:30,587 - WARNING - Row 5: Project number 2205 (Rize SFU Lot 36 & 37) not found in projects table.
+2025-03-24 23:18:30,587 - WARNING - Row 6: Project number 2205 (Rize SFU Lot 36 & 37) not found in projects table.
+2025-03-24 23:18:30,587 - WARNING - Row 7: Project number 2309 (Rize E10th Ave) not found in projects table.
+2025-03-24 23:18:30,587 - WARNING - Row 8: Project number 1904 (Qualex Regen) not found in projects table.
+2025-03-24 23:18:30,589 - WARNING - Row 11: Project number 2106 (Arbutus & 34th) not found in projects table.
+2025-03-24 23:18:30,625 - WARNING - Row 1: Project number 1702 (Mosaic Emery Phase 2) not found in projects table.
+2025-03-24 23:18:30,626 - WARNING - Row 2: Project number 2106 (IPL Arbutus & 35th) not found in projects table.
+2025-03-24 23:18:30,659 - WARNING - Row 0: Project number 2106 (IPL Arbutus & 35th) not found in projects table.
+2025-03-24 23:18:30,719 - WARNING - Row 0: Project number 1712 (Hawksley) not found in projects table.
+2025-03-24 23:18:30,719 - WARNING - Row 1: Project number 1712 (Hawksley) not found in projects table.
+2025-03-24 23:18:30,720 - WARNING - Row 2: Project number 1712 (Hawksley) not found in projects table.
+2025-03-24 23:18:30,723 - WARNING - Row 3: Project number 1712 (Hawksley) not found in projects table.
+2025-03-24 23:18:30,723 - WARNING - Row 4: Project number 1502 (Beedie Pres Centre) not found in projects table.
+2025-03-24 23:18:30,727 - WARNING - Row 13: Project number 2303 (Mosaic 200th St, Langley) not found in projects table.
+2025-03-24 23:18:30,728 - WARNING - Row 14: Project number 2402 (UBCO Master Plan) not found in projects table.
+2025-03-24 23:18:30,728 - WARNING - Row 15: Project number 2403 (Guelph & 10th) not found in projects table.
+2025-03-24 23:18:30,751 - WARNING - Row 0: Project number 2009 (Sooke Church Rd) not found in projects table.
+2025-03-24 23:18:30,751 - WARNING - Row 1: Project number 2009 (Sooke Church Rd) not found in projects table.
+2025-03-24 23:18:30,752 - WARNING - Row 2: Project number 2009 (Sooke Church Rd) not found in projects table.
+2025-03-24 23:18:30,755 - WARNING - Row 3: Project number 2009 (Sooke Church Rd) not found in projects table.
+2025-03-24 23:18:30,755 - WARNING - Row 4: Project number 2009 (Sooke Church Rd) not found in projects table.
+2025-03-24 23:18:30,755 - WARNING - Row 5: Project number 2009 (Sooke Church Rd) not found in projects table.
+2025-03-24 23:18:30,756 - WARNING - Row 6: Project number 2009 (Sooke Church Rd) not found in projects table.
+2025-03-24 23:18:30,756 - WARNING - Row 7: Project number 2009 (Sooke Church Rd) not found in projects table.
+2025-03-24 23:18:30,757 - WARNING - Row 8: Project number 2009 (Sooke Church Rd) not found in projects table.
+2025-03-24 23:18:30,757 - WARNING - Row 9: Project number 2009 (Sooke Church Rd) not found in projects table.
+2025-03-24 23:18:30,758 - WARNING - Row 10: Project number 2009 (Sooke Church Rd) not found in projects table.
+2025-03-24 23:18:30,777 - WARNING - Row 0: Project number 1712 (HAWKSLEY-Amenity Split) not found in projects table.
+2025-03-24 23:18:30,778 - WARNING - Row 1: Project number 1712 (HAWKSLEY - PH Hot Tub) not found in projects table.
+2025-03-24 23:18:30,778 - WARNING - Row 2: Project number 1712 (HAWKSLEY - Amenity) not found in projects table.
+2025-03-24 23:18:30,779 - WARNING - Row 3: Project number 2302 (Kingsway) not found in projects table.
+2025-03-24 23:18:30,799 - WARNING - Row 0: Project number 2302 (701 Kingsway Qualex) not found in projects table.
+2025-03-24 23:18:30,799 - WARNING - Row 1: Project number 2205 (SFU Lot 36 & 37) not found in projects table.
+2025-03-24 23:18:30,800 - WARNING - Row 2: Project number 2201 (Emery Phase 4) not found in projects table.
+2025-03-24 23:18:30,804 - WARNING - Row 5: Project number 2405 (Ledcor Mt Seymour Parkway) not found in projects table.
+2025-03-24 23:18:30,804 - WARNING - Row 6: Project number 2302 (Qualex Kingsway) not found in projects table.
+2025-03-24 23:18:30,804 - WARNING - Row 7: Project number 1702 (Lynn Parkside) not found in projects table.
+2025-03-24 23:18:30,805 - WARNING - Row 9: Project number 2403 (Guelph & 10th) not found in projects table.
+2025-03-24 23:18:30,806 - WARNING - Row 11: Project number 1712 (Hawksley) not found in projects table.
+2025-03-24 23:18:30,807 - WARNING - Row 13: Project number 1904 (Seasons) not found in projects table.
+2025-03-24 23:18:30,808 - WARNING - Row 15: Project number 2009 (Church Road) not found in projects table.
+2025-03-24 23:18:30,808 - WARNING - Row 16: Project number 2413 (Transca Como Lake) not found in projects table.
+2025-03-24 23:18:30,809 - WARNING - Row 17: Project number 2411 (Mosaic Burns Rd) not found in projects table.
+2025-03-24 23:18:30,858 - WARNING - Row 0: Project number 2301 (Lotus Mission) not found in projects table.
+2025-03-24 23:18:30,859 - WARNING - Row 1: Project number 2414 (Whistler Creek West) not found in projects table.
+2025-03-24 23:18:30,859 - WARNING - Row 2: Project number 2302 (Qualex Kingsway) not found in projects table.
+2025-03-24 23:18:30,859 - WARNING - Row 3: Project number 2403 (10th and Guelph) not found in projects table.
+2025-03-24 23:18:30,860 - WARNING - Row 4: Project number 2411 (Mosaic Burns Road) not found in projects table.
+2025-03-24 23:18:30,860 - WARNING - Row 5: Project number 2206 (Two Waters Master Plan) not found in projects table.
+2025-03-24 23:18:30,879 - WARNING - Row 0: Project number 1712 (Hawksley) not found in projects table.
+2025-03-24 23:18:30,880 - WARNING - Row 1: Project number 1712 (Hawksley) not found in projects table.
+2025-03-24 23:18:30,882 - WARNING - Row 2: Project number 1712 (Hawksley) not found in projects table.
+2025-03-24 23:18:30,883 - WARNING - Row 3: Project number 1712 (Hawksley) not found in projects table.
+2025-03-24 23:18:30,884 - WARNING - Row 5: Project number 1702 (Emery Lot 2) not found in projects table.
+2025-03-24 23:18:30,884 - WARNING - Row 6: Project number 9900 (CA Meeting) not found in projects table.
+2025-03-24 23:18:30,909 - WARNING - Row 0: Project number 1904 (Qualex Regan - Seasons) not found in projects table.
+2025-03-24 23:18:30,909 - WARNING - Row 1: Project number 2201 (Emery Lot 4) not found in projects table.
+2025-03-24 23:18:30,910 - WARNING - Row 3: Project number 2403 (10th & Guelph) not found in projects table.
+2025-03-24 23:18:30,929 - WARNING - Row 0: Project number 2106 (Arbutus & 35th) not found in projects table.
+2025-03-24 23:18:30,930 - WARNING - Row 1: Project number 2106 (Arbutus & 35th) not found in projects table.
+2025-03-24 23:18:30,932 - WARNING - Row 2: Project number 2302 (Kingsway) not found in projects table.
+2025-03-24 23:18:30,932 - WARNING - Row 3: Project number 2413 (Transca) not found in projects table.
+2025-03-24 23:18:30,998 - WARNING - Row 0: Project number 2009 (Sooke) not found in projects table.
+2025-03-24 23:18:30,998 - WARNING - Row 1: Project number 2009 (Sooke) not found in projects table.
+2025-03-24 23:18:30,999 - WARNING - Row 2: Project number 2205 (SFU 36 37) not found in projects table.
+2025-03-24 23:18:31,020 - WARNING - Row 0: Project number 2106 (IPL Arbutus & 35th) not found in projects table.
+2025-03-24 23:18:31,020 - WARNING - Row 1: Project number 2405 (Ledcor Mt Seymour Pkwy) not found in projects table.
+2025-03-24 23:18:31,021 - WARNING - Row 2: Project number 2303 (Mosaic Langley) not found in projects table.
+2025-03-24 23:18:31,021 - WARNING - Row 3: Project number 2302 (Qualex Kingsway) not found in projects table.
+2025-03-24 23:18:31,021 - WARNING - Row 4: Project number 2403 (Qualex 10tth & Guelph) not found in projects table.
+2025-03-24 23:18:31,022 - WARNING - Row 5: Project number 2402 (UBCO Masterplan) not found in projects table.
+2025-03-24 23:18:31,022 - WARNING - Row 6: Project number 2201 (Emery Phase 4) not found in projects table.
+2025-03-24 23:18:31,023 - WARNING - Row 8: Project number 2414 (Whistler Creek West) not found in projects table.
+2025-03-24 23:18:31,044 - WARNING - Row 1: Project number 2310 (Whistler - Lake Placid Road) not found in projects table.
+2025-03-24 23:18:31,045 - WARNING - Row 3: Project number 2302 (Qualex Kingsway) not found in projects table.
+2025-03-24 23:18:31,077 - WARNING - Row 0: Project number 1702 (Lynn Parkside) not found in projects table.
+2025-03-24 23:18:31,078 - WARNING - Row 1: Project number 1712 (Hawksley) not found in projects table.
+2025-03-24 23:18:31,084 - WARNING - Row 3: Project number 1904 (Regan - Seasons) not found in projects table.
+2025-03-24 23:18:31,085 - WARNING - Row 5: Project number 2008 (SFU Lot 24) not found in projects table.
+2025-03-24 23:18:31,085 - WARNING - Row 6: Project number 2009 (Church road) not found in projects table.
+2025-03-24 23:18:31,085 - WARNING - Row 7: Project number 2009 (Church road /Extra) not found in projects table.
+2025-03-24 23:18:31,086 - WARNING - Row 10: Project number 2106 (Arbutus) not found in projects table.
+2025-03-24 23:18:31,086 - WARNING - Row 11: Project number 2201 (Emery Lot 4) not found in projects table.
+2025-03-24 23:18:31,113 - WARNING - Row 0: Project number 2008 (Mosaic Lot 24 SFU Symposia) not found in projects table.
+2025-03-24 23:18:31,114 - WARNING - Row 2: Project number 2201 (Trailside) not found in projects table.
+2025-03-24 23:18:31,163 - WARNING - Row 0: Project number 1712 (Hawksley) not found in projects table.
+2025-03-24 23:18:31,183 - WARNING - Row 0: Project number 1712 (Hawksley) not found in projects table.
+2025-03-24 23:18:31,184 - WARNING - Row 1: Project number 2106 (Arbutus) not found in projects table.
+2025-03-24 23:18:31,187 - WARNING - Row 3: Project number 2205 (Rize SFU Lot 36 & 37) not found in projects table.
+2025-03-24 23:18:31,207 - WARNING - Row 0: Project number 2302 (Qualex Kingsway) not found in projects table.
+2025-03-24 23:18:31,208 - WARNING - Row 3: Project number 2410 (Mosaic Adaptable Study) not found in projects table.
+2025-03-24 23:18:31,212 - WARNING - Row 5: Project number 2403 (Qualex Guelph & 10th) not found in projects table.
+2025-03-24 23:18:31,244 - WARNING - Row 1: Project number 1712 (Hawksley) not found in projects table.
+2025-03-24 23:18:31,245 - WARNING - Row 3: Project number 1712 (Hawksley Amenity Splt) not found in projects table.
+2025-03-24 23:18:31,274 - WARNING - Row 0: Project number 1712 (Hawksley) not found in projects table.
+2025-03-24 23:18:31,274 - WARNING - Row 1: Project number 2106 (Arbutus) not found in projects table.
+2025-03-24 23:18:31,274 - WARNING - Row 2: Project number 2106 (Arbutus) not found in projects table.
+2025-03-24 23:18:31,274 - WARNING - Row 3: Project number 2201 (Emery Phase 4) not found in projects table.
+2025-03-24 23:18:31,275 - WARNING - Row 4: Project number 2201 (Emery Phase 4) not found in projects table.
+2025-03-24 23:18:31,275 - WARNING - Row 5: Project number 2201 (Emery Phase 4) not found in projects table.
+2025-03-24 23:18:31,304 - WARNING - Row 0: Project number 2205 (Rize SFU Lot 36 & 37) not found in projects table.
+2025-03-24 23:18:31,305 - WARNING - Row 1: Project number 1702 (Mosaic Emery Phase 2) not found in projects table.
+2025-03-24 23:18:31,323 - WARNING - Row 0: Project number 2302 (Qualex Kingsway) not found in projects table.
+2025-03-24 23:18:31,340 - WARNING - Row 0: Project number 1712 (Hawksley Amenity (Studio)) not found in projects table.
+2025-03-24 23:18:31,340 - WARNING - Row 1: Project number 1712 (Hawksley Amenity Split) not found in projects table.
+2025-03-24 23:18:31,342 - WARNING - Row 2: Project number 1712 (Hawksley) not found in projects table.
+2025-03-24 23:18:31,347 - WARNING - Row 7: Project number 2310 (Whistler-Lake Placid Road) not found in projects table.
+2025-03-24 23:18:31,348 - WARNING - Row 8: Project number 2303 (Mosaic 200th St, Langley) not found in projects table.
+2025-03-24 23:18:31,373 - WARNING - Row 1: Project number 2009 (Sooke Church Rd) not found in projects table.
+2025-03-24 23:18:31,374 - WARNING - Row 2: Project number 2009 (Sooke Church Rd) not found in projects table.
+2025-03-24 23:18:31,376 - WARNING - Row 3: Project number 2009 (Sooke Church Rd) not found in projects table.
+2025-03-24 23:18:31,377 - WARNING - Row 4: Project number 2009 (Sooke Church Rd) not found in projects table.
+2025-03-24 23:18:31,377 - WARNING - Row 5: Project number 2009 (Sooke Church Rd) not found in projects table.
+2025-03-24 23:18:31,377 - WARNING - Row 6: Project number 2009 (Sooke Church Rd) not found in projects table.
+2025-03-24 23:18:31,377 - WARNING - Row 7: Project number 2009 (Sooke Church Rd) not found in projects table.
+2025-03-24 23:18:31,378 - WARNING - Row 8: Project number 2009 (Sooke Church Rd) not found in projects table.
+2025-03-24 23:18:31,378 - WARNING - Row 9: Project number 2009 (Sooke Church Rd) not found in projects table.
+2025-03-24 23:18:31,405 - WARNING - Row 0: Project number 1712 (HAWKSLEY) not found in projects table.
+2025-03-24 23:18:31,406 - WARNING - Row 1: Project number 1712 (HAWKSLEY) not found in projects table.
+2025-03-24 23:18:31,408 - WARNING - Row 2: Project number 1712 (HAWKSLEY) not found in projects table.
+2025-03-24 23:18:31,409 - WARNING - Row 3: Project number 1712 (HAWKSLEY) not found in projects table.
+2025-03-24 23:18:31,409 - WARNING - Row 4: Project number 1712 (HAWKSLEY) not found in projects table.
+2025-03-24 23:18:31,409 - WARNING - Row 5: Project number 1712 (HAWKSLEY) not found in projects table.
+2025-03-24 23:18:31,410 - WARNING - Row 6: Project number 1712 (HAWKSLEY) not found in projects table.
+2025-03-24 23:18:31,410 - WARNING - Row 7: Project number 1712 (HAWKSLEY) not found in projects table.
+2025-03-24 23:18:31,411 - WARNING - Row 8: Project number 1712 (HAWKSLEY) not found in projects table.
+2025-03-24 23:18:31,411 - WARNING - Row 9: Project number 1712 (HAWKSLEY - Amen) not found in projects table.
+2025-03-24 23:18:31,411 - WARNING - Row 10: Project number 1712 (HAWKSLEY - Amen) not found in projects table.
+2025-03-24 23:18:31,412 - WARNING - Row 11: Project number 1712 (HAWKSLEY - Amen) not found in projects table.
+2025-03-24 23:18:31,412 - WARNING - Row 12: Project number 1712 (HAWKSLEY - Amen) not found in projects table.
+2025-03-24 23:18:31,412 - WARNING - Row 13: Project number 1712 (HAWKSLEY - Amen) not found in projects table.
+2025-03-24 23:18:31,413 - WARNING - Row 14: Project number 1712 (HAWKSLEY - Amen) not found in projects table.
+2025-03-24 23:18:31,413 - WARNING - Row 15: Project number 1712 (HAWKSLEY - Amen) not found in projects table.
+2025-03-24 23:18:31,432 - WARNING - Row 0: Project number 2302 (701 Kingsway Qualex) not found in projects table.
+2025-03-24 23:18:31,432 - WARNING - Row 1: Project number 2205 (SFU Lot 36 & 37) not found in projects table.
+2025-03-24 23:18:31,433 - WARNING - Row 2: Project number 2201 (Emery Phase 4) not found in projects table.
+2025-03-24 23:18:31,436 - WARNING - Row 6: Project number 2302 (Qualex Kingsway) not found in projects table.
+2025-03-24 23:18:31,437 - WARNING - Row 7: Project number 1702 (Lynn Parkside) not found in projects table.
+2025-03-24 23:18:31,437 - WARNING - Row 9: Project number 2401 (Cambie Station 2.0) not found in projects table.
+2025-03-24 23:18:31,438 - WARNING - Row 12: Project number 2309 (Rize East 10th) not found in projects table.
+2025-03-24 23:18:31,438 - WARNING - Row 13: Project number 1904 (Seasons) not found in projects table.
+2025-03-24 23:18:31,439 - WARNING - Row 16: Project number 2310 (Whistler Placid Lake Road) not found in projects table.
+2025-03-24 23:18:31,439 - WARNING - Row 17: Project number 2209 (Church Road) not found in projects table.
+2025-03-24 23:18:31,462 - WARNING - Row 0: Project number 2302 (Qualex KIngsway) not found in projects table.
+2025-03-24 23:18:31,465 - WARNING - Row 2: Project number 2401 (Cambie Station 2.0) not found in projects table.
+2025-03-24 23:18:31,520 - WARNING - Row 0: Project number 2309 (Rize East 10th Ave) not found in projects table.
+2025-03-24 23:18:31,520 - WARNING - Row 1: Project number 2401 (Cambie Street) not found in projects table.
+2025-03-24 23:18:31,521 - WARNING - Row 2: Project number 2302 (Qualex Kingsway) not found in projects table.
+2025-03-24 23:18:31,521 - WARNING - Row 3: Project number 2310 (Lake Placid Road) not found in projects table.
+2025-03-24 23:18:31,550 - WARNING - Row 0: Project number 1712 (Hawksley - Amenity Decoupling) not found in projects table.
+2025-03-24 23:18:31,550 - WARNING - Row 1: Project number 1712 (Hawksley - Amenity Redesign) not found in projects table.
+2025-03-24 23:18:31,551 - WARNING - Row 2: Project number 1712 (Hawksley) not found in projects table.
+2025-03-24 23:18:31,581 - WARNING - Row 0: Project number 2401 (Aragon - CAMBIE STATION  2.0) not found in projects table.
+2025-03-24 23:18:31,581 - WARNING - Row 1: Project number 2009 (CHURCH Street  extras) not found in projects table.
+2025-03-24 23:18:31,584 - WARNING - Row 2: Project number 2009 (Church Rd Sooke - Aragon) not found in projects table.
+2025-03-24 23:18:31,584 - WARNING - Row 3: Project number 2012 (Sprice Street) not found in projects table.
+2025-03-24 23:18:31,585 - WARNING - Row 4: Project number 2310 (Whistler Lake Placid Road) not found in projects table.
+2025-03-24 23:18:31,604 - WARNING - Row 4: Project number 1904 (1904 Qualex Regan Ave) not found in projects table.
+2025-03-24 23:18:31,604 - WARNING - Row 5: Project number 2201 (2201 Emery Phase 4) not found in projects table.
+2025-03-24 23:18:31,629 - WARNING - Row 1: Project number 2106 (Arbutus & 35th) not found in projects table.
+2025-03-24 23:18:31,630 - WARNING - Row 2: Project number 2309 (E 10th Ave) not found in projects table.
+2025-03-24 23:18:31,679 - WARNING - Row 0: Project number 2009 (Sooke) not found in projects table.
+2025-03-24 23:18:31,680 - WARNING - Row 1: Project number 2205 (SFU 36 37) not found in projects table.
+2025-03-24 23:18:31,681 - WARNING - Row 2: Project number 2205 (SFU 36 37) not found in projects table.
+2025-03-24 23:18:31,699 - WARNING - Row 0: Project number 2106 (IPL Arbutus & 35th) not found in projects table.
+2025-03-24 23:18:31,702 - WARNING - Row 2: Project number 2303 (Mosaic Langley) not found in projects table.
+2025-03-24 23:18:31,703 - WARNING - Row 3: Project number 2302 (Qualex Kingsway) not found in projects table.
+2025-03-24 23:18:31,704 - WARNING - Row 5: Project number 2401 (Cambie Station) not found in projects table.
+2025-03-24 23:18:31,704 - WARNING - Row 6: Project number 2205 (Rize SFU) not found in projects table.
+2025-03-24 23:18:31,705 - WARNING - Row 8: Project number 2310 (Whistler Lake Placid) not found in projects table.
+2025-03-24 23:18:31,730 - WARNING - Row 1: Project number 2310 (Whistler - Lake Placid Road) not found in projects table.
+2025-03-24 23:18:31,734 - WARNING - Row 3: Project number 2302 (Qualex Kingsway) not found in projects table.
+2025-03-24 23:18:31,761 - WARNING - Row 0: Project number 1702 (Lynn Parkside) not found in projects table.
+2025-03-24 23:18:31,761 - WARNING - Row 1: Project number 1712 (Hawksley) not found in projects table.
+2025-03-24 23:18:31,765 - WARNING - Row 4: Project number 1904 (Regan - Seasons) not found in projects table.
+2025-03-24 23:18:31,769 - WARNING - Row 6: Project number 2009 (Church road) not found in projects table.
+2025-03-24 23:18:31,795 - WARNING - Row 0: Project number 1712 (BPP Lot 6 Area 3) not found in projects table.
+2025-03-24 23:18:31,796 - WARNING - Row 1: Project number 2308 (Qualex 830 & 840 East 6th. Ave) not found in projects table.
+2025-03-24 23:18:31,796 - WARNING - Row 2: Project number 2008 (Mosaic Lot 24 SFU) not found in projects table.
+2025-03-24 23:18:31,796 - WARNING - Row 3: Project number 2309 (Rize E 10th Ave) not found in projects table.
+2025-03-24 23:18:31,827 - WARNING - Row 2: Project number 1702 (Emery Phase 2) not found in projects table.
+2025-03-24 23:18:31,827 - WARNING - Row 3: Project number 1904 (Qualex Reagan) not found in projects table.
+2025-03-24 23:18:31,828 - WARNING - Row 5: Project number 2303 (Mosaic 200th St Langley) not found in projects table.
+2025-03-24 23:18:31,858 - WARNING - Row 2: Project number 2205 (Rize SFU Parcel) not found in projects table.
+2025-03-24 23:18:31,859 - WARNING - Row 4: Project number 1904 (Qualex Regan) not found in projects table.
+2025-03-24 23:18:31,859 - WARNING - Row 5: Project number 2009 (Church Road Sooke) not found in projects table.
+2025-03-24 23:18:31,884 - WARNING - Row 0: Project number 1712 (Hawksley) not found in projects table.
+2025-03-24 23:18:31,885 - WARNING - Row 1: Project number 2106 (Arbutus) not found in projects table.
+2025-03-24 23:18:31,886 - WARNING - Row 3: Project number 2205 (Rize SFU Lot 36 & 37) not found in projects table.
+2025-03-24 23:18:31,902 - WARNING - Row 0: Project number 2205 (Rize SFU 36 & 37) not found in projects table.
+2025-03-24 23:18:31,903 - WARNING - Row 1: Project number 2106 (Arbutus & 35th) not found in projects table.
+2025-03-24 23:18:31,904 - WARNING - Row 2: Project number 1904 (Qualex Regan Ave) not found in projects table.
+2025-03-24 23:18:31,904 - WARNING - Row 4: Project number 2301 (Lotus Mission) not found in projects table.
+2025-03-24 23:18:31,905 - WARNING - Row 5: Project number 2306 (Qualex 33rd & Mackenzie) not found in projects table.
+2025-03-24 23:18:31,906 - WARNING - Row 6: Project number 2008 (Mosaic SFU Lot 24) not found in projects table.
+2025-03-24 23:18:31,906 - WARNING - Row 7: Project number 1702 (Mosaic Emery Phase 2) not found in projects table.
+2025-03-24 23:18:31,906 - WARNING - Row 8: Project number 2308 (Qualex-6th-ave) not found in projects table.
+2025-03-24 23:18:31,907 - WARNING - Row 9: Project number 2201 (Emery Phase 4) not found in projects table.
+2025-03-24 23:18:31,907 - WARNING - Row 11: Project number 2309 (Rize E10th Ave) not found in projects table.
+2025-03-24 23:18:31,927 - WARNING - Row 0: Project number 2008 (SFU LOT 24) not found in projects table.
+2025-03-24 23:18:31,932 - WARNING - Row 4: Project number 1702 (Emery Phase 2) not found in projects table.
+2025-03-24 23:18:31,933 - WARNING - Row 5: Project number 2205 (Rize SFU Lot 36 & 37) not found in projects table.
+2025-03-24 23:18:31,933 - WARNING - Row 6: Project number 1904 (Qualex Regen) not found in projects table.
+2025-03-24 23:18:31,934 - WARNING - Row 9: Project number 2106 (Arbutus & 34th) not found in projects table.
+2025-03-24 23:18:31,961 - WARNING - Row 0: Project number 2106 (Arbutus) not found in projects table.
+2025-03-24 23:18:31,962 - WARNING - Row 1: Project number 2201 (Emery Phase 4) not found in projects table.
+2025-03-24 23:18:31,963 - WARNING - Row 2: Project number 2201 (Emery Phase 4) not found in projects table.
+2025-03-24 23:18:31,963 - WARNING - Row 3: Project number 2106 (Arbutus) not found in projects table.
+2025-03-24 23:18:31,963 - WARNING - Row 4: Project number 2106 (Arbutus) not found in projects table.
+2025-03-24 23:18:31,984 - WARNING - Row 1: Project number 1702 (Mosaic Emery Phase 2) not found in projects table.
+2025-03-24 23:18:31,984 - WARNING - Row 2: Project number 2106 (IPL Arbutus & 35th) not found in projects table.
+2025-03-24 23:18:32,037 - WARNING - Row 0: Project number 1712 (Hawksley Amenity (Studio)) not found in projects table.
+2025-03-24 23:18:32,038 - WARNING - Row 1: Project number 1712 (Hawksley Amenity Split) not found in projects table.
+2025-03-24 23:18:32,040 - WARNING - Row 2: Project number 1712 (Hawksley) not found in projects table.
+2025-03-24 23:18:32,045 - WARNING - Row 7: Project number 2310 (Whistler-Lake Placid Road) not found in projects table.
+2025-03-24 23:18:32,046 - WARNING - Row 8: Project number 2303 (Mosaic 200th St, Langley) not found in projects table.
+2025-03-24 23:18:32,046 - WARNING - Row 9: Project number 2402 (UBCO Master Plan) not found in projects table.
+2025-03-24 23:18:32,075 - WARNING - Row 0: Project number 2009 (Sooke Church Rd) not found in projects table.
+2025-03-24 23:18:32,076 - WARNING - Row 1: Project number 2009 (Sooke Church Rd) not found in projects table.
+2025-03-24 23:18:32,076 - WARNING - Row 2: Project number 2009 (Sooke Church Rd) not found in projects table.
+2025-03-24 23:18:32,077 - WARNING - Row 3: Project number 2009 (Sooke Church Rd) not found in projects table.
+2025-03-24 23:18:32,077 - WARNING - Row 4: Project number 2009 (Sooke Church Rd) not found in projects table.
+2025-03-24 23:18:32,077 - WARNING - Row 5: Project number 2009 (Sooke Church Rd) not found in projects table.
+2025-03-24 23:18:32,078 - WARNING - Row 6: Project number 2009 (Sooke Church Rd) not found in projects table.
+2025-03-24 23:18:32,078 - WARNING - Row 7: Project number 2009 (Sooke Church Rd) not found in projects table.
+2025-03-24 23:18:32,078 - WARNING - Row 8: Project number 2009 (Sooke Church Rd) not found in projects table.
+2025-03-24 23:18:32,107 - WARNING - Row 0: Project number 1712 (HAWKSLEY) not found in projects table.
+2025-03-24 23:18:32,107 - WARNING - Row 1: Project number 1712 (HAWKSLEY) not found in projects table.
+2025-03-24 23:18:32,108 - WARNING - Row 2: Project number 1712 (HAWKSLEY) not found in projects table.
+2025-03-24 23:18:32,108 - WARNING - Row 3: Project number 1712 (HAWKSLEY) not found in projects table.
+2025-03-24 23:18:32,109 - WARNING - Row 4: Project number 1712 (HAWKSLEY) not found in projects table.
+2025-03-24 23:18:32,109 - WARNING - Row 5: Project number 1712 (HAWKSLEY - Amen) not found in projects table.
+2025-03-24 23:18:32,110 - WARNING - Row 6: Project number 2302 (KINGSWAY) not found in projects table.
+2025-03-24 23:18:32,131 - WARNING - Row 0: Project number 2302 (701 Kingsway Qualex) not found in projects table.
+2025-03-24 23:18:32,132 - WARNING - Row 1: Project number 2205 (SFU Lot 36 & 37) not found in projects table.
+2025-03-24 23:18:32,132 - WARNING - Row 2: Project number 2201 (Emery Phase 4) not found in projects table.
+2025-03-24 23:18:32,135 - WARNING - Row 6: Project number 2302 (Qualex Kingsway) not found in projects table.
+2025-03-24 23:18:32,136 - WARNING - Row 7: Project number 1702 (Lynn Parkside) not found in projects table.
+2025-03-24 23:18:32,137 - WARNING - Row 9: Project number 2401 (Cambie Station 2.0) not found in projects table.
+2025-03-24 23:18:32,139 - WARNING - Row 12: Project number 2309 (Rize East 10th) not found in projects table.
+2025-03-24 23:18:32,139 - WARNING - Row 13: Project number 1904 (Seasons) not found in projects table.
+2025-03-24 23:18:32,143 - WARNING - Row 16: Project number 2402 (UBCO Masterplan) not found in projects table.
+2025-03-24 23:18:32,144 - WARNING - Row 17: Project number 2209 (Church Road) not found in projects table.
+2025-03-24 23:18:32,169 - WARNING - Row 0: Project number 2302 (Qualex KIngsway) not found in projects table.
+2025-03-24 23:18:32,173 - WARNING - Row 2: Project number 2401 (Cambie Station 2.0) not found in projects table.
+2025-03-24 23:18:32,226 - WARNING - Row 0: Project number 2301 (Lotus Mission) not found in projects table.
+2025-03-24 23:18:32,227 - WARNING - Row 1: Project number 2303 (200 St Langley) not found in projects table.
+2025-03-24 23:18:32,227 - WARNING - Row 2: Project number 2302 (Qualex Kingsway) not found in projects table.
+2025-03-24 23:18:32,228 - WARNING - Row 3: Project number 2402 (UBC-O) not found in projects table.
+2025-03-24 23:18:32,255 - WARNING - Row 0: Project number 1712 (Hawksley - Amenity Decoupling) not found in projects table.
+2025-03-24 23:18:32,256 - WARNING - Row 1: Project number 1712 (Hawksley - Amenity Redesign) not found in projects table.
+2025-03-24 23:18:32,257 - WARNING - Row 2: Project number 1712 (Hawksley) not found in projects table.
+2025-03-24 23:18:32,285 - WARNING - Row 0: Project number 2401 (Aragon - Cambie Station - 2.0) not found in projects table.
+2025-03-24 23:18:32,285 - WARNING - Row 1: Project number 2009 (Aragon - Chuch St, Sooke) not found in projects table.
+2025-03-24 23:18:32,286 - WARNING - Row 2: Project number 2009 (Aragon - Chuch St, Sooke) not found in projects table.
+2025-03-24 23:18:32,286 - WARNING - Row 3: Project number 2009 (Aragon - Chuch St, Sooke) not found in projects table.
+2025-03-24 23:18:32,286 - WARNING - Row 4: Project number 2310 (Whistler Lake Placid Road) not found in projects table.
+2025-03-24 23:18:32,303 - WARNING - Row 0: Project number 2401 (Aragon - CAMBIE STATION  2.0) not found in projects table.
+2025-03-24 23:18:32,304 - WARNING - Row 1: Project number 2009 (CHURCH Street  extras) not found in projects table.
+2025-03-24 23:18:32,304 - WARNING - Row 2: Project number 2009 (Church Rd Sooke - Aragon) not found in projects table.
+2025-03-24 23:18:32,305 - WARNING - Row 3: Project number 2310 (Whistler Lake Placid Road) not found in projects table.
+2025-03-24 23:18:32,305 - WARNING - Row 4: Project number 2009 (Church Occupancy/ reissue BP) not found in projects table.
+2025-03-24 23:18:32,326 - WARNING - Row 4: Project number 1904 (1904 Qualex Regan Ave) not found in projects table.
+2025-03-24 23:18:32,326 - WARNING - Row 5: Project number 2201 (2201 Emery Phase 4) not found in projects table.
+2025-03-24 23:18:32,351 - WARNING - Row 0: Project number 2106 (Arbutus & 35th) not found in projects table.
+2025-03-24 23:18:32,398 - WARNING - Row 0: Project number 2009 (Sooke) not found in projects table.
+2025-03-24 23:18:32,399 - WARNING - Row 1: Project number 2205 (SFU 36 37) not found in projects table.
+2025-03-24 23:18:32,400 - WARNING - Row 2: Project number 2205 (SFU 36 37) not found in projects table.
+2025-03-24 23:18:32,417 - WARNING - Row 0: Project number 2106 (IPL Arbutus & 35th) not found in projects table.
+2025-03-24 23:18:32,418 - WARNING - Row 2: Project number 2303 (Mosaic Langley) not found in projects table.
+2025-03-24 23:18:32,418 - WARNING - Row 3: Project number 2302 (Qualex Kingsway) not found in projects table.
+2025-03-24 23:18:32,422 - WARNING - Row 5: Project number 2401 (Cambie Station) not found in projects table.
+2025-03-24 23:18:32,422 - WARNING - Row 6: Project number 2205 (Rize SFU) not found in projects table.
+2025-03-24 23:18:32,423 - WARNING - Row 8: Project number 2310 (Whistler Lake Placid) not found in projects table.
+2025-03-24 23:18:32,446 - WARNING - Row 1: Project number 2310 (Whistler - Lake Placid Road) not found in projects table.
+2025-03-24 23:18:32,450 - WARNING - Row 3: Project number 2302 (Qualex Kingsway) not found in projects table.
+2025-03-24 23:18:32,474 - WARNING - Row 0: Project number 1702 (Lynn Parkside) not found in projects table.
+2025-03-24 23:18:32,475 - WARNING - Row 1: Project number 1712 (Hawksley) not found in projects table.
+2025-03-24 23:18:32,479 - WARNING - Row 4: Project number 1904 (Regan - Seasons) not found in projects table.
+2025-03-24 23:18:32,480 - WARNING - Row 6: Project number 2009 (Church road) not found in projects table.
+2025-03-24 23:18:32,481 - WARNING - Row 7: Project number 2009 (Church road /Extra) not found in projects table.
+2025-03-24 23:18:32,505 - WARNING - Row 0: Project number 1712 (BPP Lot 6 Area 3) not found in projects table.
+2025-03-24 23:18:32,505 - WARNING - Row 1: Project number 2308 (Qualex 830 & 840 East 6th. Ave) not found in projects table.
+2025-03-24 23:18:32,506 - WARNING - Row 2: Project number 2008 (Mosaic Lot 24 SFU) not found in projects table.
+2025-03-24 23:18:32,506 - WARNING - Row 3: Project number 2309 (Rize E 10th Ave) not found in projects table.
+2025-03-24 23:18:32,531 - WARNING - Row 2: Project number 1702 (Emery Phase 2) not found in projects table.
+2025-03-24 23:18:32,532 - WARNING - Row 3: Project number 1904 (Qualex Reagan) not found in projects table.
+2025-03-24 23:18:32,534 - WARNING - Row 5: Project number 2303 (Mosaic 200th St Langley) not found in projects table.
+2025-03-24 23:18:32,557 - WARNING - Row 0: Project number 1712 (BPP Area 6 Lot 3 (Hawksley)) not found in projects table.
+2025-03-24 23:18:32,558 - WARNING - Row 1: Project number 1904 (Qualex Regan) not found in projects table.
+2025-03-24 23:18:32,561 - WARNING - Row 2: Project number 2009 (Church Road Sooke) not found in projects table.
+2025-03-24 23:18:32,589 - WARNING - Row 0: Project number 1712 (Hawksley) not found in projects table.
+2025-03-24 23:18:32,589 - WARNING - Row 1: Project number 2106 (Arbutus) not found in projects table.
+2025-03-24 23:18:32,592 - WARNING - Row 3: Project number 2205 (Rize SFU Lot 36 & 37) not found in projects table.
+2025-03-24 23:18:32,608 - WARNING - Row 0: Project number 2205 (Rize SFU 36 & 37) not found in projects table.
+2025-03-24 23:18:32,609 - WARNING - Row 1: Project number 2106 (Arbutus & 35th) not found in projects table.
+2025-03-24 23:18:32,610 - WARNING - Row 2: Project number 1904 (Qualex Regan Ave) not found in projects table.
+2025-03-24 23:18:32,612 - WARNING - Row 4: Project number 2301 (Lotus Mission) not found in projects table.
+2025-03-24 23:18:32,613 - WARNING - Row 5: Project number 2306 (Qualex 33rd & Mackenzie) not found in projects table.
+2025-03-24 23:18:32,613 - WARNING - Row 6: Project number 2008 (Mosaic SFU Lot 24) not found in projects table.
+2025-03-24 23:18:32,613 - WARNING - Row 7: Project number 1702 (Mosaic Emery Phase 2) not found in projects table.
+2025-03-24 23:18:32,613 - WARNING - Row 8: Project number 2308 (Qualex-6th-ave) not found in projects table.
+2025-03-24 23:18:32,613 - WARNING - Row 9: Project number 2201 (Emery Phase 4) not found in projects table.
+2025-03-24 23:18:32,614 - WARNING - Row 11: Project number 2309 (Rize E10th Ave) not found in projects table.
+2025-03-24 23:18:32,637 - WARNING - Row 0: Project number 2008 (SFU LOT 24) not found in projects table.
+2025-03-24 23:18:32,642 - WARNING - Row 4: Project number 1702 (Emery Phase 2) not found in projects table.
+2025-03-24 23:18:32,642 - WARNING - Row 5: Project number 2205 (Rize SFU Lot 36 & 37) not found in projects table.
+2025-03-24 23:18:32,642 - WARNING - Row 6: Project number 1904 (Qualex Regen) not found in projects table.
+2025-03-24 23:18:32,644 - WARNING - Row 9: Project number 2106 (Arbutus & 34th) not found in projects table.
+2025-03-24 23:18:32,668 - WARNING - Row 0: Project number 2106 (Arbutus) not found in projects table.
+2025-03-24 23:18:32,668 - WARNING - Row 1: Project number 2201 (Emery Phase 4) not found in projects table.
+2025-03-24 23:18:32,668 - WARNING - Row 2: Project number 2201 (Emery Phase 4) not found in projects table.
+2025-03-24 23:18:32,671 - WARNING - Row 3: Project number 2106 (Arbutus) not found in projects table.
+2025-03-24 23:18:32,672 - WARNING - Row 4: Project number 2106 (Arbutus) not found in projects table.
+2025-03-24 23:18:32,691 - WARNING - Row 1: Project number 1702 (Mosaic Emery Phase 2) not found in projects table.
+2025-03-24 23:18:32,691 - WARNING - Row 2: Project number 1712 (Hawksley) not found in projects table.
+2025-03-24 23:18:32,745 - WARNING - Row 0: Project number 1712 (Hawksley) not found in projects table.
+2025-03-24 23:18:32,746 - WARNING - Row 1: Project number 1712 (Hawksley) not found in projects table.
+2025-03-24 23:18:32,746 - WARNING - Row 2: Project number 1712 (Hawksley) not found in projects table.
+2025-03-24 23:18:32,751 - WARNING - Row 7: Project number 2310 (Whistler-Lake Placid Road) not found in projects table.
+2025-03-24 23:18:32,752 - WARNING - Row 8: Project number 2303 (Mosaic 200th St, Langley) not found in projects table.
+2025-03-24 23:18:32,752 - WARNING - Row 9: Project number 2402 (UBCO Master Plan) not found in projects table.
+2025-03-24 23:18:32,752 - WARNING - Row 10: Project number 2403 (Guelph & 10th) not found in projects table.
+2025-03-24 23:18:32,777 - WARNING - Row 0: Project number 2009 (Sooke Church Rd) not found in projects table.
+2025-03-24 23:18:32,777 - WARNING - Row 1: Project number 2009 (Sooke Church Rd) not found in projects table.
+2025-03-24 23:18:32,778 - WARNING - Row 2: Project number 2009 (Sooke Church Rd) not found in projects table.
+2025-03-24 23:18:32,778 - WARNING - Row 3: Project number 2009 (Sooke Church Rd) not found in projects table.
+2025-03-24 23:18:32,778 - WARNING - Row 4: Project number 2009 (Sooke Church Rd) not found in projects table.
+2025-03-24 23:18:32,779 - WARNING - Row 5: Project number 2009 (Sooke Church Rd) not found in projects table.
+2025-03-24 23:18:32,782 - WARNING - Row 6: Project number 2009 (Sooke Church Rd) not found in projects table.
+2025-03-24 23:18:32,782 - WARNING - Row 7: Project number 2009 (Sooke Church Rd) not found in projects table.
+2025-03-24 23:18:32,783 - WARNING - Row 8: Project number 2009 (Sooke Church Rd) not found in projects table.
+2025-03-24 23:18:32,783 - WARNING - Row 9: Project number 2009 (Sooke Church Rd) not found in projects table.
+2025-03-24 23:18:32,816 - WARNING - Row 0: Project number 1712 (HAWKSLEY) not found in projects table.
+2025-03-24 23:18:32,816 - WARNING - Row 1: Project number 1712 (HAWKSLEY) not found in projects table.
+2025-03-24 23:18:32,817 - WARNING - Row 2: Project number 1712 (HAWKSLEY) not found in projects table.
+2025-03-24 23:18:32,817 - WARNING - Row 3: Project number 1712 (HAWKSLEY) not found in projects table.
+2025-03-24 23:18:32,818 - WARNING - Row 4: Project number 1712 (HAWKSLEY - Amen) not found in projects table.
+2025-03-24 23:18:32,818 - WARNING - Row 5: Project number 2302 (KINGSWAY) not found in projects table.
+2025-03-24 23:18:32,835 - WARNING - Row 0: Project number 2302 (701 Kingsway Qualex) not found in projects table.
+2025-03-24 23:18:32,836 - WARNING - Row 1: Project number 2205 (SFU Lot 36 & 37) not found in projects table.
+2025-03-24 23:18:32,836 - WARNING - Row 2: Project number 2201 (Emery Phase 4) not found in projects table.
+2025-03-24 23:18:32,839 - WARNING - Row 6: Project number 2302 (Qualex Kingsway) not found in projects table.
+2025-03-24 23:18:32,839 - WARNING - Row 7: Project number 1702 (Lynn Parkside) not found in projects table.
+2025-03-24 23:18:32,840 - WARNING - Row 9: Project number 2401 (Cambie Station 2.0) not found in projects table.
+2025-03-24 23:18:32,841 - WARNING - Row 12: Project number 1712 (Hawskley) not found in projects table.
+2025-03-24 23:18:32,841 - WARNING - Row 13: Project number 1904 (Seasons) not found in projects table.
+2025-03-24 23:18:32,842 - WARNING - Row 15: Project number 2403 (Qualex Guelph & 10th) not found in projects table.
+2025-03-24 23:18:32,845 - WARNING - Row 16: Project number 2402 (UBCO Masterplan) not found in projects table.
+2025-03-24 23:18:32,845 - WARNING - Row 17: Project number 2209 (Church Road) not found in projects table.
+2025-03-24 23:18:32,868 - WARNING - Row 0: Project number 2302 (Qualex KIngsway) not found in projects table.
+2025-03-24 23:18:32,872 - WARNING - Row 2: Project number 2401 (Cambie Station 2.0) not found in projects table.
+2025-03-24 23:18:32,929 - WARNING - Row 0: Project number 2301 (Lotus Mission) not found in projects table.
+2025-03-24 23:18:32,930 - WARNING - Row 1: Project number 2303 (200 St Langley) not found in projects table.
+2025-03-24 23:18:32,930 - WARNING - Row 2: Project number 2302 (Qualex Kingsway) not found in projects table.
+2025-03-24 23:18:32,931 - WARNING - Row 3: Project number 2402 (UBC-O) not found in projects table.
+2025-03-24 23:18:32,956 - WARNING - Row 0: Project number 1712 (Hawksley) not found in projects table.
+2025-03-24 23:18:32,956 - WARNING - Row 1: Project number 1712 (Hawksley) not found in projects table.
+2025-03-24 23:18:32,957 - WARNING - Row 2: Project number 1712 (Hawksley) not found in projects table.
+2025-03-24 23:18:32,985 - WARNING - Row 0: Project number 1904 (Qualex Regan - Seasons) not found in projects table.
+2025-03-24 23:18:33,011 - WARNING - Row 0: Project number 2401 (Aragon - Cambie Station - 2.0) not found in projects table.
+2025-03-24 23:18:33,012 - WARNING - Row 1: Project number 2009 (Aragon - Chuch St, Sooke) not found in projects table.
+2025-03-24 23:18:33,012 - WARNING - Row 2: Project number 2009 (Aragon - Chuch St, Sooke) not found in projects table.
+2025-03-24 23:18:33,012 - WARNING - Row 3: Project number 2310 (Whistler Lake Placid Road) not found in projects table.
+2025-03-24 23:18:33,013 - WARNING - Row 4: Project number 2009 (Aragon - Chuch St, Sooke) not found in projects table.
+2025-03-24 23:18:33,036 - WARNING - Row 4: Project number 1904 (1904 Qualex Regan Ave) not found in projects table.
+2025-03-24 23:18:33,037 - WARNING - Row 5: Project number 2201 (2201 Emery Phase 4) not found in projects table.
+2025-03-24 23:18:33,057 - WARNING - Row 0: Project number 2106 (Arbutus & 35th) not found in projects table.
+2025-03-24 23:18:33,106 - WARNING - Row 0: Project number 2009 (Sooke) not found in projects table.
+2025-03-24 23:18:33,107 - WARNING - Row 1: Project number 2205 (SFU 36 37) not found in projects table.
+2025-03-24 23:18:33,135 - WARNING - Row 0: Project number 2106 (IPL Arbutus & 35th) not found in projects table.
+2025-03-24 23:18:33,136 - WARNING - Row 2: Project number 2303 (Mosaic Langley) not found in projects table.
+2025-03-24 23:18:33,136 - WARNING - Row 3: Project number 2302 (Qualex Kingsway) not found in projects table.
+2025-03-24 23:18:33,139 - WARNING - Row 5: Project number 2401 (Cambie Station) not found in projects table.
+2025-03-24 23:18:33,139 - WARNING - Row 6: Project number 2205 (Rize SFU) not found in projects table.
+2025-03-24 23:18:33,167 - WARNING - Row 1: Project number 2310 (Whistler - Lake Placid Road) not found in projects table.
+2025-03-24 23:18:33,170 - WARNING - Row 3: Project number 2302 (Qualex Kingsway) not found in projects table.
+2025-03-24 23:18:33,258 - WARNING - Row 0: Project number 1702 (Lynn Parkside) not found in projects table.
+2025-03-24 23:18:33,259 - WARNING - Row 1: Project number 1712 (Hawksley) not found in projects table.
+2025-03-24 23:18:33,265 - WARNING - Row 3: Project number 1904 (Regan - Seasons) not found in projects table.
+2025-03-24 23:18:33,266 - WARNING - Row 5: Project number 2009 (Church road) not found in projects table.
+2025-03-24 23:18:33,267 - WARNING - Row 6: Project number 2009 (Church road /Extra) not found in projects table.
+2025-03-24 23:18:33,267 - WARNING - Row 8: Project number 2106 (Arbutus) not found in projects table.
+2025-03-24 23:18:33,292 - WARNING - Row 0: Project number 2008 (Mosaic Lot 24 SFU) not found in projects table.
+2025-03-24 23:18:33,308 - WARNING - Row 0: Project number 2403 (10th & Guelph) not found in projects table.
+2025-03-24 23:18:33,311 - WARNING - Row 2: Project number 2303 (Mosaic 200th St Langley) not found in projects table.
+2025-03-24 23:18:33,336 - WARNING - Row 0: Project number 1712 (BPP Area 6 Lot 3 (Hawksley)) not found in projects table.
+2025-03-24 23:18:33,336 - WARNING - Row 1: Project number 1904 (Qualex Regan) not found in projects table.
+2025-03-24 23:18:33,337 - WARNING - Row 2: Project number 2009 (Church Road Sooke) not found in projects table.
+2025-03-24 23:18:33,365 - WARNING - Row 0: Project number 1712 (Hawksley) not found in projects table.
+2025-03-24 23:18:33,366 - WARNING - Row 1: Project number 2106 (Arbutus) not found in projects table.
+2025-03-24 23:18:33,366 - WARNING - Row 3: Project number 2205 (Rize SFU Lot 36 & 37) not found in projects table.
+2025-03-24 23:18:33,386 - WARNING - Row 0: Project number 2106 (Arbutus & 35th) not found in projects table.
+2025-03-24 23:18:33,386 - WARNING - Row 1: Project number 2301 (Lotus Mission) not found in projects table.
+2025-03-24 23:18:33,389 - WARNING - Row 3: Project number 2201 (Emery Phase 4) not found in projects table.
+2025-03-24 23:18:33,389 - WARNING - Row 5: Project number 2309 (Rize E10th Ave) not found in projects table.
+2025-03-24 23:18:33,413 - WARNING - Row 0: Project number 2008 (SFU LOT 24) not found in projects table.
+2025-03-24 23:18:33,417 - WARNING - Row 4: Project number 1702 (Emery Phase 2) not found in projects table.
+2025-03-24 23:18:33,417 - WARNING - Row 5: Project number 2205 (Rize SFU Lot 36 & 37) not found in projects table.
+2025-03-24 23:18:33,417 - WARNING - Row 6: Project number 1712 (BPP Area 6 Lot 3) not found in projects table.
+2025-03-24 23:18:33,418 - WARNING - Row 7: Project number 1904 (Qualex Regen) not found in projects table.
+2025-03-24 23:18:33,419 - WARNING - Row 10: Project number 2106 (Arbutus & 34th) not found in projects table.
+2025-03-24 23:18:33,445 - WARNING - Row 0: Project number 2106 (Arbutus) not found in projects table.
+2025-03-24 23:18:33,446 - WARNING - Row 1: Project number 2201 (Emery Phase 4) not found in projects table.
+2025-03-24 23:18:33,446 - WARNING - Row 2: Project number 2201 (Emery Phase 4) not found in projects table.
+2025-03-24 23:18:33,446 - WARNING - Row 3: Project number 2201 (Emery Phase 4) not found in projects table.
+2025-03-24 23:18:33,447 - WARNING - Row 4: Project number 2106 (Arbutus) not found in projects table.
+2025-03-24 23:18:33,477 - WARNING - Row 0: Project number 1712 (Hawksley) not found in projects table.
+2025-03-24 23:18:33,477 - WARNING - Row 1: Project number 1702 (Mosaic Emery Phase 2) not found in projects table.
+2025-03-24 23:18:33,573 - WARNING - Row 0: Project number 1712 (Hawksley) not found in projects table.
+2025-03-24 23:18:33,574 - WARNING - Row 1: Project number 1712 (Hawksley) not found in projects table.
+2025-03-24 23:18:33,575 - WARNING - Row 2: Project number 1712 (Hawksley) not found in projects table.
+2025-03-24 23:18:33,575 - WARNING - Row 3: Project number 1712 (Hawksley) not found in projects table.
+2025-03-24 23:18:33,579 - WARNING - Row 8: Project number 2310 (Whistler-Lake Placid Road) not found in projects table.
+2025-03-24 23:18:33,579 - WARNING - Row 9: Project number 2303 (Mosaic 200th St, Langley) not found in projects table.
+2025-03-24 23:18:33,579 - WARNING - Row 10: Project number 2402 (UBCO Master Plan) not found in projects table.
+2025-03-24 23:18:33,579 - WARNING - Row 11: Project number 2403 (Guelph & 10th) not found in projects table.
+2025-03-24 23:18:33,607 - WARNING - Row 0: Project number 2009 (Sooke Church Rd) not found in projects table.
+2025-03-24 23:18:33,608 - WARNING - Row 1: Project number 2009 (Sooke Church Rd) not found in projects table.
+2025-03-24 23:18:33,608 - WARNING - Row 2: Project number 2009 (Sooke Church Rd) not found in projects table.
+2025-03-24 23:18:33,609 - WARNING - Row 3: Project number 2009 (Sooke Church Rd) not found in projects table.
+2025-03-24 23:18:33,609 - WARNING - Row 4: Project number 2009 (Sooke Church Rd) not found in projects table.
+2025-03-24 23:18:33,610 - WARNING - Row 5: Project number 2009 (Sooke Church Rd) not found in projects table.
+2025-03-24 23:18:33,610 - WARNING - Row 6: Project number 2009 (Sooke Church Rd) not found in projects table.
+2025-03-24 23:18:33,611 - WARNING - Row 7: Project number 2009 (Sooke Church Rd) not found in projects table.
+2025-03-24 23:18:33,611 - WARNING - Row 8: Project number 2009 (Sooke Church Rd) not found in projects table.
+2025-03-24 23:18:33,612 - WARNING - Row 9: Project number 2009 (Sooke Church Rd) not found in projects table.
+2025-03-24 23:18:33,629 - WARNING - Row 0: Project number 1712 (HAWKSLEY) not found in projects table.
+2025-03-24 23:18:33,629 - WARNING - Row 1: Project number 1712 (HAWKSLEY) not found in projects table.
+2025-03-24 23:18:33,630 - WARNING - Row 2: Project number 1712 (HAWKSLEY - Amen) not found in projects table.
+2025-03-24 23:18:33,632 - WARNING - Row 3: Project number 2302 (KINGSWAY) not found in projects table.
+2025-03-24 23:18:33,650 - WARNING - Row 0: Project number 2302 (701 Kingsway Qualex) not found in projects table.
+2025-03-24 23:18:33,650 - WARNING - Row 1: Project number 2205 (SFU Lot 36 & 37) not found in projects table.
+2025-03-24 23:18:33,651 - WARNING - Row 2: Project number 2201 (Emery Phase 4) not found in projects table.
+2025-03-24 23:18:33,654 - WARNING - Row 5: Project number 2405 (Ledcor Mt Seymour Parkway) not found in projects table.
+2025-03-24 23:18:33,654 - WARNING - Row 6: Project number 2302 (Qualex Kingsway) not found in projects table.
+2025-03-24 23:18:33,654 - WARNING - Row 7: Project number 1702 (Lynn Parkside) not found in projects table.
+2025-03-24 23:18:33,655 - WARNING - Row 9: Project number 2406 (Rize Fraser & 13th) not found in projects table.
+2025-03-24 23:18:33,656 - WARNING - Row 12: Project number 1712 (Hawskley) not found in projects table.
+2025-03-24 23:18:33,656 - WARNING - Row 13: Project number 1904 (Seasons) not found in projects table.
+2025-03-24 23:18:33,656 - WARNING - Row 15: Project number 2403 (Qualex Guelph & 10th) not found in projects table.
+2025-03-24 23:18:33,656 - WARNING - Row 16: Project number 2402 (UBCO Masterplan) not found in projects table.
+2025-03-24 23:18:33,657 - WARNING - Row 17: Project number 2209 (Church Road) not found in projects table.
+2025-03-24 23:18:33,682 - WARNING - Row 0: Project number 2302 (Qualex KIngsway) not found in projects table.
+2025-03-24 23:18:33,686 - WARNING - Row 2: Project number 2401 (Cambie Station 2.0) not found in projects table.
+2025-03-24 23:18:33,846 - WARNING - Row 0: Project number 2301 (Lotus Mission) not found in projects table.
+2025-03-24 23:18:33,847 - WARNING - Row 1: Project number 2303 (200 St Langley) not found in projects table.
+2025-03-24 23:18:33,847 - WARNING - Row 2: Project number 2302 (Qualex Kingsway) not found in projects table.
+2025-03-24 23:18:33,847 - WARNING - Row 3: Project number 2402 (UBC-O) not found in projects table.
+2025-03-24 23:18:33,876 - WARNING - Row 0: Project number 1712 (Hawksley) not found in projects table.
+2025-03-24 23:18:33,876 - WARNING - Row 1: Project number 1712 (Hawksley) not found in projects table.
+2025-03-24 23:18:33,877 - WARNING - Row 2: Project number 1712 (Hawksley) not found in projects table.
+2025-03-24 23:18:33,903 - WARNING - Row 0: Project number 1904 (Qualex Regan - Seasons) not found in projects table.
+2025-03-24 23:18:33,926 - WARNING - Row 0: Project number 2401 (Aragon - Cambie Station - 2.0) not found in projects table.
+2025-03-24 23:18:33,927 - WARNING - Row 1: Project number 2009 (Aragon - Chuch St, Sooke) not found in projects table.
+2025-03-24 23:18:33,927 - WARNING - Row 2: Project number 2009 (Aragon - Chuch St, Sooke) not found in projects table.
+2025-03-24 23:18:33,928 - WARNING - Row 3: Project number 2310 (Whistler Lake Placid Road) not found in projects table.
+2025-03-24 23:18:33,928 - WARNING - Row 4: Project number 2009 (Aragon - Chuch St, Sooke) not found in projects table.
+2025-03-24 23:18:33,947 - WARNING - Row 4: Project number 1904 (1904 Qualex Regan Ave) not found in projects table.
+2025-03-24 23:18:33,948 - WARNING - Row 5: Project number 2201 (2201 Emery Phase 4) not found in projects table.
+2025-03-24 23:18:33,967 - WARNING - Row 0: Project number 2106 (Arbutus & 35th) not found in projects table.
+2025-03-24 23:18:33,968 - WARNING - Row 1: Project number 2302 (Kingsway) not found in projects table.
+2025-03-24 23:18:34,013 - WARNING - Row 0: Project number 2009 (Sooke) not found in projects table.
+2025-03-24 23:18:34,014 - WARNING - Row 1: Project number 2205 (SFU 36 37) not found in projects table.
+2025-03-24 23:18:34,021 - WARNING - Row 0: Project number 2106 (IPL Arbutus & 35th) not found in projects table.
+2025-03-24 23:18:34,022 - WARNING - Row 2: Project number 2303 (Mosaic Langley) not found in projects table.
+2025-03-24 23:18:34,022 - WARNING - Row 3: Project number 2302 (Qualex Kingsway) not found in projects table.
+2025-03-24 23:18:34,023 - WARNING - Row 5: Project number 2401 (Cambie Station) not found in projects table.
+2025-03-24 23:18:34,024 - WARNING - Row 6: Project number 2205 (Rize SFU) not found in projects table.
+2025-03-24 23:18:34,027 - WARNING - Row 8: Project number 2404 (Mosaic Colour Study) not found in projects table.
+2025-03-24 23:18:34,050 - WARNING - Row 1: Project number 2310 (Whistler - Lake Placid Road) not found in projects table.
+2025-03-24 23:18:34,053 - WARNING - Row 3: Project number 2302 (Qualex Kingsway) not found in projects table.
+2025-03-24 23:18:34,082 - WARNING - Row 0: Project number 1702 (Lynn Parkside) not found in projects table.
+2025-03-24 23:18:34,083 - WARNING - Row 1: Project number 1712 (Hawksley) not found in projects table.
+2025-03-24 23:18:34,088 - WARNING - Row 3: Project number 1904 (Regan - Seasons) not found in projects table.
+2025-03-24 23:18:34,089 - WARNING - Row 5: Project number 2008 (SFU Lot 24) not found in projects table.
+2025-03-24 23:18:34,089 - WARNING - Row 6: Project number 2009 (Church road) not found in projects table.
+2025-03-24 23:18:34,090 - WARNING - Row 7: Project number 2009 (Church road /Extra) not found in projects table.
+2025-03-24 23:18:34,093 - WARNING - Row 9: Project number 2106 (Arbutus) not found in projects table.
+2025-03-24 23:18:34,118 - WARNING - Row 0: Project number 2008 (Mosaic Lot 24 SFU) not found in projects table.
+2025-03-24 23:18:34,138 - WARNING - Row 0: Project number 2403 (10th & Guelph) not found in projects table.
+2025-03-24 23:18:34,142 - WARNING - Row 2: Project number 2303 (Mosaic 200th St Langley) not found in projects table.
+2025-03-24 23:18:34,173 - WARNING - Row 0: Project number 1712 (BPP Area 6 Lot 3 (Hawksley)) not found in projects table.
+2025-03-24 23:18:34,174 - WARNING - Row 1: Project number 1904 (Qualex Regan) not found in projects table.
+2025-03-24 23:18:34,178 - WARNING - Row 2: Project number 2009 (Church Road Sooke) not found in projects table.
+2025-03-24 23:18:34,234 - WARNING - Row 0: Project number 1712 (Hawksley) not found in projects table.
+2025-03-24 23:18:34,237 - WARNING - Row 1: Project number 2106 (Arbutus) not found in projects table.
+2025-03-24 23:18:34,238 - WARNING - Row 3: Project number 2205 (Rize SFU Lot 36 & 37) not found in projects table.
+2025-03-24 23:18:34,258 - WARNING - Row 0: Project number 2106 (Arbutus & 35th) not found in projects table.
+2025-03-24 23:18:34,263 - WARNING - Row 3: Project number 2403 (Qualex Guelph & 10th) not found in projects table.
+2025-03-24 23:18:34,295 - WARNING - Row 0: Project number 2008 (SFU LOT 24) not found in projects table.
+2025-03-24 23:18:34,301 - WARNING - Row 4: Project number 1702 (Emery Phase 2) not found in projects table.
+2025-03-24 23:18:34,301 - WARNING - Row 5: Project number 2205 (Rize SFU Lot 36 & 37) not found in projects table.
+2025-03-24 23:18:34,301 - WARNING - Row 6: Project number 1712 (BPP Area 6 Lot 3) not found in projects table.
+2025-03-24 23:18:34,302 - WARNING - Row 7: Project number 2406 (Rize Frasser & 13th) not found in projects table.
+2025-03-24 23:18:34,302 - WARNING - Row 8: Project number 1904 (Qualex Regen) not found in projects table.
+2025-03-24 23:18:34,303 - WARNING - Row 11: Project number 2106 (Arbutus & 34th) not found in projects table.
+2025-03-24 23:18:34,303 - WARNING - Row 12: Project number 2405 (Ledcor Mt Seymour) not found in projects table.
+2025-03-24 23:18:34,333 - WARNING - Row 0: Project number 2106 (Arbutus) not found in projects table.
+2025-03-24 23:18:34,334 - WARNING - Row 1: Project number 2201 (Emery Phase 4) not found in projects table.
+2025-03-24 23:18:34,334 - WARNING - Row 2: Project number 2201 (Emery Phase 4) not found in projects table.
+2025-03-24 23:18:34,335 - WARNING - Row 3: Project number 2201 (Emery Phase 4) not found in projects table.
+2025-03-24 23:18:34,335 - WARNING - Row 4: Project number 2106 (Arbutus) not found in projects table.
+2025-03-24 23:18:34,339 - WARNING - Row 6: Project number 1712 (Hawksley) not found in projects table.
+2025-03-24 23:18:34,362 - WARNING - Row 0: Project number 1712 (Hawksley) not found in projects table.
+2025-03-24 23:18:34,363 - WARNING - Row 1: Project number 1702 (Mosaic Emery Phase 2) not found in projects table.
+2025-03-24 23:18:34,367 - WARNING - Row 3: Project number 2405 (Ledcor Mt Seymour Pkwy) not found in projects table.
+2025-03-24 23:18:34,455 - WARNING - Row 0: Project number 1712 (Hawksley) not found in projects table.
+2025-03-24 23:18:34,455 - WARNING - Row 1: Project number 1712 (Hawksley) not found in projects table.
+2025-03-24 23:18:34,456 - WARNING - Row 2: Project number 1712 (Hawksley) not found in projects table.
+2025-03-24 23:18:34,456 - WARNING - Row 3: Project number 1712 (Hawksley) not found in projects table.
+2025-03-24 23:18:34,460 - WARNING - Row 8: Project number 2310 (Whistler-Lake Placid Road) not found in projects table.
+2025-03-24 23:18:34,461 - WARNING - Row 9: Project number 2303 (Mosaic 200th St, Langley) not found in projects table.
+2025-03-24 23:18:34,461 - WARNING - Row 10: Project number 2402 (UBCO Master Plan) not found in projects table.
+2025-03-24 23:18:34,461 - WARNING - Row 11: Project number 2403 (Guelph & 10th) not found in projects table.
+2025-03-24 23:18:34,487 - WARNING - Row 0: Project number 2009 (Sooke Church Rd) not found in projects table.
+2025-03-24 23:18:34,488 - WARNING - Row 1: Project number 2009 (Sooke Church Rd) not found in projects table.
+2025-03-24 23:18:34,490 - WARNING - Row 2: Project number 2009 (Sooke Church Rd) not found in projects table.
+2025-03-24 23:18:34,491 - WARNING - Row 3: Project number 2009 (Sooke Church Rd) not found in projects table.
+2025-03-24 23:18:34,491 - WARNING - Row 4: Project number 2009 (Sooke Church Rd) not found in projects table.
+2025-03-24 23:18:34,492 - WARNING - Row 5: Project number 2009 (Sooke Church Rd) not found in projects table.
+2025-03-24 23:18:34,493 - WARNING - Row 6: Project number 2009 (Sooke Church Rd) not found in projects table.
+2025-03-24 23:18:34,493 - WARNING - Row 7: Project number 2009 (Sooke Church Rd) not found in projects table.
+2025-03-24 23:18:34,493 - WARNING - Row 8: Project number 2009 (Sooke Church Rd) not found in projects table.
+2025-03-24 23:18:34,494 - WARNING - Row 9: Project number 2009 (Sooke Church Rd) not found in projects table.
+2025-03-24 23:18:34,522 - WARNING - Row 0: Project number 1712 (HAWKSLEY) not found in projects table.
+2025-03-24 23:18:34,522 - WARNING - Row 1: Project number 1712 (HAWKSLEY) not found in projects table.
+2025-03-24 23:18:34,522 - WARNING - Row 2: Project number 1712 (HAWKSLEY) not found in projects table.
+2025-03-24 23:18:34,523 - WARNING - Row 3: Project number 1712 (HAWKSLEY - Amen          DP /) not found in projects table.
+2025-03-24 23:18:34,523 - WARNING - Row 4: Project number 2302 (KINGSWAY) not found in projects table.
+2025-03-24 23:18:34,542 - WARNING - Row 0: Project number 2302 (701 Kingsway Qualex) not found in projects table.
+2025-03-24 23:18:34,542 - WARNING - Row 1: Project number 2205 (SFU Lot 36 & 37) not found in projects table.
+2025-03-24 23:18:34,543 - WARNING - Row 2: Project number 2201 (Emery Phase 4) not found in projects table.
+2025-03-24 23:18:34,546 - WARNING - Row 5: Project number 2405 (Ledcor Mt Seymour Parkway) not found in projects table.
+2025-03-24 23:18:34,546 - WARNING - Row 6: Project number 2302 (Qualex Kingsway) not found in projects table.
+2025-03-24 23:18:34,547 - WARNING - Row 7: Project number 1702 (Lynn Parkside) not found in projects table.
+2025-03-24 23:18:34,550 - WARNING - Row 9: Project number 2406 (Rize Fraser & 13th) not found in projects table.
+2025-03-24 23:18:34,550 - WARNING - Row 12: Project number 1712 (Hawskley) not found in projects table.
+2025-03-24 23:18:34,551 - WARNING - Row 13: Project number 1904 (Seasons) not found in projects table.
+2025-03-24 23:18:34,551 - WARNING - Row 15: Project number 2403 (Qualex Guelph & 10th) not found in projects table.
+2025-03-24 23:18:34,552 - WARNING - Row 16: Project number 2402 (UBCO Masterplan) not found in projects table.
+2025-03-24 23:18:34,552 - WARNING - Row 17: Project number 2209 (Church Road) not found in projects table.
+2025-03-24 23:18:34,577 - WARNING - Row 0: Project number 2302 (Qualex KIngsway) not found in projects table.
+2025-03-24 23:18:34,644 - WARNING - Row 0: Project number 2301 (Lotus Mission) not found in projects table.
+2025-03-24 23:18:34,644 - WARNING - Row 1: Project number 2303 (200 St Langley) not found in projects table.
+2025-03-24 23:18:34,645 - WARNING - Row 2: Project number 2302 (Qualex Kingsway) not found in projects table.
+2025-03-24 23:18:34,646 - WARNING - Row 3: Project number 2402 (UBC-O) not found in projects table.
+2025-03-24 23:18:34,672 - WARNING - Row 0: Project number 1712 (Hawksley) not found in projects table.
+2025-03-24 23:18:34,673 - WARNING - Row 1: Project number 1712 (Hawksley) not found in projects table.
+2025-03-24 23:18:34,676 - WARNING - Row 2: Project number 1712 (Hawksley) not found in projects table.
+2025-03-24 23:18:34,703 - WARNING - Row 0: Project number 1904 (Qualex Regan - Seasons) not found in projects table.
+2025-03-24 23:18:34,737 - WARNING - Row 4: Project number 1904 (1904 Qualex Regan Ave) not found in projects table.
+2025-03-24 23:18:34,737 - WARNING - Row 5: Project number 2201 (2201 Emery Phase 4) not found in projects table.
+2025-03-24 23:18:34,763 - WARNING - Row 0: Project number 2106 (Arbutus & 35th) not found in projects table.
+2025-03-24 23:18:34,764 - WARNING - Row 1: Project number 2302 (Kingsway) not found in projects table.
+2025-03-24 23:18:34,811 - WARNING - Row 0: Project number 2009 (Sooke) not found in projects table.
+2025-03-24 23:18:34,811 - WARNING - Row 1: Project number 2009 (Sooke) not found in projects table.
+2025-03-24 23:18:34,811 - WARNING - Row 2: Project number 2205 (SFU 36 37) not found in projects table.
+2025-03-24 23:18:34,831 - WARNING - Row 0: Project number 2106 (IPL Arbutus & 35th) not found in projects table.
+2025-03-24 23:18:34,832 - WARNING - Row 1: Project number 2405 (Ledcor Mt Seymour Pkwy) not found in projects table.
+2025-03-24 23:18:34,832 - WARNING - Row 2: Project number 2303 (Mosaic Langley) not found in projects table.
+2025-03-24 23:18:34,833 - WARNING - Row 3: Project number 2302 (Qualex Kingsway) not found in projects table.
+2025-03-24 23:18:34,834 - WARNING - Row 5: Project number 2401 (Cambie Station) not found in projects table.
+2025-03-24 23:18:34,834 - WARNING - Row 6: Project number 2205 (Rize SFU) not found in projects table.
+2025-03-24 23:18:34,838 - WARNING - Row 8: Project number 2404 (Mosaic Colour Study) not found in projects table.
+2025-03-24 23:18:34,864 - WARNING - Row 1: Project number 2310 (Whistler - Lake Placid Road) not found in projects table.
+2025-03-24 23:18:34,868 - WARNING - Row 3: Project number 2302 (Qualex Kingsway) not found in projects table.
+2025-03-24 23:18:34,894 - WARNING - Row 0: Project number 1702 (Lynn Parkside) not found in projects table.
+2025-03-24 23:18:34,895 - WARNING - Row 1: Project number 1712 (Hawksley) not found in projects table.
+2025-03-24 23:18:34,900 - WARNING - Row 3: Project number 1904 (Regan - Seasons) not found in projects table.
+2025-03-24 23:18:34,902 - WARNING - Row 5: Project number 2008 (SFU Lot 24) not found in projects table.
+2025-03-24 23:18:34,902 - WARNING - Row 6: Project number 2009 (Church road) not found in projects table.
+2025-03-24 23:18:34,902 - WARNING - Row 7: Project number 2009 (Church road /Extra) not found in projects table.
+2025-03-24 23:18:34,903 - WARNING - Row 9: Project number 2106 (Arbutus) not found in projects table.
+2025-03-24 23:18:34,927 - WARNING - Row 0: Project number 2008 (Mosaic Lot 24 SFU Symposia) not found in projects table.
+2025-03-24 23:18:34,930 - WARNING - Row 2: Project number 2201 (Trailside) not found in projects table.
+2025-03-24 23:18:34,953 - WARNING - Row 0: Project number 2403 (10th & Guelph) not found in projects table.
+2025-03-24 23:18:34,957 - WARNING - Row 3: Project number 2303 (Mosaic 200th St Langley) not found in projects table.
+2025-03-24 23:18:34,979 - WARNING - Row 0: Project number 1712 (BPP Area 6 Lot 3 (Hawksley)) not found in projects table.
+2025-03-24 23:18:34,980 - WARNING - Row 1: Project number 1904 (Qualex Regan) not found in projects table.
+2025-03-24 23:18:34,980 - WARNING - Row 2: Project number 2009 (Church Road Sooke) not found in projects table.
+2025-03-24 23:18:35,009 - WARNING - Row 0: Project number 1712 (Hawksley) not found in projects table.
+2025-03-24 23:18:35,010 - WARNING - Row 1: Project number 2106 (Arbutus) not found in projects table.
+2025-03-24 23:18:35,011 - WARNING - Row 3: Project number 2205 (Rize SFU Lot 36 & 37) not found in projects table.
+2025-03-24 23:18:35,028 - WARNING - Row 0: Project number 2008 (Mosaic SFU Lot 24) not found in projects table.
+2025-03-24 23:18:35,034 - WARNING - Row 4: Project number 2403 (Qualex Guelph & 10th) not found in projects table.
+2025-03-24 23:18:35,059 - WARNING - Row 0: Project number 2008 (SFU LOT 24) not found in projects table.
+2025-03-24 23:18:35,066 - WARNING - Row 4: Project number 1702 (Emery Phase 2) not found in projects table.
+2025-03-24 23:18:35,066 - WARNING - Row 5: Project number 2205 (Rize SFU Lot 36 & 37) not found in projects table.
+2025-03-24 23:18:35,066 - WARNING - Row 6: Project number 1712 (BPP Area 6 Lot 3) not found in projects table.
+2025-03-24 23:18:35,067 - WARNING - Row 7: Project number 2406 (Rize Frasser & 13th) not found in projects table.
+2025-03-24 23:18:35,067 - WARNING - Row 8: Project number 1904 (Qualex Regen) not found in projects table.
+2025-03-24 23:18:35,068 - WARNING - Row 11: Project number 2106 (Arbutus & 34th) not found in projects table.
+2025-03-24 23:18:35,068 - WARNING - Row 12: Project number 2405 (Ledcor Mt Seymour) not found in projects table.
+2025-03-24 23:18:35,101 - WARNING - Row 0: Project number 2106 (Arbutus) not found in projects table.
+2025-03-24 23:18:35,102 - WARNING - Row 1: Project number 2201 (Emery Phase 4) not found in projects table.
+2025-03-24 23:18:35,105 - WARNING - Row 2: Project number 2201 (Emery Phase 4) not found in projects table.
+2025-03-24 23:18:35,106 - WARNING - Row 3: Project number 2201 (Emery Phase 4) not found in projects table.
+2025-03-24 23:18:35,106 - WARNING - Row 4: Project number 2106 (Arbutus) not found in projects table.
+2025-03-24 23:18:35,112 - WARNING - Row 6: Project number 1712 (Hawksley) not found in projects table.
+2025-03-24 23:18:35,145 - WARNING - Row 0: Project number 2407 (IPL W. 16th Study) not found in projects table.
+2025-03-24 23:18:35,146 - WARNING - Row 1: Project number 1702 (Mosaic Emery Phase 2) not found in projects table.
+2025-03-24 23:18:35,152 - WARNING - Row 3: Project number 2405 (Ledcor Mt Seymour Pkwy) not found in projects table.
+2025-03-24 23:18:35,241 - WARNING - Row 0: Project number 1712 (Hawksley) not found in projects table.
+2025-03-24 23:18:35,242 - WARNING - Row 1: Project number 1712 (Hawksley) not found in projects table.
+2025-03-24 23:18:35,244 - WARNING - Row 2: Project number 1712 (Hawksley) not found in projects table.
+2025-03-24 23:18:35,245 - WARNING - Row 3: Project number 1712 (Hawksley) not found in projects table.
+2025-03-24 23:18:35,251 - WARNING - Row 10: Project number 2303 (Mosaic 200th St, Langley) not found in projects table.
+2025-03-24 23:18:35,252 - WARNING - Row 11: Project number 2402 (UBCO Master Plan) not found in projects table.
+2025-03-24 23:18:35,252 - WARNING - Row 12: Project number 2403 (Guelph & 10th) not found in projects table.
+2025-03-24 23:18:35,252 - WARNING - Row 13: Project number 2403 (Guelph & 10th) not found in projects table.
+2025-03-24 23:18:35,282 - WARNING - Row 0: Project number 2009 (Sooke Church Rd) not found in projects table.
+2025-03-24 23:18:35,283 - WARNING - Row 1: Project number 2009 (Sooke Church Rd) not found in projects table.
+2025-03-24 23:18:35,283 - WARNING - Row 2: Project number 2009 (Sooke Church Rd) not found in projects table.
+2025-03-24 23:18:35,284 - WARNING - Row 3: Project number 2009 (Sooke Church Rd) not found in projects table.
+2025-03-24 23:18:35,284 - WARNING - Row 4: Project number 2009 (Sooke Church Rd) not found in projects table.
+2025-03-24 23:18:35,285 - WARNING - Row 5: Project number 2009 (Sooke Church Rd) not found in projects table.
+2025-03-24 23:18:35,285 - WARNING - Row 6: Project number 2009 (Sooke Church Rd) not found in projects table.
+2025-03-24 23:18:35,285 - WARNING - Row 7: Project number 2009 (Sooke Church Rd) not found in projects table.
+2025-03-24 23:18:35,287 - WARNING - Row 8: Project number 2009 (Sooke Church Rd) not found in projects table.
+2025-03-24 23:18:35,290 - WARNING - Row 9: Project number 2009 (Sooke Church Rd) not found in projects table.
+2025-03-24 23:18:35,317 - WARNING - Row 0: Project number 1712 (HAWKSLEY) not found in projects table.
+2025-03-24 23:18:35,317 - WARNING - Row 1: Project number 1712 (HAWKSLEY - W PH) not found in projects table.
+2025-03-24 23:18:35,319 - WARNING - Row 2: Project number 1712 (HAWKSLEY - Amenity Split) not found in projects table.
+2025-03-24 23:18:35,337 - WARNING - Row 0: Project number 2302 (701 Kingsway Qualex) not found in projects table.
+2025-03-24 23:18:35,338 - WARNING - Row 1: Project number 2205 (SFU Lot 36 & 37) not found in projects table.
+2025-03-24 23:18:35,338 - WARNING - Row 2: Project number 2201 (Emery Phase 4) not found in projects table.
+2025-03-24 23:18:35,341 - WARNING - Row 5: Project number 2405 (Ledcor Mt Seymour Parkway) not found in projects table.
+2025-03-24 23:18:35,342 - WARNING - Row 6: Project number 2302 (Qualex Kingsway) not found in projects table.
+2025-03-24 23:18:35,342 - WARNING - Row 7: Project number 1702 (Lynn Parkside) not found in projects table.
+2025-03-24 23:18:35,343 - WARNING - Row 9: Project number 2406 (Rize Fraser & 13th) not found in projects table.
+2025-03-24 23:18:35,343 - WARNING - Row 12: Project number 1712 (Hawskley) not found in projects table.
+2025-03-24 23:18:35,344 - WARNING - Row 13: Project number 1904 (Seasons) not found in projects table.
+2025-03-24 23:18:35,344 - WARNING - Row 15: Project number 2403 (Qualex Guelph & 10th) not found in projects table.
+2025-03-24 23:18:35,345 - WARNING - Row 16: Project number 2402 (UBCO Masterplan) not found in projects table.
+2025-03-24 23:18:35,345 - WARNING - Row 17: Project number 2209 (Church Road) not found in projects table.
+2025-03-24 23:18:35,368 - WARNING - Row 0: Project number 2302 (Qualex KIngsway) not found in projects table.
+2025-03-24 23:18:35,423 - WARNING - Row 0: Project number 2301 (Lotus Mission) not found in projects table.
+2025-03-24 23:18:35,424 - WARNING - Row 1: Project number 2303 (200 St Langley) not found in projects table.
+2025-03-24 23:18:35,424 - WARNING - Row 2: Project number 2302 (Qualex Kingsway) not found in projects table.
+2025-03-24 23:18:35,425 - WARNING - Row 3: Project number 2402 (UBC-O) not found in projects table.
+2025-03-24 23:18:35,425 - WARNING - Row 4: Project number 2206 (Two Waters Master Plan) not found in projects table.
+2025-03-24 23:18:35,453 - WARNING - Row 0: Project number 1712 (Hawksley) not found in projects table.
+2025-03-24 23:18:35,454 - WARNING - Row 1: Project number 1712 (Hawksley) not found in projects table.
+2025-03-24 23:18:35,454 - WARNING - Row 2: Project number 1712 (Hawksley) not found in projects table.
+2025-03-24 23:18:35,455 - WARNING - Row 3: Project number 1712 (Hawksley) not found in projects table.
+2025-03-24 23:18:35,486 - WARNING - Row 0: Project number 1904 (Qualex Regan - Seasons) not found in projects table.
+2025-03-24 23:18:35,518 - WARNING - Row 4: Project number 1904 (1904 Qualex Regan Ave) not found in projects table.
+2025-03-24 23:18:35,518 - WARNING - Row 5: Project number 2201 (2201 Emery Phase 4) not found in projects table.
+2025-03-24 23:18:35,543 - WARNING - Row 0: Project number 2106 (Arbutus & 35th) not found in projects table.
+2025-03-24 23:18:35,544 - WARNING - Row 1: Project number 2302 (Kingsway) not found in projects table.
+2025-03-24 23:18:35,595 - WARNING - Row 0: Project number 2009 (Sooke) not found in projects table.
+2025-03-24 23:18:35,595 - WARNING - Row 1: Project number 2009 (Sooke) not found in projects table.
+2025-03-24 23:18:35,596 - WARNING - Row 2: Project number 2205 (SFU 36 37) not found in projects table.
+2025-03-24 23:18:35,617 - WARNING - Row 0: Project number 2106 (IPL Arbutus & 35th) not found in projects table.
+2025-03-24 23:18:35,618 - WARNING - Row 1: Project number 2405 (Ledcor Mt Seymour Pkwy) not found in projects table.
+2025-03-24 23:18:35,623 - WARNING - Row 2: Project number 2303 (Mosaic Langley) not found in projects table.
+2025-03-24 23:18:35,624 - WARNING - Row 3: Project number 2302 (Qualex Kingsway) not found in projects table.
+2025-03-24 23:18:35,626 - WARNING - Row 5: Project number 2402 (UBCO Masterplan) not found in projects table.
+2025-03-24 23:18:35,626 - WARNING - Row 6: Project number 2205 (Rize SFU) not found in projects table.
+2025-03-24 23:18:35,650 - WARNING - Row 8: Project number 2404 (Mosaic Colour Study) not found in projects table.
+2025-03-24 23:18:35,680 - WARNING - Row 1: Project number 2310 (Whistler - Lake Placid Road) not found in projects table.
+2025-03-24 23:18:36,716 - WARNING - Row 3: Project number 2302 (Qualex Kingsway) not found in projects table.
+2025-03-24 23:18:36,784 - WARNING - Row 0: Project number 1702 (Lynn Parkside) not found in projects table.
+2025-03-24 23:18:36,785 - WARNING - Row 1: Project number 1712 (Hawksley) not found in projects table.
+2025-03-24 23:18:36,789 - WARNING - Row 3: Project number 1904 (Regan - Seasons) not found in projects table.
+2025-03-24 23:18:36,791 - WARNING - Row 5: Project number 2008 (SFU Lot 24) not found in projects table.
+2025-03-24 23:18:36,792 - WARNING - Row 6: Project number 2009 (Church road) not found in projects table.
+2025-03-24 23:18:36,792 - WARNING - Row 7: Project number 2009 (Church road /Extra) not found in projects table.
+2025-03-24 23:18:36,793 - WARNING - Row 9: Project number 2106 (Arbutus) not found in projects table.
+2025-03-24 23:18:36,852 - WARNING - Row 0: Project number 2008 (Mosaic Lot 24 SFU Symposia) not found in projects table.
+2025-03-24 23:18:36,861 - WARNING - Row 2: Project number 2201 (Trailside) not found in projects table.
+2025-03-24 23:18:36,901 - WARNING - Row 0: Project number 2403 (10th & Guelph) not found in projects table.
+2025-03-24 23:18:36,905 - WARNING - Row 3: Project number 2303 (Mosaic 200th St Langley) not found in projects table.
+2025-03-24 23:18:36,906 - WARNING - Row 4: Project number 1712 (BPP Area 6 Lot 3) not found in projects table.
+2025-03-24 23:18:37,125 - WARNING - Row 0: Project number 1712 (BPP Area 6 Lot 3 (Hawksley)) not found in projects table.
+2025-03-24 23:18:37,126 - WARNING - Row 1: Project number 1904 (Qualex Regan) not found in projects table.
+2025-03-24 23:18:37,140 - WARNING - Row 2: Project number 2009 (Church Road Sooke) not found in projects table.
+2025-03-24 23:18:37,203 - WARNING - Row 0: Project number 1712 (Hawksley) not found in projects table.
+2025-03-24 23:18:37,203 - WARNING - Row 1: Project number 2106 (Arbutus) not found in projects table.
+2025-03-24 23:18:37,204 - WARNING - Row 3: Project number 2205 (Rize SFU Lot 36 & 37) not found in projects table.
+2025-03-24 23:18:37,226 - WARNING - Row 0: Project number 2008 (Mosaic SFU Lot 24) not found in projects table.
+2025-03-24 23:18:37,232 - WARNING - Row 4: Project number 2403 (Qualex Guelph & 10th) not found in projects table.
+2025-03-24 23:18:37,266 - WARNING - Row 4: Project number 1702 (Emery Phase 2) not found in projects table.
+2025-03-24 23:18:37,266 - WARNING - Row 5: Project number 2205 (Rize SFU Lot 36 & 37) not found in projects table.
+2025-03-24 23:18:37,266 - WARNING - Row 6: Project number 2408 (IPL W41st & Blenheim) not found in projects table.
+2025-03-24 23:18:37,266 - WARNING - Row 7: Project number 2201 (Emery Lot 4) not found in projects table.
+2025-03-24 23:18:37,267 - WARNING - Row 8: Project number 1904 (Qualex Regen) not found in projects table.
+2025-03-24 23:18:37,268 - WARNING - Row 11: Project number 2106 (Arbutus & 34th) not found in projects table.
+2025-03-24 23:18:37,271 - WARNING - Row 12: Project number 2407 (IPL W16th) not found in projects table.
+2025-03-24 23:18:37,301 - WARNING - Row 0: Project number 1712 (Hawksley) not found in projects table.
+2025-03-24 23:18:37,302 - WARNING - Row 1: Project number 2106 (Arbutus) not found in projects table.
+2025-03-24 23:18:37,304 - WARNING - Row 2: Project number 2106 (Arbutus) not found in projects table.
+2025-03-24 23:18:37,305 - WARNING - Row 3: Project number 2201 (Emery Phase 4) not found in projects table.
+2025-03-24 23:18:37,305 - WARNING - Row 4: Project number 2201 (Emery Phase 4) not found in projects table.
+2025-03-24 23:18:37,306 - WARNING - Row 5: Project number 2201 (Emery Phase 4) not found in projects table.
+2025-03-24 23:18:37,349 - WARNING - Row 0: Project number 2407 (IPL W. 16th Study) not found in projects table.
+2025-03-24 23:18:37,350 - WARNING - Row 1: Project number 1702 (Mosaic Emery Phase 2) not found in projects table.
+2025-03-24 23:18:37,358 - WARNING - Row 3: Project number 2405 (Ledcor Mt Seymour Pkwy) not found in projects table.
+2025-03-24 23:18:37,501 - WARNING - Row 0: Project number 1712 (Hawksley) not found in projects table.
+2025-03-24 23:18:37,502 - WARNING - Row 1: Project number 1712 (Hawksley) not found in projects table.
+2025-03-24 23:18:37,502 - WARNING - Row 2: Project number 1712 (Hawksley) not found in projects table.
+2025-03-24 23:18:37,503 - WARNING - Row 3: Project number 1712 (Hawksley) not found in projects table.
+2025-03-24 23:18:37,512 - WARNING - Row 10: Project number 2303 (Mosaic 200th St, Langley) not found in projects table.
+2025-03-24 23:18:37,512 - WARNING - Row 11: Project number 2402 (UBCO Master Plan) not found in projects table.
+2025-03-24 23:18:37,513 - WARNING - Row 12: Project number 2403 (Guelph & 10th) not found in projects table.
+2025-03-24 23:18:37,513 - WARNING - Row 13: Project number 2403 (Guelph & 10th) not found in projects table.
+2025-03-24 23:18:37,607 - WARNING - Row 0: Project number 2009 (Sooke Church Rd) not found in projects table.
+2025-03-24 23:18:37,613 - WARNING - Row 1: Project number 2009 (Sooke Church Rd) not found in projects table.
+2025-03-24 23:18:37,614 - WARNING - Row 2: Project number 2009 (Sooke Church Rd) not found in projects table.
+2025-03-24 23:18:37,615 - WARNING - Row 3: Project number 2009 (Sooke Church Rd) not found in projects table.
+2025-03-24 23:18:37,615 - WARNING - Row 4: Project number 2009 (Sooke Church Rd) not found in projects table.
+2025-03-24 23:18:37,616 - WARNING - Row 5: Project number 2009 (Sooke Church Rd) not found in projects table.
+2025-03-24 23:18:37,616 - WARNING - Row 6: Project number 2009 (Sooke Church Rd) not found in projects table.
+2025-03-24 23:18:37,617 - WARNING - Row 7: Project number 2009 (Sooke Church Rd) not found in projects table.
+2025-03-24 23:18:37,617 - WARNING - Row 8: Project number 2009 (Sooke Church Rd) not found in projects table.
+2025-03-24 23:18:37,617 - WARNING - Row 9: Project number 2009 (Sooke Church Rd) not found in projects table.
+2025-03-24 23:18:37,654 - WARNING - Row 0: Project number 1712 (HAWKSLEY - W PH) not found in projects table.
+2025-03-24 23:18:37,654 - WARNING - Row 1: Project number 1712 (HAWKSLEY - Amenity Split) not found in projects table.
+2025-03-24 23:18:37,655 - WARNING - Row 2: Project number 1712 (HAWKSLEY - Purchaser customizations) not found in projects table.
+2025-03-24 23:18:37,676 - WARNING - Row 0: Project number 2302 (701 Kingsway Qualex) not found in projects table.
+2025-03-24 23:18:37,676 - WARNING - Row 1: Project number 2205 (SFU Lot 36 & 37) not found in projects table.
+2025-03-24 23:18:37,677 - WARNING - Row 2: Project number 2201 (Emery Phase 4) not found in projects table.
+2025-03-24 23:18:37,684 - WARNING - Row 5: Project number 2405 (Ledcor Mt Seymour Parkway) not found in projects table.
+2025-03-24 23:18:37,685 - WARNING - Row 6: Project number 2302 (Qualex Kingsway) not found in projects table.
+2025-03-24 23:18:37,685 - WARNING - Row 7: Project number 1702 (Lynn Parkside) not found in projects table.
+2025-03-24 23:18:37,687 - WARNING - Row 12: Project number 1712 (Hawskley) not found in projects table.
+2025-03-24 23:18:37,687 - WARNING - Row 13: Project number 1904 (Seasons) not found in projects table.
+2025-03-24 23:18:37,688 - WARNING - Row 15: Project number 2409 (Mosaic Balcony Study) not found in projects table.
+2025-03-24 23:18:37,688 - WARNING - Row 16: Project number 2402 (UBCO Masterplan) not found in projects table.
+2025-03-24 23:18:37,689 - WARNING - Row 17: Project number 2209 (Church Road) not found in projects table.
+2025-03-24 23:18:37,720 - WARNING - Row 0: Project number 2302 (Qualex KIngsway) not found in projects table.
+2025-03-24 23:18:37,723 - WARNING - Row 2: Project number 2402 (19th & Guelph) not found in projects table.
+2025-03-24 23:18:37,799 - WARNING - Row 0: Project number 2301 (Lotus Mission) not found in projects table.
+2025-03-24 23:18:37,800 - WARNING - Row 1: Project number 2303 (200 St Langley) not found in projects table.
+2025-03-24 23:18:37,800 - WARNING - Row 2: Project number 2302 (Qualex Kingsway) not found in projects table.
+2025-03-24 23:18:37,801 - WARNING - Row 3: Project number 2402 (UBC-O) not found in projects table.
+2025-03-24 23:18:37,801 - WARNING - Row 4: Project number 2206 (Two Waters Master Plan) not found in projects table.
+2025-03-24 23:18:37,825 - WARNING - Row 0: Project number 1712 (Hawksley) not found in projects table.
+2025-03-24 23:18:37,826 - WARNING - Row 1: Project number 1712 (Hawksley) not found in projects table.
+2025-03-24 23:18:37,829 - WARNING - Row 2: Project number 1712 (Hawksley) not found in projects table.
+2025-03-24 23:18:37,877 - WARNING - Row 0: Project number 1904 (Qualex Regan - Seasons) not found in projects table.
+2025-03-24 23:18:37,880 - WARNING - Row 3: Project number 2403 (10th & Guelph) not found in projects table.
+2025-03-24 23:18:37,910 - WARNING - Row 4: Project number 1904 (1904 Qualex Regan Ave) not found in projects table.
+2025-03-24 23:18:37,911 - WARNING - Row 5: Project number 2201 (2201 Emery Phase 4) not found in projects table.
+2025-03-24 23:18:37,935 - WARNING - Row 0: Project number 2106 (Arbutus & 35th) not found in projects table.
+2025-03-24 23:18:37,936 - WARNING - Row 1: Project number 2106 (Arbutus & 35th) not found in projects table.
+2025-03-24 23:18:37,936 - WARNING - Row 2: Project number 2302 (Kingsway) not found in projects table.
+2025-03-24 23:18:37,998 - WARNING - Row 0: Project number 2009 (Sooke) not found in projects table.
+2025-03-24 23:18:37,999 - WARNING - Row 1: Project number 2009 (Sooke) not found in projects table.
+2025-03-24 23:18:38,000 - WARNING - Row 2: Project number 2205 (SFU 36 37) not found in projects table.
+2025-03-24 23:18:38,039 - WARNING - Row 0: Project number 2106 (IPL Arbutus & 35th) not found in projects table.
+2025-03-24 23:18:38,040 - WARNING - Row 1: Project number 2405 (Ledcor Mt Seymour Pkwy) not found in projects table.
+2025-03-24 23:18:38,044 - WARNING - Row 2: Project number 2303 (Mosaic Langley) not found in projects table.
+2025-03-24 23:18:38,045 - WARNING - Row 3: Project number 2302 (Qualex Kingsway) not found in projects table.
+2025-03-24 23:18:38,048 - WARNING - Row 5: Project number 2402 (UBCO Masterplan) not found in projects table.
+2025-03-24 23:18:38,049 - WARNING - Row 6: Project number 2205 (Rize SFU) not found in projects table.
+2025-03-24 23:18:38,050 - WARNING - Row 8: Project number 2404 (Mosaic Colour Study) not found in projects table.
+2025-03-24 23:18:38,075 - WARNING - Row 1: Project number 2310 (Whistler - Lake Placid Road) not found in projects table.
+2025-03-24 23:18:38,080 - WARNING - Row 3: Project number 2302 (Qualex Kingsway) not found in projects table.
+2025-03-24 23:18:38,129 - WARNING - Row 0: Project number 1702 (Lynn Parkside) not found in projects table.
+2025-03-24 23:18:38,130 - WARNING - Row 1: Project number 1712 (Hawksley) not found in projects table.
+2025-03-24 23:18:38,140 - WARNING - Row 3: Project number 1904 (Regan - Seasons) not found in projects table.
+2025-03-24 23:18:38,146 - WARNING - Row 5: Project number 2008 (SFU Lot 24) not found in projects table.
+2025-03-24 23:18:38,146 - WARNING - Row 6: Project number 2009 (Church road) not found in projects table.
+2025-03-24 23:18:38,147 - WARNING - Row 7: Project number 2009 (Church road /Extra) not found in projects table.
+2025-03-24 23:18:38,148 - WARNING - Row 9: Project number 2106 (Arbutus) not found in projects table.
+2025-03-24 23:18:38,179 - WARNING - Row 0: Project number 2008 (Mosaic Lot 24 SFU Symposia) not found in projects table.
+2025-03-24 23:18:38,186 - WARNING - Row 2: Project number 2201 (Trailside) not found in projects table.
+2025-03-24 23:18:38,226 - WARNING - Row 2: Project number 1712 (BPP Area 6 Lot 3) not found in projects table.
+2025-03-24 23:18:38,228 - WARNING - Row 4: Project number 2403 (10th & Guelph) not found in projects table.
+2025-03-24 23:18:38,266 - WARNING - Row 0: Project number 1712 (BPP Area 6 Lot 3 (Hawksley)) not found in projects table.
+2025-03-24 23:18:38,267 - WARNING - Row 1: Project number 1904 (Qualex Regan) not found in projects table.
+2025-03-24 23:18:38,270 - WARNING - Row 2: Project number 2009 (Church Road Sooke) not found in projects table.
+2025-03-24 23:18:38,322 - WARNING - Row 0: Project number 1712 (Hawksley) not found in projects table.
+2025-03-24 23:18:38,323 - WARNING - Row 1: Project number 2106 (Arbutus) not found in projects table.
+2025-03-24 23:18:38,332 - WARNING - Row 3: Project number 2205 (Rize SFU Lot 36 & 37) not found in projects table.
+2025-03-24 23:18:38,368 - WARNING - Row 0: Project number 2301 (Lotus Mission) not found in projects table.
+2025-03-24 23:18:38,421 - WARNING - Row 4: Project number 1702 (Emery Phase 2) not found in projects table.
+2025-03-24 23:18:38,422 - WARNING - Row 5: Project number 2205 (Rize SFU Lot 36 & 37) not found in projects table.
+2025-03-24 23:18:38,425 - WARNING - Row 6: Project number 2408 (IPL W41st & Blenheim) not found in projects table.
+2025-03-24 23:18:38,426 - WARNING - Row 7: Project number 2201 (Emery Lot 4) not found in projects table.
+2025-03-24 23:18:38,426 - WARNING - Row 8: Project number 1904 (Qualex Regen) not found in projects table.
+2025-03-24 23:18:38,429 - WARNING - Row 11: Project number 2106 (Arbutus & 34th) not found in projects table.
+2025-03-24 23:18:38,463 - WARNING - Row 0: Project number 1712 (Hawksley) not found in projects table.
+2025-03-24 23:18:38,464 - WARNING - Row 1: Project number 2106 (Arbutus) not found in projects table.
+2025-03-24 23:18:38,465 - WARNING - Row 2: Project number 2106 (Arbutus) not found in projects table.
+2025-03-24 23:18:38,468 - WARNING - Row 3: Project number 2201 (Emery Phase 4) not found in projects table.
+2025-03-24 23:18:38,468 - WARNING - Row 4: Project number 2201 (Emery Phase 4) not found in projects table.
+2025-03-24 23:18:38,469 - WARNING - Row 5: Project number 2201 (Emery Phase 4) not found in projects table.
+2025-03-24 23:18:38,510 - WARNING - Row 0: Project number 2407 (IPL W. 16th Study) not found in projects table.
+2025-03-24 23:18:38,510 - WARNING - Row 1: Project number 1702 (Mosaic Emery Phase 2) not found in projects table.
+2025-03-24 23:18:38,612 - WARNING - Row 0: Project number 1712 (Hawksley) not found in projects table.
+2025-03-24 23:18:38,612 - WARNING - Row 1: Project number 1712 (Hawksley) not found in projects table.
+2025-03-24 23:18:38,614 - WARNING - Row 2: Project number 1712 (Hawksley) not found in projects table.
+2025-03-24 23:18:38,615 - WARNING - Row 3: Project number 1712 (Hawksley) not found in projects table.
+2025-03-24 23:18:38,621 - WARNING - Row 9: Project number 2303 (Mosaic 200th St, Langley) not found in projects table.
+2025-03-24 23:18:38,621 - WARNING - Row 10: Project number 2402 (UBCO Master Plan) not found in projects table.
+2025-03-24 23:18:38,621 - WARNING - Row 11: Project number 2403 (Guelph & 10th) not found in projects table.
+2025-03-24 23:18:38,622 - WARNING - Row 12: Project number 2403 (Guelph & 10th) not found in projects table.
+2025-03-24 23:18:38,651 - WARNING - Row 1: Project number 2009 (Sooke Church Rd) not found in projects table.
+2025-03-24 23:18:38,651 - WARNING - Row 2: Project number 2009 (Sooke Church Rd) not found in projects table.
+2025-03-24 23:18:38,652 - WARNING - Row 3: Project number 2009 (Sooke Church Rd) not found in projects table.
+2025-03-24 23:18:38,652 - WARNING - Row 4: Project number 2009 (Sooke Church Rd) not found in projects table.
+2025-03-24 23:18:38,653 - WARNING - Row 5: Project number 2009 (Sooke Church Rd) not found in projects table.
+2025-03-24 23:18:38,653 - WARNING - Row 6: Project number 2009 (Sooke Church Rd) not found in projects table.
+2025-03-24 23:18:38,653 - WARNING - Row 7: Project number 2009 (Sooke Church Rd) not found in projects table.
+2025-03-24 23:18:38,654 - WARNING - Row 8: Project number 2009 (Sooke Church Rd) not found in projects table.
+2025-03-24 23:18:38,654 - WARNING - Row 9: Project number 2009 (Sooke Church Rd) not found in projects table.
+2025-03-24 23:18:38,655 - WARNING - Row 10: Project number 2009 (Sooke Church Rd) not found in projects table.
+2025-03-24 23:18:38,665 - WARNING - Row 13: Project number 2009 (Sooke Church Rd) not found in projects table.
+2025-03-24 23:18:38,699 - WARNING - Row 0: Project number 1712 (HAWKSLEY - W PH) not found in projects table.
+2025-03-24 23:18:38,700 - WARNING - Row 1: Project number 1712 (HAWKSLEY-Amenity Split/DPA3) not found in projects table.
+2025-03-24 23:18:38,701 - WARNING - Row 2: Project number 1712 (HAWKSLEY - Amenity) not found in projects table.
+2025-03-24 23:18:38,728 - WARNING - Row 0: Project number 2302 (701 Kingsway Qualex) not found in projects table.
+2025-03-24 23:18:38,729 - WARNING - Row 1: Project number 2205 (SFU Lot 36 & 37) not found in projects table.
+2025-03-24 23:18:38,732 - WARNING - Row 2: Project number 2201 (Emery Phase 4) not found in projects table.
+2025-03-24 23:18:38,736 - WARNING - Row 5: Project number 2405 (Ledcor Mt Seymour Parkway) not found in projects table.
+2025-03-24 23:18:38,738 - WARNING - Row 6: Project number 2302 (Qualex Kingsway) not found in projects table.
+2025-03-24 23:18:38,738 - WARNING - Row 7: Project number 1702 (Lynn Parkside) not found in projects table.
+2025-03-24 23:18:38,742 - WARNING - Row 11: Project number 1712 (Hawksley) not found in projects table.
+2025-03-24 23:18:38,744 - WARNING - Row 13: Project number 1904 (Seasons) not found in projects table.
+2025-03-24 23:18:38,746 - WARNING - Row 15: Project number 2009 (Church Road) not found in projects table.
+2025-03-24 23:18:38,746 - WARNING - Row 16: Project number 2402 (UBCO Masterplan) not found in projects table.
+2025-03-24 23:18:38,775 - WARNING - Row 0: Project number 2302 (Qualex KIngsway) not found in projects table.
+2025-03-24 23:18:38,780 - WARNING - Row 2: Project number 2403 (Qualex 10th & Guelph) not found in projects table.
+2025-03-24 23:18:38,780 - WARNING - Row 3: Project number 2206 (Two Waters Masterplan) not found in projects table.
+2025-03-24 23:18:38,845 - WARNING - Row 0: Project number 2301 (Lotus Mission) not found in projects table.
+2025-03-24 23:18:38,846 - WARNING - Row 1: Project number 2303 (200 St Langley) not found in projects table.
+2025-03-24 23:18:38,846 - WARNING - Row 2: Project number 2302 (Qualex Kingsway) not found in projects table.
+2025-03-24 23:18:38,847 - WARNING - Row 3: Project number 2402 (UBC-O) not found in projects table.
+2025-03-24 23:18:38,850 - WARNING - Row 4: Project number 2206 (Two Waters Master Plan) not found in projects table.
+2025-03-24 23:18:38,879 - WARNING - Row 0: Project number 1712 (Hawksley) not found in projects table.
+2025-03-24 23:18:38,880 - WARNING - Row 1: Project number 1712 (Hawksley) not found in projects table.
+2025-03-24 23:18:38,882 - WARNING - Row 2: Project number 1712 (Hawksley) not found in projects table.
+2025-03-24 23:18:38,883 - WARNING - Row 3: Project number 1712 (Hawksley) not found in projects table.
+2025-03-24 23:18:38,886 - WARNING - Row 5: Project number 1702 (Emery Lot 2) not found in projects table.
+2025-03-24 23:18:38,914 - WARNING - Row 0: Project number 1904 (Qualex Regan - Seasons) not found in projects table.
+2025-03-24 23:18:38,915 - WARNING - Row 1: Project number 2201 (Emery Lot 4) not found in projects table.
+2025-03-24 23:18:38,918 - WARNING - Row 3: Project number 2403 (10th & Guelph) not found in projects table.
+2025-03-24 23:18:38,937 - WARNING - Row 0: Project number 2106 (Arbutus & 35th) not found in projects table.
+2025-03-24 23:18:38,937 - WARNING - Row 1: Project number 2106 (Arbutus & 35th) not found in projects table.
+2025-03-24 23:18:38,938 - WARNING - Row 2: Project number 2302 (Kingsway) not found in projects table.
+2025-03-24 23:18:38,998 - WARNING - Row 0: Project number 2009 (Sooke) not found in projects table.
+2025-03-24 23:18:38,998 - WARNING - Row 1: Project number 2009 (Sooke) not found in projects table.
+2025-03-24 23:18:38,999 - WARNING - Row 2: Project number 2205 (SFU 36 37) not found in projects table.
+2025-03-24 23:18:39,031 - WARNING - Row 0: Project number 2106 (IPL Arbutus & 35th) not found in projects table.
+2025-03-24 23:18:39,031 - WARNING - Row 1: Project number 2405 (Ledcor Mt Seymour Pkwy) not found in projects table.
+2025-03-24 23:18:39,032 - WARNING - Row 2: Project number 2303 (Mosaic Langley) not found in projects table.
+2025-03-24 23:18:39,033 - WARNING - Row 3: Project number 2302 (Qualex Kingsway) not found in projects table.
+2025-03-24 23:18:39,033 - WARNING - Row 4: Project number 2403 (Qualex 10tth & Guelph) not found in projects table.
+2025-03-24 23:18:39,034 - WARNING - Row 5: Project number 2402 (UBCO Masterplan) not found in projects table.
+2025-03-24 23:18:39,034 - WARNING - Row 6: Project number 2205 (Rize SFU) not found in projects table.
+2025-03-24 23:18:39,035 - WARNING - Row 8: Project number 2404 (Mosaic Colour Study) not found in projects table.
+2025-03-24 23:18:39,056 - WARNING - Row 1: Project number 2310 (Whistler - Lake Placid Road) not found in projects table.
+2025-03-24 23:18:39,063 - WARNING - Row 3: Project number 2302 (Qualex Kingsway) not found in projects table.
+2025-03-24 23:18:39,092 - WARNING - Row 0: Project number 1702 (Lynn Parkside) not found in projects table.
+2025-03-24 23:18:39,093 - WARNING - Row 1: Project number 1712 (Hawksley) not found in projects table.
+2025-03-24 23:18:39,099 - WARNING - Row 3: Project number 1904 (Regan - Seasons) not found in projects table.
+2025-03-24 23:18:39,100 - WARNING - Row 5: Project number 2008 (SFU Lot 24) not found in projects table.
+2025-03-24 23:18:39,100 - WARNING - Row 6: Project number 2009 (Church road) not found in projects table.
+2025-03-24 23:18:39,101 - WARNING - Row 7: Project number 2009 (Church road /Extra) not found in projects table.
+2025-03-24 23:18:39,102 - WARNING - Row 9: Project number 2106 (Arbutus) not found in projects table.
+2025-03-24 23:18:39,130 - WARNING - Row 0: Project number 2008 (Mosaic Lot 24 SFU Symposia) not found in projects table.
+2025-03-24 23:18:39,137 - WARNING - Row 2: Project number 2201 (Trailside) not found in projects table.
+2025-03-24 23:18:39,166 - WARNING - Row 0: Project number 2303 (Mosaic - Latimer) not found in projects table.
+2025-03-24 23:18:39,172 - WARNING - Row 3: Project number 1712 (BPP Area 6 Lot 3) not found in projects table.
+2025-03-24 23:18:39,172 - WARNING - Row 5: Project number 2403 (10th & Guelph) not found in projects table.
+2025-03-24 23:18:39,202 - WARNING - Row 0: Project number 1712 (BPP Area 6 Lot 3 (Hawksley)) not found in projects table.
+2025-03-24 23:18:39,203 - WARNING - Row 1: Project number 1904 (Qualex Regan) not found in projects table.
+2025-03-24 23:18:39,206 - WARNING - Row 2: Project number 2009 (Church Road Sooke) not found in projects table.
+2025-03-24 23:18:39,240 - WARNING - Row 0: Project number 1712 (Hawksley) not found in projects table.
+2025-03-24 23:18:39,240 - WARNING - Row 1: Project number 2106 (Arbutus) not found in projects table.
+2025-03-24 23:18:39,246 - WARNING - Row 3: Project number 2205 (Rize SFU Lot 36 & 37) not found in projects table.
+2025-03-24 23:18:39,274 - WARNING - Row 0: Project number 2301 (Lotus Mission) not found in projects table.
+2025-03-24 23:18:39,277 - WARNING - Row 3: Project number 2410 (Mosaic Adaptable Study) not found in projects table.
+2025-03-24 23:18:39,325 - WARNING - Row 4: Project number 1702 (Emery Phase 2) not found in projects table.
+2025-03-24 23:18:39,326 - WARNING - Row 5: Project number 2205 (Rize SFU Lot 36 & 37) not found in projects table.
+2025-03-24 23:18:39,330 - WARNING - Row 6: Project number 2408 (IPL W41st & Blenheim) not found in projects table.
+2025-03-24 23:18:39,330 - WARNING - Row 7: Project number 2201 (Emery Lot 4) not found in projects table.
+2025-03-24 23:18:39,330 - WARNING - Row 8: Project number 1904 (Qualex Regen) not found in projects table.
+2025-03-24 23:18:39,333 - WARNING - Row 11: Project number 2106 (Arbutus & 34th) not found in projects table.
+2025-03-24 23:18:39,333 - WARNING - Row 12: Project number 2008 (SFU Lot 24) not found in projects table.
+2025-03-24 23:18:39,408 - WARNING - Row 0: Project number 1712 (Hawksley) not found in projects table.
+2025-03-24 23:18:39,409 - WARNING - Row 1: Project number 2106 (Arbutus) not found in projects table.
+2025-03-24 23:18:39,410 - WARNING - Row 2: Project number 2106 (Arbutus) not found in projects table.
+2025-03-24 23:18:39,410 - WARNING - Row 3: Project number 2201 (Emery Phase 4) not found in projects table.
+2025-03-24 23:18:39,411 - WARNING - Row 4: Project number 2201 (Emery Phase 4) not found in projects table.
+2025-03-24 23:18:39,411 - WARNING - Row 5: Project number 2201 (Emery Phase 4) not found in projects table.
+2025-03-24 23:18:39,445 - WARNING - Row 0: Project number 2407 (IPL W. 16th Study) not found in projects table.
+2025-03-24 23:18:39,446 - WARNING - Row 1: Project number 1702 (Mosaic Emery Phase 2) not found in projects table.
+2025-03-24 23:18:39,522 - WARNING - Row 0: Project number 1712 (Hawksley) not found in projects table.
+2025-03-24 23:18:39,523 - WARNING - Row 1: Project number 1712 (Hawksley) not found in projects table.
+2025-03-24 23:18:39,524 - WARNING - Row 2: Project number 1712 (Hawksley) not found in projects table.
+2025-03-24 23:18:39,525 - WARNING - Row 3: Project number 1712 (Hawksley) not found in projects table.
+2025-03-24 23:18:39,530 - WARNING - Row 4: Project number 1502 (Beedie Pres Centre) not found in projects table.
+2025-03-24 23:18:39,538 - WARNING - Row 12: Project number 2303 (Mosaic 200th St, Langley) not found in projects table.
+2025-03-24 23:18:39,539 - WARNING - Row 13: Project number 2402 (UBCO Master Plan) not found in projects table.
+2025-03-24 23:18:39,539 - WARNING - Row 14: Project number 2403 (Guelph & 10th) not found in projects table.
+2025-03-24 23:18:39,570 - WARNING - Row 1: Project number 2009 (Sooke Church Rd) not found in projects table.
+2025-03-24 23:18:39,570 - WARNING - Row 2: Project number 2009 (Sooke Church Rd) not found in projects table.
+2025-03-24 23:18:39,571 - WARNING - Row 3: Project number 2009 (Sooke Church Rd) not found in projects table.
+2025-03-24 23:18:39,575 - WARNING - Row 4: Project number 2009 (Sooke Church Rd) not found in projects table.
+2025-03-24 23:18:39,576 - WARNING - Row 5: Project number 2009 (Sooke Church Rd) not found in projects table.
+2025-03-24 23:18:39,577 - WARNING - Row 6: Project number 2009 (Sooke Church Rd) not found in projects table.
+2025-03-24 23:18:39,578 - WARNING - Row 7: Project number 2009 (Sooke Church Rd) not found in projects table.
+2025-03-24 23:18:39,578 - WARNING - Row 8: Project number 2009 (Sooke Church Rd) not found in projects table.
+2025-03-24 23:18:39,578 - WARNING - Row 9: Project number 2009 (Sooke Church Rd) not found in projects table.
+2025-03-24 23:18:39,579 - WARNING - Row 10: Project number 2009 (Sooke Church Rd) not found in projects table.
+2025-03-24 23:18:39,582 - WARNING - Row 13: Project number 2009 (Sooke Church Rd) not found in projects table.
+2025-03-24 23:18:39,608 - WARNING - Row 0: Project number 1712 (HAWKSLEY-Amenity Split) not found in projects table.
+2025-03-24 23:18:39,609 - WARNING - Row 1: Project number 1712 (HAWKSLEY - Amenity) not found in projects table.
+2025-03-24 23:18:39,627 - WARNING - Row 0: Project number 2302 (701 Kingsway Qualex) not found in projects table.
+2025-03-24 23:18:39,627 - WARNING - Row 1: Project number 2205 (SFU Lot 36 & 37) not found in projects table.
+2025-03-24 23:18:39,627 - WARNING - Row 2: Project number 2201 (Emery Phase 4) not found in projects table.
+2025-03-24 23:18:39,631 - WARNING - Row 5: Project number 2405 (Ledcor Mt Seymour Parkway) not found in projects table.
+2025-03-24 23:18:39,631 - WARNING - Row 6: Project number 2302 (Qualex Kingsway) not found in projects table.
+2025-03-24 23:18:39,631 - WARNING - Row 7: Project number 1702 (Lynn Parkside) not found in projects table.
+2025-03-24 23:18:39,632 - WARNING - Row 11: Project number 1712 (Hawksley) not found in projects table.
+2025-03-24 23:18:39,633 - WARNING - Row 13: Project number 1904 (Seasons) not found in projects table.
+2025-03-24 23:18:39,634 - WARNING - Row 15: Project number 2009 (Church Road) not found in projects table.
+2025-03-24 23:18:39,634 - WARNING - Row 16: Project number 2412 (Sales Centre Reno Beedie) not found in projects table.
+2025-03-24 23:18:39,634 - WARNING - Row 17: Project number 2411 (Mosaic Burns Rd) not found in projects table.
+2025-03-24 23:18:39,660 - WARNING - Row 0: Project number 2302 (Qualex KIngsway) not found in projects table.
+2025-03-24 23:18:39,663 - WARNING - Row 2: Project number 2403 (Qualex 10th & Guelph) not found in projects table.
+2025-03-24 23:18:39,663 - WARNING - Row 3: Project number 2206 (Two Waters Masterplan) not found in projects table.
+2025-03-24 23:18:39,717 - WARNING - Row 0: Project number 2301 (Lotus Mission) not found in projects table.
+2025-03-24 23:18:39,718 - WARNING - Row 1: Project number 2310 (Lake Placid Road) not found in projects table.
+2025-03-24 23:18:39,719 - WARNING - Row 2: Project number 2302 (Qualex Kingsway) not found in projects table.
+2025-03-24 23:18:39,719 - WARNING - Row 3: Project number 2403 (10th and Guelph) not found in projects table.
+2025-03-24 23:18:39,720 - WARNING - Row 4: Project number 2411 (Mosaic Burns Road) not found in projects table.
+2025-03-24 23:18:39,720 - WARNING - Row 5: Project number 2206 (Two Waters Master Plan) not found in projects table.
+2025-03-24 23:18:39,752 - WARNING - Row 0: Project number 1712 (Hawksley) not found in projects table.
+2025-03-24 23:18:39,752 - WARNING - Row 1: Project number 1712 (Hawksley) not found in projects table.
+2025-03-24 23:18:39,753 - WARNING - Row 2: Project number 1712 (Hawksley) not found in projects table.
+2025-03-24 23:18:39,754 - WARNING - Row 3: Project number 1712 (Hawksley) not found in projects table.
+2025-03-24 23:18:39,757 - WARNING - Row 5: Project number 1702 (Emery Lot 2) not found in projects table.
+2025-03-24 23:18:39,782 - WARNING - Row 0: Project number 1904 (Qualex Regan - Seasons) not found in projects table.
+2025-03-24 23:18:39,783 - WARNING - Row 1: Project number 2201 (Emery Lot 4) not found in projects table.
+2025-03-24 23:18:39,783 - WARNING - Row 3: Project number 2403 (10th & Guelph) not found in projects table.
+2025-03-24 23:18:39,800 - WARNING - Row 0: Project number 2106 (Arbutus & 35th) not found in projects table.
+2025-03-24 23:18:39,800 - WARNING - Row 1: Project number 2106 (Arbutus & 35th) not found in projects table.
+2025-03-24 23:18:39,801 - WARNING - Row 2: Project number 2302 (Kingsway) not found in projects table.
+2025-03-24 23:18:39,801 - WARNING - Row 3: Project number 2403 (Guelph) not found in projects table.
+2025-03-24 23:18:39,859 - WARNING - Row 0: Project number 2009 (Sooke) not found in projects table.
+2025-03-24 23:18:39,860 - WARNING - Row 1: Project number 2009 (Sooke) not found in projects table.
+2025-03-24 23:18:39,861 - WARNING - Row 2: Project number 2205 (SFU 36 37) not found in projects table.
+2025-03-24 23:18:39,889 - WARNING - Row 0: Project number 2106 (IPL Arbutus & 35th) not found in projects table.
+2025-03-24 23:18:39,889 - WARNING - Row 1: Project number 2405 (Ledcor Mt Seymour Pkwy) not found in projects table.
+2025-03-24 23:18:39,892 - WARNING - Row 2: Project number 2303 (Mosaic Langley) not found in projects table.
+2025-03-24 23:18:39,892 - WARNING - Row 3: Project number 2302 (Qualex Kingsway) not found in projects table.
+2025-03-24 23:18:39,893 - WARNING - Row 4: Project number 2403 (Qualex 10tth & Guelph) not found in projects table.
+2025-03-24 23:18:39,893 - WARNING - Row 5: Project number 2402 (UBCO Masterplan) not found in projects table.
+2025-03-24 23:18:39,894 - WARNING - Row 6: Project number 2205 (Rize SFU) not found in projects table.
+2025-03-24 23:18:39,920 - WARNING - Row 1: Project number 2310 (Whistler - Lake Placid Road) not found in projects table.
+2025-03-24 23:18:39,924 - WARNING - Row 3: Project number 2302 (Qualex Kingsway) not found in projects table.
+2025-03-24 23:18:39,953 - WARNING - Row 0: Project number 1702 (Lynn Parkside) not found in projects table.
+2025-03-24 23:18:39,953 - WARNING - Row 1: Project number 1712 (Hawksley) not found in projects table.
+2025-03-24 23:18:39,959 - WARNING - Row 3: Project number 1904 (Regan - Seasons) not found in projects table.
+2025-03-24 23:18:39,960 - WARNING - Row 5: Project number 2008 (SFU Lot 24) not found in projects table.
+2025-03-24 23:18:39,961 - WARNING - Row 6: Project number 2009 (Church road) not found in projects table.
+2025-03-24 23:18:39,961 - WARNING - Row 7: Project number 2009 (Church road /Extra) not found in projects table.
+2025-03-24 23:18:39,962 - WARNING - Row 9: Project number 2106 (Arbutus) not found in projects table.
+2025-03-24 23:18:39,986 - WARNING - Row 0: Project number 2008 (Mosaic Lot 24 SFU Symposia) not found in projects table.
+2025-03-24 23:18:39,990 - WARNING - Row 2: Project number 2201 (Trailside) not found in projects table.
+2025-03-24 23:18:40,018 - WARNING - Row 0: Project number 2411 (Mosaic - Burns Road) not found in projects table.
+2025-03-24 23:18:40,023 - WARNING - Row 3: Project number 1712 (BPP Area 6 Lot 3) not found in projects table.
+2025-03-24 23:18:40,048 - WARNING - Row 0: Project number 1702 (Emery Lot 2 - Lynn Parkside) not found in projects table.
+2025-03-24 23:18:40,049 - WARNING - Row 1: Project number 1712 (BPP Area 6 Lot 3 (Hawksley)) not found in projects table.
+2025-03-24 23:18:40,051 - WARNING - Row 2: Project number 2009 (Church Road Sooke) not found in projects table.
+2025-03-24 23:18:40,084 - WARNING - Row 0: Project number 1712 (Hawksley) not found in projects table.
+2025-03-24 23:18:40,085 - WARNING - Row 1: Project number 2106 (Arbutus) not found in projects table.
+2025-03-24 23:18:40,092 - WARNING - Row 4: Project number 2205 (Rize SFU Lot 36 & 37) not found in projects table.
+2025-03-24 23:18:40,125 - WARNING - Row 0: Project number 2412 (Sale Centre Reno) not found in projects table.
+2025-03-24 23:18:40,129 - WARNING - Row 3: Project number 2410 (Mosaic Adaptable Study) not found in projects table.
+2025-03-24 23:18:40,131 - WARNING - Row 4: Project number 2403 (Qualex Guelph & 10th) not found in projects table.
+2025-03-24 23:18:40,170 - WARNING - Row 4: Project number 1702 (Emery Phase 2) not found in projects table.
+2025-03-24 23:18:40,171 - WARNING - Row 5: Project number 2205 (Rize SFU Lot 36 & 37) not found in projects table.
+2025-03-24 23:18:40,171 - WARNING - Row 6: Project number 2201 (Emery Lot 4) not found in projects table.
+2025-03-24 23:18:40,171 - WARNING - Row 7: Project number 2411 (Mosaic Burns Rd) not found in projects table.
+2025-03-24 23:18:40,173 - WARNING - Row 10: Project number 2106 (Arbutus & 34th) not found in projects table.
+2025-03-24 23:18:40,173 - WARNING - Row 11: Project number 2410 (Mosaic Adaptable Dwelling Study) not found in projects table.
+2025-03-24 23:18:40,173 - WARNING - Row 12: Project number 2008 (SFU Lot 24) not found in projects table.
+2025-03-24 23:18:40,197 - WARNING - Row 1: Project number 1712 (Hawksley) not found in projects table.
+2025-03-24 23:18:40,233 - WARNING - Row 0: Project number 1712 (Hawksley) not found in projects table.
+2025-03-24 23:18:40,233 - WARNING - Row 1: Project number 2106 (Arbutus) not found in projects table.
+2025-03-24 23:18:40,234 - WARNING - Row 2: Project number 2106 (Arbutus) not found in projects table.
+2025-03-24 23:18:40,234 - WARNING - Row 3: Project number 2201 (Emery Phase 4) not found in projects table.
+2025-03-24 23:18:40,235 - WARNING - Row 4: Project number 2201 (Emery Phase 4) not found in projects table.
+2025-03-24 23:18:40,236 - WARNING - Row 5: Project number 2201 (Emery Phase 4) not found in projects table.
+2025-03-24 23:18:40,273 - WARNING - Row 0: Project number 2407 (IPL W. 16th Study) not found in projects table.
+2025-03-24 23:18:40,274 - WARNING - Row 1: Project number 1702 (Mosaic Emery Phase 2) not found in projects table.
+2025-03-24 23:18:40,345 - WARNING - Row 0: Project number 1712 (Hawksley) not found in projects table.
+2025-03-24 23:18:40,345 - WARNING - Row 1: Project number 1712 (Hawksley) not found in projects table.
+2025-03-24 23:18:40,346 - WARNING - Row 2: Project number 1712 (Hawksley) not found in projects table.
+2025-03-24 23:18:40,349 - WARNING - Row 3: Project number 1712 (Hawksley) not found in projects table.
+2025-03-24 23:18:40,349 - WARNING - Row 4: Project number 1502 (Beedie Pres Centre) not found in projects table.
+2025-03-24 23:18:40,356 - WARNING - Row 13: Project number 2303 (Mosaic 200th St, Langley) not found in projects table.
+2025-03-24 23:18:40,356 - WARNING - Row 14: Project number 2402 (UBCO Master Plan) not found in projects table.
+2025-03-24 23:18:40,356 - WARNING - Row 15: Project number 2403 (Guelph & 10th) not found in projects table.
+2025-03-24 23:18:40,384 - WARNING - Row 0: Project number 2009 (Sooke Church Rd) not found in projects table.
+2025-03-24 23:18:40,385 - WARNING - Row 1: Project number 2009 (Sooke Church Rd) not found in projects table.
+2025-03-24 23:18:40,386 - WARNING - Row 2: Project number 2009 (Sooke Church Rd) not found in projects table.
+2025-03-24 23:18:40,386 - WARNING - Row 3: Project number 2009 (Sooke Church Rd) not found in projects table.
+2025-03-24 23:18:40,386 - WARNING - Row 4: Project number 2009 (Sooke Church Rd) not found in projects table.
+2025-03-24 23:18:40,387 - WARNING - Row 5: Project number 2009 (Sooke Church Rd) not found in projects table.
+2025-03-24 23:18:40,387 - WARNING - Row 6: Project number 2009 (Sooke Church Rd) not found in projects table.
+2025-03-24 23:18:40,388 - WARNING - Row 7: Project number 2009 (Sooke Church Rd) not found in projects table.
+2025-03-24 23:18:40,388 - WARNING - Row 8: Project number 2009 (Sooke Church Rd) not found in projects table.
+2025-03-24 23:18:40,388 - WARNING - Row 9: Project number 2009 (Sooke Church Rd) not found in projects table.
+2025-03-24 23:18:40,389 - WARNING - Row 10: Project number 2009 (Sooke Church Rd) not found in projects table.
+2025-03-24 23:18:40,418 - WARNING - Row 0: Project number 1712 (HAWKSLEY-Amenity Split) not found in projects table.
+2025-03-24 23:18:40,419 - WARNING - Row 1: Project number 1712 (HAWKSLEY - PH Hot Tub) not found in projects table.
+2025-03-24 23:18:40,419 - WARNING - Row 2: Project number 1712 (HAWKSLEY - Amenity) not found in projects table.
+2025-03-24 23:18:40,438 - WARNING - Row 0: Project number 2302 (701 Kingsway Qualex) not found in projects table.
+2025-03-24 23:18:40,438 - WARNING - Row 1: Project number 2205 (SFU Lot 36 & 37) not found in projects table.
+2025-03-24 23:18:40,438 - WARNING - Row 2: Project number 2201 (Emery Phase 4) not found in projects table.
+2025-03-24 23:18:40,445 - WARNING - Row 5: Project number 2405 (Ledcor Mt Seymour Parkway) not found in projects table.
+2025-03-24 23:18:40,446 - WARNING - Row 6: Project number 2302 (Qualex Kingsway) not found in projects table.
+2025-03-24 23:18:40,446 - WARNING - Row 7: Project number 1702 (Lynn Parkside) not found in projects table.
+2025-03-24 23:18:40,446 - WARNING - Row 9: Project number 2403 (Guelph & 10th) not found in projects table.
+2025-03-24 23:18:40,447 - WARNING - Row 11: Project number 1712 (Hawksley) not found in projects table.
+2025-03-24 23:18:40,448 - WARNING - Row 13: Project number 1904 (Seasons) not found in projects table.
+2025-03-24 23:18:40,448 - WARNING - Row 15: Project number 2009 (Church Road) not found in projects table.
+2025-03-24 23:18:40,449 - WARNING - Row 16: Project number 2413 (Transca Como Lake Study) not found in projects table.
+2025-03-24 23:18:40,449 - WARNING - Row 17: Project number 2411 (Mosaic Burns Rd) not found in projects table.
+2025-03-24 23:18:40,480 - WARNING - Row 0: Project number 2302 (Qualex KIngsway) not found in projects table.
+2025-03-24 23:18:40,482 - WARNING - Row 2: Project number 2403 (Qualex 10th & Guelph) not found in projects table.
+2025-03-24 23:18:40,483 - WARNING - Row 3: Project number 2206 (Two Waters Masterplan) not found in projects table.
+2025-03-24 23:18:40,543 - WARNING - Row 0: Project number 2301 (Lotus Mission) not found in projects table.
+2025-03-24 23:18:40,543 - WARNING - Row 1: Project number 2414 (Whistler Creek West) not found in projects table.
+2025-03-24 23:18:40,544 - WARNING - Row 2: Project number 2302 (Qualex Kingsway) not found in projects table.
+2025-03-24 23:18:40,544 - WARNING - Row 3: Project number 2403 (10th and Guelph) not found in projects table.
+2025-03-24 23:18:40,545 - WARNING - Row 4: Project number 2411 (Mosaic Burns Road) not found in projects table.
+2025-03-24 23:18:40,545 - WARNING - Row 5: Project number 2206 (Two Waters Master Plan) not found in projects table.
+2025-03-24 23:18:40,567 - WARNING - Row 0: Project number 1712 (Hawksley) not found in projects table.
+2025-03-24 23:18:40,567 - WARNING - Row 1: Project number 1712 (Hawksley) not found in projects table.
+2025-03-24 23:18:40,570 - WARNING - Row 2: Project number 1712 (Hawksley) not found in projects table.
+2025-03-24 23:18:40,570 - WARNING - Row 3: Project number 1712 (Hawksley) not found in projects table.
+2025-03-24 23:18:40,571 - WARNING - Row 5: Project number 1702 (Emery Lot 2) not found in projects table.
+2025-03-24 23:18:40,590 - WARNING - Row 0: Project number 1904 (Qualex Regan - Seasons) not found in projects table.
+2025-03-24 23:18:40,590 - WARNING - Row 1: Project number 2201 (Emery Lot 4) not found in projects table.
+2025-03-24 23:18:40,592 - WARNING - Row 3: Project number 2403 (10th & Guelph) not found in projects table.
+2025-03-24 23:18:40,623 - WARNING - Row 0: Project number 2106 (Arbutus & 35th) not found in projects table.
+2025-03-24 23:18:40,623 - WARNING - Row 1: Project number 2106 (Arbutus & 35th) not found in projects table.
+2025-03-24 23:18:40,623 - WARNING - Row 2: Project number 2302 (Kingsway) not found in projects table.
+2025-03-24 23:18:40,624 - WARNING - Row 3: Project number 2403 (Guelph) not found in projects table.
+2025-03-24 23:18:40,682 - WARNING - Row 0: Project number 2009 (Sooke) not found in projects table.
+2025-03-24 23:18:40,683 - WARNING - Row 1: Project number 2009 (Sooke) not found in projects table.
+2025-03-24 23:18:40,683 - WARNING - Row 2: Project number 2205 (SFU 36 37) not found in projects table.
+2025-03-24 23:18:40,715 - WARNING - Row 0: Project number 2106 (IPL Arbutus & 35th) not found in projects table.
+2025-03-24 23:18:40,716 - WARNING - Row 1: Project number 2405 (Ledcor Mt Seymour Pkwy) not found in projects table.
+2025-03-24 23:18:40,716 - WARNING - Row 2: Project number 2303 (Mosaic Langley) not found in projects table.
+2025-03-24 23:18:40,716 - WARNING - Row 3: Project number 2302 (Qualex Kingsway) not found in projects table.
+2025-03-24 23:18:40,717 - WARNING - Row 4: Project number 2403 (Qualex 10tth & Guelph) not found in projects table.
+2025-03-24 23:18:40,719 - WARNING - Row 5: Project number 2402 (UBCO Masterplan) not found in projects table.
+2025-03-24 23:18:40,720 - WARNING - Row 6: Project number 2205 (Rize SFU) not found in projects table.
+2025-03-24 23:18:40,749 - WARNING - Row 1: Project number 2310 (Whistler - Lake Placid Road) not found in projects table.
+2025-03-24 23:18:40,753 - WARNING - Row 3: Project number 2302 (Qualex Kingsway) not found in projects table.
+2025-03-24 23:18:40,780 - WARNING - Row 0: Project number 1702 (Lynn Parkside) not found in projects table.
+2025-03-24 23:18:40,781 - WARNING - Row 1: Project number 1712 (Hawksley) not found in projects table.
+2025-03-24 23:18:40,787 - WARNING - Row 3: Project number 1904 (Regan - Seasons) not found in projects table.
+2025-03-24 23:18:40,789 - WARNING - Row 5: Project number 2008 (SFU Lot 24) not found in projects table.
+2025-03-24 23:18:40,789 - WARNING - Row 6: Project number 2009 (Church road) not found in projects table.
+2025-03-24 23:18:40,789 - WARNING - Row 7: Project number 2009 (Church road /Extra) not found in projects table.
+2025-03-24 23:18:40,790 - WARNING - Row 10: Project number 2106 (Arbutus) not found in projects table.
+2025-03-24 23:18:40,819 - WARNING - Row 0: Project number 2008 (Mosaic Lot 24 SFU Symposia) not found in projects table.
+2025-03-24 23:18:40,823 - WARNING - Row 2: Project number 2201 (Trailside) not found in projects table.
+2025-03-24 23:18:40,849 - WARNING - Row 0: Project number 2411 (Mosaic - Burns Road) not found in projects table.
+2025-03-24 23:18:40,854 - WARNING - Row 3: Project number 1712 (BPP Area 6 Lot 3) not found in projects table.
+2025-03-24 23:18:40,880 - WARNING - Row 0: Project number 1712 (Hawksley) not found in projects table.
+2025-03-24 23:18:40,914 - WARNING - Row 0: Project number 1712 (Hawksley) not found in projects table.
+2025-03-24 23:18:40,914 - WARNING - Row 1: Project number 2106 (Arbutus) not found in projects table.
+2025-03-24 23:18:40,918 - WARNING - Row 3: Project number 2205 (Rize SFU Lot 36 & 37) not found in projects table.
+2025-03-24 23:18:40,946 - WARNING - Row 0: Project number 2302 (Qualex Kingsway) not found in projects table.
+2025-03-24 23:18:40,948 - WARNING - Row 3: Project number 2410 (Mosaic Adaptable Study) not found in projects table.
+2025-03-24 23:18:40,952 - WARNING - Row 5: Project number 2403 (Qualex Guelph & 10th) not found in projects table.
+2025-03-24 23:18:40,988 - WARNING - Row 4: Project number 1702 (Emery Phase 2) not found in projects table.
+2025-03-24 23:18:40,989 - WARNING - Row 5: Project number 2205 (Rize SFU Lot 36 & 37) not found in projects table.
+2025-03-24 23:18:40,991 - WARNING - Row 6: Project number 2201 (Emery Lot 4) not found in projects table.
+2025-03-24 23:18:40,991 - WARNING - Row 7: Project number 2411 (Mosaic Burns Rd) not found in projects table.
+2025-03-24 23:18:40,995 - WARNING - Row 10: Project number 2106 (Arbutus & 34th) not found in projects table.
+2025-03-24 23:18:40,995 - WARNING - Row 11: Project number 2410 (Mosaic Adaptable Dwelling Study) not found in projects table.
+2025-03-24 23:18:40,995 - WARNING - Row 12: Project number 2413 (Transca Como Lake) not found in projects table.
+2025-03-24 23:18:40,995 - WARNING - Row 13: Project number 2008 (SFU Lot 24) not found in projects table.
+2025-03-24 23:18:41,026 - WARNING - Row 1: Project number 1712 (Hawksley) not found in projects table.
+2025-03-24 23:18:41,027 - WARNING - Row 3: Project number 1712 (Hawksley Amenity Splt) not found in projects table.
+2025-03-24 23:18:41,054 - WARNING - Row 0: Project number 1712 (Hawksley) not found in projects table.
+2025-03-24 23:18:41,055 - WARNING - Row 1: Project number 2106 (Arbutus) not found in projects table.
+2025-03-24 23:18:41,055 - WARNING - Row 2: Project number 2106 (Arbutus) not found in projects table.
+2025-03-24 23:18:41,056 - WARNING - Row 3: Project number 2201 (Emery Phase 4) not found in projects table.
+2025-03-24 23:18:41,056 - WARNING - Row 4: Project number 2201 (Emery Phase 4) not found in projects table.
+2025-03-24 23:18:41,056 - WARNING - Row 5: Project number 2201 (Emery Phase 4) not found in projects table.
+2025-03-24 23:18:41,088 - WARNING - Row 0: Project number 2407 (IPL W. 16th Study) not found in projects table.
+2025-03-24 23:18:41,088 - WARNING - Row 1: Project number 1702 (Mosaic Emery Phase 2) not found in projects table.
+2025-03-24 23:18:41,157 - WARNING - Row 0: Project number 1712 (Hawksley) not found in projects table.
+2025-03-24 23:18:41,159 - WARNING - Row 1: Project number 1712 (Hawksley) not found in projects table.
+2025-03-24 23:18:41,160 - WARNING - Row 2: Project number 1712 (Hawksley) not found in projects table.
+2025-03-24 23:18:41,160 - WARNING - Row 3: Project number 1712 (Hawksley) not found in projects table.
+2025-03-24 23:18:41,161 - WARNING - Row 4: Project number 1502 (Beedie Pres Centre) not found in projects table.
+2025-03-24 23:18:41,168 - WARNING - Row 13: Project number 2303 (Mosaic 200th St, Langley) not found in projects table.
+2025-03-24 23:18:41,168 - WARNING - Row 14: Project number 2402 (UBCO Master Plan) not found in projects table.
+2025-03-24 23:18:41,169 - WARNING - Row 15: Project number 2403 (Guelph & 10th) not found in projects table.
+2025-03-24 23:18:41,203 - WARNING - Row 0: Project number 2009 (Sooke Church Rd) not found in projects table.
+2025-03-24 23:18:41,204 - WARNING - Row 1: Project number 2009 (Sooke Church Rd) not found in projects table.
+2025-03-24 23:18:41,207 - WARNING - Row 2: Project number 2009 (Sooke Church Rd) not found in projects table.
+2025-03-24 23:18:41,207 - WARNING - Row 3: Project number 2009 (Sooke Church Rd) not found in projects table.
+2025-03-24 23:18:41,207 - WARNING - Row 4: Project number 2009 (Sooke Church Rd) not found in projects table.
+2025-03-24 23:18:41,208 - WARNING - Row 5: Project number 2009 (Sooke Church Rd) not found in projects table.
+2025-03-24 23:18:41,209 - WARNING - Row 6: Project number 2009 (Sooke Church Rd) not found in projects table.
+2025-03-24 23:18:41,210 - WARNING - Row 7: Project number 2009 (Sooke Church Rd) not found in projects table.
+2025-03-24 23:18:41,211 - WARNING - Row 8: Project number 2009 (Sooke Church Rd) not found in projects table.
+2025-03-24 23:18:41,211 - WARNING - Row 9: Project number 2009 (Sooke Church Rd) not found in projects table.
+2025-03-24 23:18:41,212 - WARNING - Row 10: Project number 2009 (Sooke Church Rd) not found in projects table.
+2025-03-24 23:18:41,243 - WARNING - Row 0: Project number 1712 (HAWKSLEY-Amenity Split) not found in projects table.
+2025-03-24 23:18:41,244 - WARNING - Row 1: Project number 1712 (HAWKSLEY - PH Hot Tub) not found in projects table.
+2025-03-24 23:18:41,245 - WARNING - Row 2: Project number 1712 (HAWKSLEY - Amenity) not found in projects table.
+2025-03-24 23:18:41,245 - WARNING - Row 3: Project number 2302 (Kingsway) not found in projects table.
+2025-03-24 23:18:41,269 - WARNING - Row 0: Project number 2302 (701 Kingsway Qualex) not found in projects table.
+2025-03-24 23:18:41,270 - WARNING - Row 1: Project number 2205 (SFU Lot 36 & 37) not found in projects table.
+2025-03-24 23:18:41,274 - WARNING - Row 2: Project number 2201 (Emery Phase 4) not found in projects table.
+2025-03-24 23:18:41,278 - WARNING - Row 5: Project number 2405 (Ledcor Mt Seymour Parkway) not found in projects table.
+2025-03-24 23:18:41,279 - WARNING - Row 6: Project number 2302 (Qualex Kingsway) not found in projects table.
+2025-03-24 23:18:41,279 - WARNING - Row 7: Project number 1702 (Lynn Parkside) not found in projects table.
+2025-03-24 23:18:41,281 - WARNING - Row 9: Project number 2403 (Guelph & 10th) not found in projects table.
+2025-03-24 23:18:41,282 - WARNING - Row 11: Project number 1712 (Hawksley) not found in projects table.
+2025-03-24 23:18:41,284 - WARNING - Row 13: Project number 1904 (Seasons) not found in projects table.
+2025-03-24 23:18:41,284 - WARNING - Row 15: Project number 2009 (Church Road) not found in projects table.
+2025-03-24 23:18:41,285 - WARNING - Row 16: Project number 2414 (Whistler Creek West) not found in projects table.
+2025-03-24 23:18:41,285 - WARNING - Row 17: Project number 2411 (Mosaic Burns Rd) not found in projects table.
+2025-03-24 23:18:41,316 - WARNING - Row 0: Project number 2206 (Two Waters Masterplan) not found in projects table.
+2025-03-24 23:18:41,316 - WARNING - Row 1: Project number 2302 (Qualex KIngsway) not found in projects table.
+2025-03-24 23:18:41,323 - WARNING - Row 3: Project number 2403 (Qualex 10th & Guelph) not found in projects table.
+2025-03-24 23:18:41,383 - WARNING - Row 0: Project number 2301 (Lotus Mission) not found in projects table.
+2025-03-24 23:18:41,384 - WARNING - Row 1: Project number 2414 (Whistler Creek West) not found in projects table.
+2025-03-24 23:18:41,384 - WARNING - Row 2: Project number 2302 (Qualex Kingsway) not found in projects table.
+2025-03-24 23:18:41,385 - WARNING - Row 3: Project number 2403 (10th and Guelph) not found in projects table.
+2025-03-24 23:18:41,385 - WARNING - Row 4: Project number 2411 (Mosaic Burns Road) not found in projects table.
+2025-03-24 23:18:41,385 - WARNING - Row 5: Project number 2206 (Two Waters Master Plan) not found in projects table.
+2025-03-24 23:18:41,406 - WARNING - Row 0: Project number 1712 (Hawksley) not found in projects table.
+2025-03-24 23:18:41,407 - WARNING - Row 1: Project number 1712 (Hawksley) not found in projects table.
+2025-03-24 23:18:41,410 - WARNING - Row 2: Project number 1712 (Hawksley) not found in projects table.
+2025-03-24 23:18:41,410 - WARNING - Row 3: Project number 1712 (Hawksley) not found in projects table.
+2025-03-24 23:18:41,413 - WARNING - Row 5: Project number 1702 (Emery Lot 2) not found in projects table.
+2025-03-24 23:18:41,440 - WARNING - Row 0: Project number 1904 (Qualex Regan - Seasons) not found in projects table.
+2025-03-24 23:18:41,440 - WARNING - Row 1: Project number 2201 (Emery Lot 4) not found in projects table.
+2025-03-24 23:18:41,443 - WARNING - Row 3: Project number 2403 (10th & Guelph) not found in projects table.
+2025-03-24 23:18:41,476 - WARNING - Row 0: Project number 2106 (Arbutus & 35th) not found in projects table.
+2025-03-24 23:18:41,477 - WARNING - Row 1: Project number 2106 (Arbutus & 35th) not found in projects table.
+2025-03-24 23:18:41,478 - WARNING - Row 2: Project number 2302 (Kingsway) not found in projects table.
+2025-03-24 23:18:41,478 - WARNING - Row 3: Project number 2403 (Guelph) not found in projects table.
+2025-03-24 23:18:41,541 - WARNING - Row 0: Project number 2009 (Sooke) not found in projects table.
+2025-03-24 23:18:41,542 - WARNING - Row 1: Project number 2009 (Sooke) not found in projects table.
+2025-03-24 23:18:41,542 - WARNING - Row 2: Project number 2205 (SFU 36 37) not found in projects table.
+2025-03-24 23:18:41,574 - WARNING - Row 0: Project number 2106 (IPL Arbutus & 35th) not found in projects table.
+2025-03-24 23:18:41,575 - WARNING - Row 1: Project number 2405 (Ledcor Mt Seymour Pkwy) not found in projects table.
+2025-03-24 23:18:41,576 - WARNING - Row 2: Project number 2303 (Mosaic Langley) not found in projects table.
+2025-03-24 23:18:41,576 - WARNING - Row 3: Project number 2302 (Qualex Kingsway) not found in projects table.
+2025-03-24 23:18:41,576 - WARNING - Row 4: Project number 2403 (Qualex 10tth & Guelph) not found in projects table.
+2025-03-24 23:18:41,577 - WARNING - Row 5: Project number 2402 (UBCO Masterplan) not found in projects table.
+2025-03-24 23:18:41,580 - WARNING - Row 6: Project number 2201 (Emery Phase 4) not found in projects table.
+2025-03-24 23:18:41,582 - WARNING - Row 8: Project number 2414 (Whistler Creek West) not found in projects table.
+2025-03-24 23:18:41,604 - WARNING - Row 1: Project number 2310 (Whistler - Lake Placid Road) not found in projects table.
+2025-03-24 23:18:41,605 - WARNING - Row 3: Project number 2302 (Qualex Kingsway) not found in projects table.
+2025-03-24 23:18:41,625 - WARNING - Row 0: Project number 1702 (Lynn Parkside) not found in projects table.
+2025-03-24 23:18:41,626 - WARNING - Row 1: Project number 1712 (Hawksley) not found in projects table.
+2025-03-24 23:18:41,631 - WARNING - Row 3: Project number 1904 (Regan - Seasons) not found in projects table.
+2025-03-24 23:18:41,633 - WARNING - Row 5: Project number 2008 (SFU Lot 24) not found in projects table.
+2025-03-24 23:18:41,634 - WARNING - Row 6: Project number 2009 (Church road) not found in projects table.
+2025-03-24 23:18:41,634 - WARNING - Row 7: Project number 2009 (Church road /Extra) not found in projects table.
+2025-03-24 23:18:41,635 - WARNING - Row 10: Project number 2106 (Arbutus) not found in projects table.
+2025-03-24 23:18:41,636 - WARNING - Row 11: Project number 2201 (Emery Lot 4) not found in projects table.
+2025-03-24 23:18:41,665 - WARNING - Row 0: Project number 2008 (Mosaic Lot 24 SFU Symposia) not found in projects table.
+2025-03-24 23:18:41,669 - WARNING - Row 2: Project number 2201 (Trailside) not found in projects table.
+2025-03-24 23:18:41,697 - WARNING - Row 0: Project number 2411 (Mosaic - Burns Road) not found in projects table.
+2025-03-24 23:18:41,703 - WARNING - Row 3: Project number 1712 (BPP Area 6 Lot 3) not found in projects table.
+2025-03-24 23:18:41,736 - WARNING - Row 0: Project number 1712 (Hawksley) not found in projects table.
+2025-03-24 23:18:41,767 - WARNING - Row 0: Project number 1712 (Hawksley) not found in projects table.
+2025-03-24 23:18:41,767 - WARNING - Row 1: Project number 2106 (Arbutus) not found in projects table.
+2025-03-24 23:18:41,771 - WARNING - Row 3: Project number 2205 (Rize SFU Lot 36 & 37) not found in projects table.
+2025-03-24 23:18:41,801 - WARNING - Row 0: Project number 2302 (Qualex Kingsway) not found in projects table.
+2025-03-24 23:18:41,802 - WARNING - Row 3: Project number 2410 (Mosaic Adaptable Study) not found in projects table.
+2025-03-24 23:18:41,805 - WARNING - Row 5: Project number 2403 (Qualex Guelph & 10th) not found in projects table.
+2025-03-24 23:18:41,838 - WARNING - Row 4: Project number 1702 (Emery Phase 2) not found in projects table.
+2025-03-24 23:18:41,838 - WARNING - Row 5: Project number 2205 (Rize SFU Lot 36 & 37) not found in projects table.
+2025-03-24 23:18:41,838 - WARNING - Row 6: Project number 2201 (Emery Lot 4) not found in projects table.
+2025-03-24 23:18:41,839 - WARNING - Row 7: Project number 2411 (Mosaic Burns Rd) not found in projects table.
+2025-03-24 23:18:41,840 - WARNING - Row 10: Project number 2106 (Arbutus & 34th) not found in projects table.
+2025-03-24 23:18:41,840 - WARNING - Row 11: Project number 2410 (Mosaic Adaptable Dwelling Study) not found in projects table.
+2025-03-24 23:18:41,840 - WARNING - Row 12: Project number 2413 (Transca Como Lake) not found in projects table.
+2025-03-24 23:18:41,841 - WARNING - Row 13: Project number 2008 (SFU Lot 24) not found in projects table.
+2025-03-24 23:18:41,870 - WARNING - Row 1: Project number 1712 (Hawksley) not found in projects table.
+2025-03-24 23:18:41,871 - WARNING - Row 3: Project number 1712 (Hawksley Amenity Splt) not found in projects table.
+2025-03-24 23:18:41,896 - WARNING - Row 0: Project number 1712 (Hawksley) not found in projects table.
+2025-03-24 23:18:41,897 - WARNING - Row 1: Project number 2106 (Arbutus) not found in projects table.
+2025-03-24 23:18:41,897 - WARNING - Row 2: Project number 2106 (Arbutus) not found in projects table.
+2025-03-24 23:18:41,898 - WARNING - Row 3: Project number 2201 (Emery Phase 4) not found in projects table.
+2025-03-24 23:18:41,898 - WARNING - Row 4: Project number 2201 (Emery Phase 4) not found in projects table.
+2025-03-24 23:18:41,898 - WARNING - Row 5: Project number 2201 (Emery Phase 4) not found in projects table.
+2025-03-24 23:18:41,926 - WARNING - Row 0: Project number 2205 (Rize SFU Lot 36 & 37) not found in projects table.
+2025-03-24 23:18:41,927 - WARNING - Row 1: Project number 1702 (Mosaic Emery Phase 2) not found in projects table.
+2025-03-24 23:18:41,956 - WARNING - Row 0: Project number 2302 (Qualex Kingsway) not found in projects table.
