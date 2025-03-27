@@ -10,3 +10,4 @@ Cleaned_Timekeeping/*
 .Trashes
 
 __pycache__/
+.ipynb_checkpoints/
