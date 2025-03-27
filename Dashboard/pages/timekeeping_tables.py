@@ -4,6 +4,10 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import plotly.express as px
 
+from utils.header_navigation import show_buttons#CUSTOM HEADER (utils folder)
+
+show_buttons("Timekeeping Tables", "Table Data")
+
 #connect
 conn = sqlite3.connect('../timekeeping.db')
 
@@ -12,8 +16,6 @@ conn = sqlite3.connect('../timekeeping.db')
 def load_data(query):
     return pd.read_sql(query, conn)
 
-#title
-st.title("Timekeeping DB Dashboard")
 
 
 #sidebar

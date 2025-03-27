@@ -4,12 +4,11 @@ import plotly.express as px
 import sqlite3
 import streamlit as st
 
+from utils.header_navigation import show_buttons#CUSTOM HEADER (utils folder)
+
+show_buttons("Monthly Stats", "Insights into Monthly Business Trends & Productivity")
+
 conn =sqlite3.connect('../timekeeping.db')
-
-st.set_page_config(layout="wide")
-
-st.title("Monthly Stats")
-st.write("Insights into Monthly Business Trends & Productivity")
 
 #extract from db tables
 df_employees = pd.read_sql("SELECT employee_id, name FROM Employees", conn)
