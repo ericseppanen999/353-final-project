@@ -1,156 +1,206 @@
 import sqlite3
+import pandas as pd
+import numpy as np
+import os
+import re
+import sys
+import glob
+import logging
+from datetime import datetime
 
-# Connect to the database
-conn = sqlite3.connect('timekeeping.db')
+# Configure logging (if needed)
+logging.basicConfig(
+    filename='missing_projects.log',
+    level=logging.WARNING,
+    format='%(asctime)s - %(levelname)s - %(message)s',
+    filemode='a'
+)
+
+# ----- Helper: Revised filename parser (if needed elsewhere) -----
+def parse_filename(filename):
+    valid_months = {
+        "january", "february", "march", "april", "may", "june",
+        "july", "august", "september", "october", "november", "december"
+    }
+    base = os.path.basename(filename)
+    # Remove suffix like "_projects.csv", "_summary.csv", etc.
+    base = re.sub(r'(_(projects|summary))?\.xls(x)?$', '', base, flags=re.IGNORECASE)
+    base = re.sub(r'(_(projects|summary))?\.csv$', '', base, flags=re.IGNORECASE)
+    parts = base.split('_')
+    if len(parts) >= 3:
+        candidate = parts[-2].lower()
+        if candidate in valid_months:
+            employee_name = " ".join(parts[:-2])
+            month_year = parts[-2] + " " + parts[-1]
+        else:
+            try:
+                month_num = int(candidate)
+                if 1 <= month_num <= 12:
+                    employee_name = " ".join(parts[:-2])
+                    month_name = datetime(1900, month_num, 1).strftime("%B")
+                    month_year = month_name + " " + parts[-1]
+                else:
+                    employee_name = " ".join(parts[:-1])
+                    month_year = parts[-1]
+            except ValueError:
+                employee_name = " ".join(parts[:-1])
+                month_year = parts[-1]
+    else:
+        employee_name = "Unknown"
+        month_year = "Unknown"
+    return (employee_name, month_year)
+
+def clean_project_no(project_no):
+    # Keep project number as string to allow values like "1004b"
+    # remove leading 0's
+    project_no = str(project_no).strip()
+    project_no = re.sub(r'^[0]+', '', project_no)  # Remove leading zeros
+    return project_no
+
+# ----- Connect to the Database -----
+db_path = 'timekeeping.db'
+conn = sqlite3.connect(db_path)
 cur = conn.cursor()
 
+# ----- Drop Existing Tables (if desired) -----
 cur.execute("DROP TABLE IF EXISTS projects")
+cur.execute("DROP TABLE IF EXISTS financial_data")
 conn.commit()
 
-# Create the projects table if it doesn't exist
+# ----- Create the Projects Table -----
 cur.execute("""
     CREATE TABLE IF NOT EXISTS projects (
-        project_no INTEGER PRIMARY KEY,
+        project_no TEXT PRIMARY KEY,
         project_name TEXT NOT NULL,
-        project_captain TEXT NOT NULL
-    )
-    """)
+        project_captain TEXT NOT NULL,
+        developer TEXT,
+        neighbourhood TEXT
+    );
+""")
 conn.commit()
 
-# Insert project information
-projects = [
-    (122, 'Sagebrook', 'A Mitchell'),
-    (213, 'Port Royal (PR)', 'A Mitchell'),
-    (219, 'Cortina', 'A Mitchell'),
-    (234, 'Chancellor House', 'G McCutcheon'),
-    (249, 'Indigo Townhouses', 'S Houwen'),
-    (313, 'Argyll House West', 'G McCutcheon'),
-    (314, 'Argyll House East', 'G McCutcheon'),
-    (402, 'Folio', 'A Seppanen'),
-    (405, 'SFU Lot 10', 'R Wolfe'),
-    (411, '6th & Clarkson', 'A Chan'),
-    (412, 'UBC Duplexes', 'A Seppanen'),
-    (413, 'Chancellor 2', 'B Ramsay'),
-    (414, 'Lee Residence', 'D Chies'),
-    (420, 'UBC Design Studio', 'S Houwen'),
-    (427, 'Trailmobile Collage', 'A Mitchell'),
-    (504, 'Camera', 'T Winkler'),
-    (508, 'PR Rowhouses', 'M Wodszynski'),
-    (515, 'PR High Rise', 'A Seppanen'),
-    (516, 'PR Float Homes', 'A Chan'),
-    (517, 'PR Phase 3B', 'A Bolin'),
-    (518, 'British Pacific Properties (BPP)', 'V Vukojevic'),
-    (520, 'T Lee Residence', '0'),
-    (607, 'PR Phase 3C', 'T Winkler'),
-    (613, 'Mosaic Dominion St', 'S Hsu'),
-    (615, 'Lot 62 North Vancouver', 'T Winkler'),
-    (626, 'Mosaic Wilkie Ave', 'S Hsu'),
-    (631, 'PR Commercial', 'A Chan'),
-    (633, 'Reliance 8th St NW', 'A Chan'),
-    (705, 'Billy Brown Apartments', 'G McCutcheon'),
-    (712, 'PR - 4A - Rental', 'S Hsu'),
-    (713, 'Aragon - Wall Street', 'V Vukojevic'),
-    (721, 'Mosaic - Roxton Avenue', 'S Hsu'),
-    (722, 'DHL - Ewen Avenue', 'T Winkler'),
-    (731, 'Polygon - Highland Drive', 'A Chan'),
-    (734, 'Mosaic - Clayton Avenue', 'S Hsu'),
-    (809, 'Mosaic - S Bonson CC', 'A Bolin'),
-    (811, 'Intracorp - Anavets - Market', 'T Winkler'),
-    (812, '33rd & Mackenzie', 'A Chan'),
-    (825, 'Intergulf - 2222 Burrard St', 'B Ramsay'),
-    (831, 'Sikh Temple', 'T Winkler'),
-    (833, 'Mt Seymour Seniors Centre', 'A Chan'),
-    (906, 'UBCO Student Res Phase 4', 'A Seppanen'),
-    (908, 'Mosaic - Baptist Church Site', 'A Mitchell'),
-    (909, 'Mosaic - Wilkie Amendment', 'S Hsu'),
-    (916, 'PR 3A', 'T Winkler'),
-    (921, 'Guardian - Coast Meridian', 'S Hsu'),
-    (1004, 'Mosaic - Foster Avenue', 'S Hsu'),
-    (1007, 'Intracorp - 3rd and Lonsdale', 'A Chan'),
-    (1008, 'PR - 4a - Lots G, H', 'A Chan'),
-    (1009, 'PR - 4a - Lot J', 'Al Chan'),
-    (1011, 'Mosaic - Como Lake', 'S Hsu'),
-    (1014, 'Intracorp - Anavets - Rental', 'J Ralph'),
-    (1020, 'Intracorp - Foster Ave - East', 'Kurt/Saeed'),
-    (1021, 'Intracorp - Foster Ave - West', 'S Hsu'),
-    (1022, 'Mosaic - Cambie Street', 'S Hsu'),
-    (1024, 'Parklane -  Village at Bedford', 'A Mitchell'),
-    (1104, 'Mosaic - Como Lake II', 'S Hsu'),
-    (1106, 'Intracorp - Maywood Park', 'B Ramsay'),
-    (1109, 'PR Phase 6 Apts', 'A Chan'),
-    (1115, 'Mosaic - Yorkson TH', 'Jack Wu'),
-    (1119, 'Intergulf - 4500 Cambie', 'B Ramsay'),
-    (1207, 'BBP - The Peak', 'A Bolin'),
-    (1220, 'Mosaic - Cambie & 50th', 'S Hsu'),
-    (1317, 'Mosaic - 23rd Ave Surrey TH', 'S Hsu'),
-    (1403, 'Mosaic - 156 East 35th', '0'),
-    (1405, 'UBC Mixed Use', '0'),
-    (1406, 'Intracorp - 375 West 59th', 'K McLaren'),
-    (1415, 'Mosaic - 54th & Cambie', 'S Hsu'),
-    (1417, 'UBC - Lot E', 'S Hsu'),
-    (1503, 'Intergulf - Hunter St, N Van', 'C Ding'),
-    (1505, 'PR - Phase 6C Apartments', 'A Chan'),
-    (1507, 'IPL - Finnish Manor', 'S Hsu'),
-    (1508, 'BBP - Lot 37 - Apartments', 'A Seppanen'),
-    (1602, 'IPL - Hudson St TH', 'S Hsu'),
-    (1604, 'Intergulf - SFU - Lot 17', 'S Hsu'),
-    (1607, 'Intergulf Lower Lynn Town Ctre', 'J Heinmiller'),
-    (1705, 'Mosaic - Forsythe', 'S Hsu'),
-    (1709, 'Aragon - PR 6b CLT apts', 'B Ramsay'),
-    (1714, 'Mosaic - SFU - Lot 19', 'S Hsu'),
-    (1715, 'Beedie - Fraser Mills 7B; 8B', 'B Ramsay'),
-    (1803, 'Qualex - Grange St, Burnaby', 'K McLaren'),
-    (1806, 'Aragon - Cambie Station', 'Jack Wu'),
-    (1901, 'Quadreal - Maplewood Gardens', 'A Seppanen'),
-    (2003, 'IPL - Victoria & 11th', 'S Hsu'),
-    (2010, 'NISD - Lot 19', 'B Ramsay'),
-    (2011, 'NISD - Lot 17', 'B Ramsay'),
-    (2013, 'Qualex - Harrison & Kemsley', 'A Seppanen'),
-    (2017, 'Mosaic - Emery 3', 'S Hsu'),
-    (2102, 'IPL - 33rd & Commercial', 'K McLaren'),
-    (2304, 'Aragon - Two Waters - Lot 1,2', 'C.Ding'),
-    (1013, 'Intracorp - Orizon', ''),
-    (407, 'Rogers Creek', ''),
-    (425, 'British Prop small lot', ''),
-    (507, 'CMHC - Nan Hui', ''),
-    (614, 'CMHC', ''),
-    (622, 'Kamloops Daycare', ''),
-    (603, 'P R 2A Rowhouses', ''),
-    (429, 'Pringle Creek', ''),
-    (630, 'Pringle Creek - Lots 73 - 75', ''),
-    (612, 'Anton Street - Whistler', ''),
-    (322, 'Quest University', ''),
-    (625, 'Quest University - furniture', ''),
-    (629, 'Townline - Thompsons Ldg', ''),
-    (717, 'Davis Outlook', ''),
-    (723, 'SW Coquitlam Housing Study', ''),
-    (730, 'Intracorp - Chanc Row Duplex', ''),
-    (735, 'UBCO Gateway', ''),
-    (736, '800 Maclean Drive', ''),
-    (808, 'Intracorp - Barker Highrise', ''),
-    (807, 'Richmond - S Mclennan Study', ''),
-    (824, 'Prussion - Commercial & 20th', ''),
-    (826, 'Coquitlam - Zoning Study', ''),
-    (827, 'Coquitlam - How to booklets', ''),
-    (829, 'Lynn Valley Masterplan', ''),
-    (910, 'Mosaic - Marquerite Study', ''),
-    (911, 'Port Coquitlam Infill Housing Study', ''),
-    (912, 'New Westminster Gas Works Site', ''),
-    (914, 'Tsakumis - 17th Ave Surrey', ''),
-    (915, 'City of Nanaimo Urban Design Study', ''),
-    (1210, 'Intergulf - Howe Street', ''),
-    (1216, 'Queens Hotel - Townhouse', ''),
-    (1216, 'Queens Hotel - hourly', ''),
-    (1503, 'Intergulf - Hunter Street Comm Ctre', '')
+# ----- Create the Financial Data Table -----
+cur.execute("""
+    CREATE TABLE IF NOT EXISTS financial_data (
+        project_no TEXT PRIMARY KEY,
+        percent_complete REAL,
+        fee_earned_to_date REAL,
+        fee_as_per_contract REAL,
+        amount_left_to_bill REAL,
+        target_fees_per_hour REAL,
+        actual_fees_per_hour REAL,
+        pre_CA_budget_hours REAL,
+        pre_CA_actual_hours REAL,
+        hours_left REAL,
+        months_in_construction REAL,
+        construction_fee_per_month REAL,
+        CA_actual_hours REAL,
+        CA_budget_hours REAL,
+        date_updated TEXT,
+        classification TEXT,
+        storeys TEXT,
+        construction_type TEXT,
+        floor_area REAL,
+        cost_per_sq_ft REAL,
+        construction_budget REAL,
+        number_of_units INTEGER,
+        corrected_fee_budget_hours REAL,
+        corrected_fee_actual_hours REAL,
+        fee_per_unit_based_on_higher_fee_value REAL,
+        fee_per_sf_based_on_higher_fee_value REAL,
+        fee_construction_budget REAL,
+        corrected_fee_construction_budget REAL
+    );
+""")
+conn.commit()
+
+# ----- Read Excel Files -----
+project_data = pd.read_excel('Project_Data/Project_Archive_List.xls', sheet_name='Sheet1', skiprows=1)
+financial_data = pd.read_excel('Project_Data/Financial_Data.xls', sheet_name='Sheet1', skiprows=1)
+
+# Convert to DataFrames
+project_data = pd.DataFrame(project_data)
+financial_data = pd.DataFrame(financial_data)
+
+# ----- Process Project Data -----
+# Select and rename columns from project_data
+project_data = project_data[['Project No.', 'Project Name', 'Team Lead', 'Developer', 'AHJ/ Neighbourhood']]
+project_data.columns = ['project_no', 'project_name', 'project_captain', 'developer', 'neighbourhood']
+
+# Drop rows where project_no is missing or all other fields are missing
+project_data = project_data.dropna(subset=['project_no'])
+project_data = project_data[~project_data[['project_name', 'project_captain', 'developer', 'neighbourhood']].isna().all(axis=1)]
+
+# Ensure project numbers are cleaned (allowing alphanumeric values)
+project_data['project_no'] = project_data['project_no'].apply(clean_project_no)
+
+# Convert project_data to list of tuples in the proper order
+project_tuples = list(project_data[['project_no','project_name','project_captain','developer','neighbourhood']].itertuples(index=False, name=None))
+
+# ----- Insert Projects Data -----
+cur.executemany('''
+    INSERT OR IGNORE INTO projects (project_no, project_name, project_captain, developer, neighbourhood)
+    VALUES (?,?,?,?,?)
+''', project_tuples)
+conn.commit()
+
+# ----- Process Financial Data -----
+# Clean financial_data column names and select columns of interest
+financial_data.columns = financial_data.columns.str.strip()
+cols = [
+    "Job Number", "Job Name", "Job Captain", "% Complete", "Fee Earned to Date", 
+    "Fee as per Contract", "Amount Left to be Billed", "Target Fees per Hour", 
+    "Actual Fees per Hour", "Budget Hours", "Actual Hours", "Hours Left", 
+    "Months in Construction", "Construction Fee Per Month", "Actual Hours", 
+    "Budget Hours", "Date Updated", "Classification", "Storeys", "Const Type", 
+    "Floor Area (sf)", "Cost per sq. ft.", "Construction Budget", "Number of units", 
+    "Corrected Fee (Budget Hours)", "Corrected Fee (Actual Hours)", 
+    "Fee per unit based on higher Fee Value", "Fee per s.f. based on higher Fee Value", 
+    "Fee/ Construction Budget", "Corrected Fee/Construction Budget"
+]
+financial_data = financial_data[cols]
+financial_data.columns = [
+    "project_no", "project_name", "project_captain", "percent_complete", "fee_earned_to_date",
+    "fee_as_per_contract", "amount_left_to_bill", "target_fees_per_hour",
+    "actual_fees_per_hour", "pre_CA_budget_hours", "pre_CA_actual_hours", "hours_left",
+    "months_in_construction", "construction_fee_per_month", "CA_actual_hours", "CA_budget_hours",
+    "date_updated", "classification", "storeys", "construction_type",
+    "floor_area", "cost_per_sq_ft", "construction_budget", "number_of_units",
+    "corrected_fee_budget_hours", "corrected_fee_actual_hours",
+    "fee_per_unit_based_on_higher_fee_value", "fee_per_sf_based_on_higher_fee_value",
+    "fee_construction_budget", "corrected_fee_construction_budget"
 ]
 
-cur.executemany('''
-INSERT OR IGNORE INTO projects (project_no, project_name, project_captain)
-VALUES (?, ?, ?)
-''', projects)
+# Clean project numbers in financial_data as well
+financial_data['project_no'] = financial_data['project_no'].astype(str).apply(clean_project_no)
 
-# Commit the transaction
+# Convert financial_data to list of tuples in the proper order
+financial_tuples = list(financial_data[['project_no','percent_complete','fee_earned_to_date',
+    'fee_as_per_contract','amount_left_to_bill','target_fees_per_hour','actual_fees_per_hour',
+    'pre_CA_budget_hours','pre_CA_actual_hours','hours_left','months_in_construction',
+    'construction_fee_per_month','CA_actual_hours','CA_budget_hours','date_updated',
+    'classification','storeys','construction_type','floor_area','cost_per_sq_ft',
+    'construction_budget','number_of_units','corrected_fee_budget_hours',
+    'corrected_fee_actual_hours','fee_per_unit_based_on_higher_fee_value',
+    'fee_per_sf_based_on_higher_fee_value','fee_construction_budget','corrected_fee_construction_budget'
+]].itertuples(index=False, name=None))
+
+# ----- Insert Financial Data -----
+cur.executemany('''
+    INSERT OR IGNORE INTO financial_data (
+        project_no, percent_complete, fee_earned_to_date,
+        fee_as_per_contract, amount_left_to_bill, target_fees_per_hour, actual_fees_per_hour,
+        pre_CA_budget_hours, pre_CA_actual_hours, hours_left, months_in_construction, construction_fee_per_month,
+        CA_actual_hours, CA_budget_hours, date_updated, classification, storeys, construction_type,
+        floor_area, cost_per_sq_ft, construction_budget, number_of_units, corrected_fee_budget_hours,
+        corrected_fee_actual_hours, fee_per_unit_based_on_higher_fee_value, fee_per_sf_based_on_higher_fee_value,
+        fee_construction_budget, corrected_fee_construction_budget
+    )
+    VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)
+''', financial_tuples)
 conn.commit()
 
-# Close the connection
+# ----- Close the Database Connection -----
 conn.close()
+
+print("Processing complete.")

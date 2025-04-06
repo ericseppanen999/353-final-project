@@ -242,7 +242,7 @@ for year_folder in os.listdir(input_directory):
     if not year_folder.isdigit():
         continue
     year = int(year_folder)
-    if year < 2003 or year > 2024:
+    if year < 2004 or year > 2025:
         continue
     year_path = os.path.join(input_directory, year_folder)
     if not os.path.isdir(year_path):

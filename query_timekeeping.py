@@ -28,11 +28,12 @@ def query_top_projects(conn):
     JOIN projects P ON T.project_no = P.project_no
     GROUP BY T.project_no
     ORDER BY total_hours DESC
-    LIMIT 5
     """
     df = pd.read_sql_query(query, conn)
     print("\n=== Top 5 Projects by Total Billable Hours ===")
     print(df)
+    # export to csv
+    df.to_csv('top_projects.csv', index=False)
 
 def query_top_employees(conn):
     query_billable = """
@@ -181,6 +182,25 @@ def inspect_simin_lotfi(conn):
     print("\n=== Simin Lotfi ===")
     print(df)
 
+
+def query_financial_data(conn):
+    query="""
+    SELECT 
+    f.project_no, 
+    p.project_name,
+    f.construction_budget,
+    f.date_updated
+    FROM financial_data f
+    LEFT JOIN projects p ON f.project_no = p.project_no
+    ORDER BY f.construction_budget DESC
+    LIMIT 10;
+    """
+    df= pd.read_sql_query(query, conn)
+    print("\n=== Financial Data ===")
+    print(df)
+
+
+
 def main():
     db_path = "timekeeping.db"
     conn = sqlite3.connect(db_path)
@@ -192,19 +212,20 @@ def main():
     #query_nonbillable_entries(conn)
     
     # Summary queries.
-    #query_top_projects(conn)
-    #query_top_employees(conn)
+    query_top_projects(conn)
+    query_top_employees(conn)
     
     # Extended and insightful queries.
     query_hours_by_employee_and_month(conn)
     query_billable_vs_nonbillable_by_employee(conn)
     query_top_projects_by_month(conn)
     query_avg_daily_hours_by_employee(conn)
-    #query_highest_daily_hours(conn)
+    query_highest_daily_hours(conn)
     #query_common_work_codes(conn)
     query_company_monthly_trend(conn)
     #test(conn)
-    inspect_simin_lotfi(conn)
+    #inspect_simin_lotfi(conn)
+    query_financial_data(conn)
 
     conn.close()
 

@@ -1,13 +1,14 @@
-import pandas as pd
 import sqlite3
+import pandas as pd
+import numpy as np
 import os
 import re
+import sys
 import glob
 import logging
 from datetime import datetime
-import sys
 
-# Configure logging for missing project numbers.
+# Configure logging (if needed)
 logging.basicConfig(
     filename='missing_projects.log',
     level=logging.WARNING,
@@ -27,7 +28,7 @@ except ValueError:
     print("Error: Start and end year must be integers.")
     sys.exit(1)
 
-if not (2003 <= min_year <= 2024) or not (2003 <= max_year <= 2024):
+if not (2003 <= min_year <= 2025) or not (2003 <= max_year <= 2025):
     print("Error: Years must be between 2003 and 2024.")
     sys.exit(1)
 
@@ -35,17 +36,8 @@ if min_year > max_year:
     print("Error: Start year must be less than or equal to end year.")
     sys.exit(1)
 
-# ----- Helper: Revised filename parser -----
+# ----- Helper: Revised filename parser (unchanged) -----
 def parse_filename(filename):
-    """
-    Parse the filename to extract employee name and month/year.
-    Assumes filenames are like:
-      "Allan_Seppanen_May_2021_projects.csv" or
-      "Vanessa_Tam_December_2024_summary.csv"
-    This function removes the trailing '_projects' or '_summary' and then checks if the penultimate
-    token is a valid month name (or a number between 1 and 12). If so, it uses the last two tokens
-    as the month and year and the rest as the employee name.
-    """
     valid_months = {
         "january", "february", "march", "april", "may", "june",
         "july", "august", "september", "october", "november", "december"
@@ -81,27 +73,27 @@ def parse_filename(filename):
     return (employee_name, month_year)
 
 def id_hash(employee_name):
-    # Compute a stable integer hash for the employee name.
     return hash(employee_name) % 1000000
 
+# ----- Updated clean_project_no() -----
 def clean_project_no(project_no):
-    """
-    Remove all non-digit characters and leading zeros.
-    Convert to integer.
-    """
-    digits = re.sub(r'\D', '', str(project_no))
-    if not digits:
-        return None
-    digits = int(digits)
-    if digits > 9999:
-        digits = digits // 10
-    return digits
+    s = str(project_no).strip()
+    try:
+        f = float(s)
+        if f.is_integer():
+            return str(int(f))
+    except ValueError:
+        pass
+    m = re.match(r'(\d+)', s)
+    if m:
+        return m.group(1)
+    else:
+        return s
 
 def drop_tables_if_exists(db_path):
     conn = sqlite3.connect(db_path)
     cur = conn.cursor()
     cur.execute("DROP TABLE IF EXISTS employees")
-    # Do not drop the projects table since it is loaded by a separate script.
     cur.execute("DROP TABLE IF EXISTS time_entries")
     cur.execute("DROP TABLE IF EXISTS non_billable_entries")
     conn.commit()
@@ -116,6 +108,7 @@ def load_projects_csv_to_db(csv_file, db_path):
     conn = sqlite3.connect(db_path)
     cur = conn.cursor()
 
+    # Create employees table if not exists.
     cur.execute("""
     CREATE TABLE IF NOT EXISTS employees (
         employee_id INTEGER PRIMARY KEY,
@@ -123,12 +116,12 @@ def load_projects_csv_to_db(csv_file, db_path):
     )
     """)
     
-    # Projects table assumed to be pre-loaded in a separate script.
+    # Create time_entries table if not exists.
     cur.execute("""
     CREATE TABLE IF NOT EXISTS time_entries (
         entry_id INTEGER PRIMARY KEY AUTOINCREMENT,
         employee_id INTEGER,
-        project_no INTEGER,
+        project_no TEXT,
         work_code TEXT,
         date DATE,
         hours_worked DECIMAL,
@@ -147,26 +140,25 @@ def load_projects_csv_to_db(csv_file, db_path):
     employee_id = cur.fetchone()[0]
 
     df = pd.read_csv(csv_file)
-    # Expected columns: PROJECT NO, PROJECT NAME, WORK CODE, "1", ... "31", TOTAL, DESCRIPTION / COMMENTS.
+    # Expected columns: PROJECT NO, PROJECT NAME, WORK CODE, "1", ... "31", TOTAL, DESCRIPTION/COMMENTS.
     for idx, row in df.iterrows():
         raw_project_no = row["PROJECT NO"]
         cleaned_project_no = clean_project_no(raw_project_no)
-        if cleaned_project_no is None:
+        if cleaned_project_no == "":
             print(f"Skipping row {idx} due to invalid project number: {raw_project_no}")
             continue
         
         project_name = str(row["PROJECT NAME"]).strip()
         work_code = str(row["WORK CODE"]).strip()
         
-        # Check if the project exists in the projects table.
+        # Check if the project exists in the pre-loaded projects table.
         cur.execute("SELECT project_no FROM projects WHERE project_no = ?", (cleaned_project_no,))
-        """
         if cur.fetchone() is None:
-            msg = f"Row {idx}: Project number {cleaned_project_no} ({project_name}) not found in projects table."
+            msg = f"Row {idx}: Project number {cleaned_project_no} ({project_name}) not found in projects table. Skipping row."
             logging.warning(msg)
-            print(f"Skipping row {idx}: Project number {cleaned_project_no} ({project_name}) not found in projects table.")
+            print(msg)
             continue
-        """
+
         for day in range(1, 32):
             col = str(day)
             try:
@@ -181,7 +173,7 @@ def load_projects_csv_to_db(csv_file, db_path):
                     continue
                 cur.execute("""
                 INSERT INTO time_entries(employee_id, project_no, work_code, date, hours_worked)
-                VALUES(?, ?, ?, ?, ?)
+                VALUES (?, ?, ?, ?, ?)
                 """, (employee_id, cleaned_project_no, work_code, entry_date.isoformat(), hours))
     conn.commit()
     conn.close()
@@ -233,7 +225,7 @@ def load_summary_csv_to_db(csv_file, db_path):
                     continue
                 cur.execute("""
                 INSERT INTO non_billable_entries(employee_id, category, date, hours_worked)
-                VALUES(?, ?, ?, ?)
+                VALUES (?, ?, ?, ?)
                 """, (employee_id, category, entry_date.isoformat(), hours))
     conn.commit()
     conn.close()
@@ -258,7 +250,7 @@ for year_folder in os.listdir(input_directory):
     year_path = os.path.join(input_directory, year_folder)
     if not os.path.isdir(year_path):
         continue
-    # Projects
+    # Projects folder
     for month_folder in os.listdir(year_path):
         projects_folder = os.path.join(year_path, month_folder, "Projects")
         if os.path.isdir(projects_folder):
@@ -266,7 +258,7 @@ for year_folder in os.listdir(input_directory):
                 if "~$" in os.path.basename(file).lower() or "unknown" in os.path.basename(file).lower():
                     continue
                 project_files.append(file)
-    # Summaries
+    # Summaries folder
     for month_folder in os.listdir(year_path):
         summaries_folder = os.path.join(year_path, month_folder, "Summaries")
         if os.path.isdir(summaries_folder):
