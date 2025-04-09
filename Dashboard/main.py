@@ -61,6 +61,8 @@ with col2:
 with col3:
     if st.button("Predictions"):
         st.switch_page("pages/predictions.py")
+    if st.button("Project Stats"):
+        st.switch_page("pages/project_stats.py")
     
 
 #placeholder image for now

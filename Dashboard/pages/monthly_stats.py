@@ -3,6 +3,7 @@ import pandas as pd
 import plotly.express as px
 import sqlite3
 import streamlit as st
+import numpy as np
 
 from utils.header_navigation import show_buttons#CUSTOM HEADER (utils folder)
 
@@ -26,8 +27,46 @@ df = df_time.merge(df_employees, on="employee_id", how="left")
 st.sidebar.header("Filter Data")
 
 #months - This filters all the following vizs by month
-months =df["month"].astype(str).unique()
-selected_month = st.sidebar.selectbox("Select a Month", months, index=len(months) - 1)#default to most recent month
+df["year"]=df["month"].dt.year
+df["month_num"]=df["month"].dt.month
+
+years=sorted(df["year"].unique())
+selected_year=st.sidebar.selectbox("Select a Year", years, index=len(years) - 1)
+
+available_months=df[df["year"] == selected_year]["month_num"].unique()
+available_months=sorted(available_months)
+month_names={1: "January", 2: "February", 3: "March", 4: "April", 5: "May", 
+               6: "June", 7: "July", 8: "August", 9: "September", 
+               10: "October", 11: "November", 12: "December"}
+
+selected_month_num=st.sidebar.selectbox("Select a Month",available_months,format_func=lambda x: month_names[x])
+selected_month_int=int(selected_month_num)
+if selected_month_int>1:
+    prev_year=selected_year
+    prev_month_int=selected_month_int-1
+else:
+    prev_year=selected_year-1
+    prev_month_int=12
+
+prev_month=f"{prev_year}-{prev_month_int:02d}"
+print("prev_month", prev_month)
+print("prev_year", prev_year)
+# Construct period string
+selected_month = f"{selected_year}-{selected_month_num:02d}"
+
+def calc_pct_increase(row):
+    pct=0.0
+    if row["prev_hours"] == 0:
+        pct=0.0
+    else:
+        pct = ((row["hours_worked"] - row["prev_hours"]) / row["prev_hours"]) * 100
+    if pct==0:
+        return "0.00%"
+    if pct>0:
+        return f"+{pct:.2f}%"
+    else:
+        return f"-{pct:.2f}%"
+
 
 filtered_df = df[df["month"].astype(str) ==selected_month]#filter by month
 filtered_non_billable_df = df_non_billable[df_non_billable["month"].astype(str) == selected_month]#filter non-billable data based on month
@@ -35,6 +74,10 @@ filtered_non_billable_df = df_non_billable[df_non_billable["month"].astype(str) 
 
 #hours vars
 employee_hours = filtered_df.groupby(["employee_id", "name"])["hours_worked"].sum().reset_index()
+employee_hours["prev_hours"]=employee_hours["hours_worked"].shift(1)
+employee_hours["prev_hours"]=employee_hours["prev_hours"].fillna(0)
+employee_hours["pct_change"]=employee_hours.apply(calc_pct_increase,axis=1)
+employee_hours["prev_hours"]=employee_hours["prev_hours"].fillna(0)
 work_type_hours = filtered_df.groupby("work_code")["hours_worked"].sum().reset_index()
 billable_hours = filtered_df["hours_worked"].sum()
 non_billable_hours = filtered_non_billable_df["hours_worked"].sum()
@@ -46,11 +89,21 @@ billable_vs_non_billable_df = pd.DataFrame({
 })
 
 
+employee_hours = employee_hours.sort_values(by="hours_worked",ascending=False)
 
 fig1 = px.bar(employee_hours, x="name", y="hours_worked",
               labels={"hours_worked": "Hours Worked", "name": "Employee"},
               color="hours_worked", color_continuous_scale="Blues",
               width=700, height=500)  # Increased figure size
+
+fig1.update_traces(text=employee_hours["pct_change"], textposition="outside")
+fig1.update_layout(
+    margin=dict(t=60, b=60),
+    uniformtext_minsize=8,
+    uniformtext_mode='hide',
+    title_text=f"Total Billable Hours per Employee ({selected_month})<br><sup>with % Increase vs {prev_month}</sup>",
+    title_x=0.5
+)
 
 fig2 = px.pie(work_type_hours, names="work_code", values="hours_worked",
               labels={"work_code": "Work Type", "hours_worked": "Total Hours"},
@@ -98,7 +151,7 @@ col1, spacer, col2 = st.columns([3.5, 0.1, 2.5])#columns - adjust these nums for
 #left one
 with col1:
     #top
-    st.subheader(f"Total Hours Worked per Employee ({selected_month})")
+    st.subheader(f"Total Billable Hours Worked per Employee ({selected_month})")
     st.plotly_chart(fig1, use_container_width=True)
     
     #bott
