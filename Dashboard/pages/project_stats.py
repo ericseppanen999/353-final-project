@@ -7,10 +7,9 @@ from datetime import datetime
 from sample_analysis.forecasting import forecast_expenditure, clean_project_no
 from utils.header_navigation import show_buttons
 
-st.title("Project Work Over Time")
-
-conn = sqlite3.connect('../timekeeping.db')  # connect to DB
-projects_df = pd.read_sql("SELECT project_no, project_name FROM projects ORDER BY project_no", conn)
+st.title("Project Insights")
+conn=sqlite3.connect('../timekeeping.db') # connect to db
+projects_df=pd.read_sql("SELECT project_no, project_name FROM projects ORDER BY project_no",conn) # fetch projects
 
 if projects_df.empty:
     st.error("No projects available.")  # no projects
@@ -36,9 +35,62 @@ else:
         selected_proj_no = selected_proj.split(" - ")[0].strip()
         st.write(f"### Work History for Project {selected_proj_no}")
 
-        # Fetch time entries for the selected project
-        query = f"SELECT date, hours_worked FROM time_entries WHERE project_no = '{selected_proj_no}'"
-        df_time = pd.read_sql(query, conn)
+
+        #KPI Section 
+        project_info_query = f"""
+        SELECT p.project_captain, f.percent_complete, f.amount_left_to_bill
+        FROM projects p
+        LEFT JOIN financial_data f ON p.project_no = f.project_no
+        WHERE p.project_no = '{selected_proj_no}'
+        """
+        
+        kpi_df =pd.read_sql(project_info_query, conn)
+        
+        if not kpi_df.empty :
+            
+            captain = kpi_df["project_captain"].iloc[0]
+            percent_complete_raw = kpi_df["percent_complete"].iloc[0]
+            amount_left = kpi_df["amount_left_to_bill"].iloc[0]
+        
+            #percent complete (converts frac to percent)
+            if pd.isnull(percent_complete_raw) or percent_complete_raw <= 0:
+                
+                percent_complete_display = "N/A"
+            elif percent_complete_raw >= 1.0:
+                percent_complete_display = "100%"
+                
+            else :
+                percent_complete_display = f"{percent_complete_raw * 100:.1f}%"
+        
+            #hours
+            hours_query = f"""
+            SELECT hours_worked
+            FROM time_entries
+            WHERE project_no = '{selected_proj_no}'
+            """
+            
+            hours_df =pd.read_sql(hours_query,conn)
+            total_hours = hours_df["hours_worked"].sum()
+
+            #the kpis are split into 4 columns so they go across the screen
+            col1, col2, col3, col4 =st.columns(4)
+            
+            col1.metric("📋 Job Captain", captain if captain else "N/A")
+            col2.metric("✅ Completion %", percent_complete_display)
+            col3.metric("💸 Left to Bill", f"${amount_left:,.2f}" if pd.notnull(amount_left) and percent_complete_raw < 1.0 else "✓ Fully Billed")
+            col4.metric("⏱️ Total Hours Logged", f"{total_hours:,.1f}")
+        else:
+            
+            st.warning("No KPI data available for this project.")
+
+            
+
+
+
+    
+
+        query=f"SELECT date, hours_worked FROM time_entries WHERE project_no = '{selected_proj_no}'" # fetch time entries
+        df_time=pd.read_sql(query,conn)
 
         if df_time.empty:
             st.warning("No time entries found for this project.")

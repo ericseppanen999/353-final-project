@@ -114,38 +114,23 @@ cur.execute("""
 """)
 conn.commit()
 
-# ----- Read Excel Files -----
-project_data = pd.read_excel('Project_Data/Project_Archive_List.xls', sheet_name='Sheet1', skiprows=1)
-financial_data = pd.read_excel('Project_Data/Financial_Data.xls', sheet_name='Sheet1', skiprows=1)
+project_data=pd.read_excel('Project_Data/Project_Archive_List.xls', sheet_name='Sheet1', skiprows=1)
+financial_data=pd.read_excel('Project_Data/Financial_Data.xls', sheet_name='Sheet1', skiprows=1)
 
-# Convert to DataFrames
-project_data = pd.DataFrame(project_data)
-financial_data = pd.DataFrame(financial_data)
+project_data=pd.DataFrame(project_data)
+financial_data=pd.DataFrame(financial_data)
 
-# ----- Process Project Data -----
-# Select and rename columns from project_data
 project_data = project_data[['Project No.', 'Project Name', 'Team Lead', 'Developer', 'AHJ/ Neighbourhood']]
 project_data.columns = ['project_no', 'project_name', 'project_captain', 'developer', 'neighbourhood']
-
-# Drop rows where project_no is missing or all other fields are missing
 project_data = project_data.dropna(subset=['project_no'])
 project_data = project_data[~project_data[['project_name', 'project_captain', 'developer', 'neighbourhood']].isna().all(axis=1)]
-
-# Ensure project numbers are cleaned (allowing alphanumeric values)
 project_data['project_no'] = project_data['project_no'].apply(clean_project_no)
-
-# Convert project_data to list of tuples in the proper order
 project_tuples = list(project_data[['project_no','project_name','project_captain','developer','neighbourhood']].itertuples(index=False, name=None))
-
-# ----- Insert Projects Data -----
 cur.executemany('''
     INSERT OR IGNORE INTO projects (project_no, project_name, project_captain, developer, neighbourhood)
     VALUES (?,?,?,?,?)
 ''', project_tuples)
 conn.commit()
-
-# ----- Process Financial Data -----
-# Clean financial_data column names and select columns of interest
 financial_data.columns = financial_data.columns.str.strip()
 cols = [
     "Job Number", "Job Name", "Job Captain", "% Complete", "Fee Earned to Date", 
@@ -171,10 +156,8 @@ financial_data.columns = [
     "fee_construction_budget", "corrected_fee_construction_budget"
 ]
 
-# Clean project numbers in financial_data as well
 financial_data['project_no'] = financial_data['project_no'].astype(str).apply(clean_project_no)
 
-# Convert financial_data to list of tuples in the proper order
 financial_tuples = list(financial_data[['project_no','percent_complete','fee_earned_to_date',
     'fee_as_per_contract','amount_left_to_bill','target_fees_per_hour','actual_fees_per_hour',
     'pre_CA_budget_hours','pre_CA_actual_hours','hours_left','months_in_construction',
@@ -185,7 +168,6 @@ financial_tuples = list(financial_data[['project_no','percent_complete','fee_ear
     'fee_per_sf_based_on_higher_fee_value','fee_construction_budget','corrected_fee_construction_budget'
 ]].itertuples(index=False, name=None))
 
-# ----- Insert Financial Data -----
 cur.executemany('''
     INSERT OR IGNORE INTO financial_data (
         project_no, percent_complete, fee_earned_to_date,
@@ -200,7 +182,6 @@ cur.executemany('''
 ''', financial_tuples)
 conn.commit()
 
-# ----- Close the Database Connection -----
 conn.close()
 
 print("Processing complete.")

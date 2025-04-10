@@ -7,6 +7,7 @@ import sys
 import glob
 import logging
 from datetime import datetime
+import difflib
 
 # Configure logging (if needed)
 logging.basicConfig(
@@ -70,7 +71,7 @@ def parse_filename(filename):
     else:
         employee_name = "Unknown"
         month_year = "Unknown"
-    return (employee_name, month_year)
+    return (employee_name.strip(), month_year.strip())
 
 def id_hash(employee_name):
     return hash(employee_name) % 1000000
@@ -98,25 +99,100 @@ def drop_tables_if_exists(db_path):
     cur.execute("DROP TABLE IF EXISTS non_billable_entries")
     conn.commit()
     conn.close()
-    print("Tables dropped successfully (excluding projects).")
+    print("Tables dropped successfully (employees, time_entries, non_billable_entries).")
 
-# ----- Loader for Project CSVs (Billable Hours) -----
-def load_projects_csv_to_db(csv_file, db_path):
-    employee_name, month_year = parse_filename(csv_file)
-    print(f"[Projects] Parsed from filename: Employee = {employee_name}, Month/Year = {month_year}")
+# ----- Helper: Get matching employee using difflib -----
+def get_matching_employee(parsed_name, master_names, cutoff=0.8):
+    if parsed_name in master_names:
+        return parsed_name
+    matches = difflib.get_close_matches(parsed_name, master_names, n=1, cutoff=cutoff)
+    return matches[0] if matches else None
 
-    conn = sqlite3.connect(db_path)
-    cur = conn.cursor()
-
-    # Create employees table if not exists.
-    cur.execute("""
-    CREATE TABLE IF NOT EXISTS employees (
-        employee_id INTEGER PRIMARY KEY,
-        name TEXT NOT NULL UNIQUE
-    )
-    """)
+def load_master_employees(db_path, master_file):
+    df=pd.read_excel(master_file, sheet_name='employees')
+    df['Code']=df['Code'].astype(str).str.strip().str.upper()
+    rate_mapping={
+        "A":205,
+        "B":165,
+        "C":145,
+        "D":135,
+        "E":120,
+        "F":95,
+        "G":65
+    }
+    linked_dict={
+        "A":"Principal",
+        "B":"Project Arch/Proj Man",
+        "C":"Contractor Administrator",
+        "D":"Senior Designer/Architect/Project Coordinator",
+        "E":"Int Designer/Tech",
+        "F":"Junior Design Assist/Tech",
+        "G":"Admin Staff"
+    }
     
-    # Create time_entries table if not exists.
+    df['billable_rate']=df['Code'].map(rate_mapping)
+    df['billable_rate']=df['billable_rate'].fillna(0).astype(int)
+    df['position']=df['Code'].map(linked_dict)
+    df['Name']=df['Name'].astype(str).str.strip()
+    df = df[df['Name']!=""]
+
+    master_employees={}
+    for idx,row in df.iterrows():
+        name=row['Name']
+        employee_id=id_hash(name)
+        master_employees[name]=employee_id
+    
+    conn=sqlite3.connect(db_path)
+    cur=conn.cursor()
+    cur.execute("""
+        CREATE TABLE IF NOT EXISTS employees (
+            employee_id INTEGER PRIMARY KEY,
+            name TEXT NOT NULL UNIQUE,
+            billable_rate INTEGER,
+            position TEXT
+        )
+    """)
+
+    for name,employee_id in master_employees.items():
+        employee_rates=df.loc[df['Name']==name,'billable_rate']
+        if employee_rates.empty:
+            print(f"Warning: Billable rate not found for employee '{name}', setting to 0")
+            rate=0
+        else:
+            rate=employee_rates.iloc[0]
+            try:
+                rate=int(rate)
+            except ValueError:
+                print(f"Warning: Invalid billable rate for employee '{name}', setting to 0")
+                rate=0
+        employee_positions=df.loc[df['Name']==name,'position']
+        if employee_positions.empty:
+            pos=""
+        else:
+            pos=employee_positions.iloc[0]
+        
+        cur.execute("INSERT OR IGNORE INTO employees(employee_id, name, billable_rate, position) VALUES(?, ?, ?, ?)",(employee_id, name, rate, pos))
+    conn.commit()
+    conn.close()
+    print("Master employees loaded into database.")
+    return master_employees
+
+def load_projects_csv_to_db(csv_file, db_path, master_employees):
+    employee_name,month_year=parse_filename(csv_file)
+    print(f"[Projects] Parsed from filename: Employee = '{employee_name}', Month/Year = {month_year}")
+    matched_employee=get_matching_employee(employee_name,master_employees.keys())
+    if not matched_employee:
+        msg=f"Employee '{employee_name}' from file {csv_file} not found in master list. Skipping file."
+        logging.error(msg)
+        print(msg)
+        return
+    elif matched_employee!=employee_name:
+        print(f"Using close match: '{matched_employee}' for employee '{employee_name}'.")
+        employee_name=matched_employee
+    employee_id=master_employees[employee_name]
+    
+    conn=sqlite3.connect(db_path)
+    cur=conn.cursor()
     cur.execute("""
     CREATE TABLE IF NOT EXISTS time_entries (
         entry_id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -132,12 +208,6 @@ def load_projects_csv_to_db(csv_file, db_path):
     cur.execute("CREATE INDEX IF NOT EXISTS idx_time_entries_employee_date ON time_entries(employee_id, date)")
     cur.execute("CREATE INDEX IF NOT EXISTS idx_time_entries_project_date ON time_entries(project_no, date)")
     conn.commit()
-
-    employee_id = id_hash(employee_name)
-    cur.execute("INSERT OR IGNORE INTO employees(employee_id, name) VALUES(?, ?)", (employee_id, employee_name))
-    conn.commit()
-    cur.execute("SELECT employee_id FROM employees WHERE name=?", (employee_name,))
-    employee_id = cur.fetchone()[0]
 
     df = pd.read_csv(csv_file)
     # Expected columns: PROJECT NO, PROJECT NAME, WORK CODE, "1", ... "31", TOTAL, DESCRIPTION/COMMENTS.
@@ -180,13 +250,23 @@ def load_projects_csv_to_db(csv_file, db_path):
     print(f"[Projects] Data from {csv_file} loaded into the database.")
 
 # ----- Loader for Summary CSVs (Non-Billable Hours) -----
-def load_summary_csv_to_db(csv_file, db_path):
+def load_summary_csv_to_db(csv_file, db_path, master_employees):
     employee_name, month_year = parse_filename(csv_file)
-    print(f"[Summary] Parsed from filename: Employee = {employee_name}, Month/Year = {month_year}")
-
+    print(f"[Summary] Parsed from filename: Employee = '{employee_name}', Month/Year = {month_year}")
+    
+    matched_employee = get_matching_employee(employee_name, master_employees.keys())
+    if not matched_employee:
+        msg = f"Employee '{employee_name}' from file {csv_file} not found in master list. Skipping file."
+        logging.error(msg)
+        print(msg)
+        return
+    elif matched_employee != employee_name:
+        print(f"Using close match: '{matched_employee}' for employee '{employee_name}'.")
+        employee_name = matched_employee
+    employee_id = master_employees[employee_name]
+    
     conn = sqlite3.connect(db_path)
     cur = conn.cursor()
-
     cur.execute("""
     CREATE TABLE IF NOT EXISTS non_billable_entries (
         entry_id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -198,12 +278,6 @@ def load_summary_csv_to_db(csv_file, db_path):
     )
     """)
     conn.commit()
-
-    employee_id = id_hash(employee_name)
-    cur.execute("INSERT OR IGNORE INTO employees(employee_id, name) VALUES(?, ?)", (employee_id, employee_name))
-    conn.commit()
-    cur.execute("SELECT employee_id FROM employees WHERE name=?", (employee_name,))
-    employee_id = cur.fetchone()[0]
 
     df = pd.read_csv(csv_file)
     # The summary CSV is expected to have a column "non-billable" plus columns "1" to "31" for day-wise non-billable hours.
@@ -234,8 +308,12 @@ def load_summary_csv_to_db(csv_file, db_path):
 # ----- Main Processing Loop -----
 input_directory = "Cleaned_Timekeeping"
 db_path = "timekeeping.db"
+master_file = "Staff Chargeout Matrix.xlsx"  # Path to the master employee Excel file
 
 drop_tables_if_exists(db_path)
+
+# Load the master employee list and populate the employees table.
+master_employees = load_master_employees(db_path, master_file)
 
 project_files = []
 summary_files = []
@@ -271,9 +349,9 @@ print(f"Total project files found: {len(project_files)}")
 print(f"Total summary files found: {len(summary_files)}")
 
 for file in project_files:
-    load_projects_csv_to_db(file, db_path)
+    load_projects_csv_to_db(file, db_path, master_employees)
 
 for file in summary_files:
-    load_summary_csv_to_db(file, db_path)
+    load_summary_csv_to_db(file, db_path, master_employees)
 
 print("Processing complete.")
