@@ -34,7 +34,7 @@ with col_logo:
     st.image("assets/logo.png", width=180)#adjust width to fit logo
     
 with col_title:
-    st.title("Welcome to the Dashboard!")
+    st.title("Welcome to the RWA Analytics Dashboard!")
     st.subheader("Your all-in-one timekeeping and analytics tool.")
 
 
@@ -49,26 +49,57 @@ col1, col2, col3 = st.columns([1, 0.8, 1])
 with col1:
     if st.button("Home"):
         st.switch_page("main.py")
-    if st.button("Questions"):
-        st.switch_page("pages/questions.py")
-    
+    if st.button("Employee Analysis"):
+        st.switch_page("pages/Employee-Analysis.py")
 
 with col2:
-    if st.button("Monthly Stats"):
-        st.switch_page("pages/monthly_stats.py")
-    if st.button("Timekeeping Tables"):
-        st.switch_page("pages/timekeeping_tables.py")
+    if st.button("Project Level Insights"):
+        st.switch_page("pages/Project-Level-Insights.py")
+    if st.button("Employee Monthly Stats"):
+        st.switch_page("pages/Monthly-Stats.py")
 
 with col3:
-    if st.button("Predictions"):
-        st.switch_page("pages/predictions.py")
-    if st.button("Project Stats"):
-        st.switch_page("pages/project_stats.py")
-    
+    if st.button("General Tables"):
+        st.switch_page("pages/General-Tables.py")
 
-#placeholder image for now
-st.image("assets/image.jpg", caption="PLACEHOLDER IMAGE", use_container_width=True)
 
+col_left, col_center, col_right = st.columns([1, 2, 1])
+
+with col_center:
+    st.text("")
+    st.text("")
+    st.image("assets/image.jpg", width=1000)
+    st.text("")
+    st.text("")
+
+col_spacer1, col_info1, col_spacer2, col_info2, col_spacer3 =st.columns([0.2, 1,0.4, 1, 0.2])
+with col_info1:
+    st.text("")
+    st.markdown(
+        """
+        ### About This Dashboard
+
+        This interactive dashboard was created as part of the CMPT 353 at Simon Fraser University in the Spring 2025 semester. The project focuses on building a complete data pipeline to convert raw organizational data from RWA Architecture Group into meaningful business insights. We collected and cleaned timekeeping and project records, stored them in a SQLite database, and developed visual analytics using Streamlit. The result is a user-friendly interface that provides a streamlined view of workforce and project data for internal decision-making and performance tracking.
+        """
+    )
+
+with col_info2:
+    st.text("")
+    st.markdown(
+        
+        """
+        ### Project Info
+
+        - Course: CMPT 353 – Data Science
+        - Group Members: Annie Boltwood & Eric Seppanen
+        - Semester: Spring 2025
+        - Tools Used: Python, SQLite, Streamlit, pandas, plotly
+        - Real-World Focus: Designed for RWA Architecture Group
+        """
+        
+    )
+    st.text("")
+    st.text("")
 
 st.markdown("---")
 st.write("For support or more details, contact the admin.")

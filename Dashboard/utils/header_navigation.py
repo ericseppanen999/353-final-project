@@ -39,17 +39,16 @@ def show_buttons(page_title, page_subtitle):
     with col1:
         if st.button("Home"):
             st.switch_page("main.py")
-        if st.button("Questions"):
-            st.switch_page("pages/questions.py")
+        if st.button("Employee Analysis"):
+            st.switch_page("pages/Employee-Analysis.py")
 
     with col2:
-        if st.button("Monthly Stats"):
-            st.switch_page("pages/monthly_stats.py")
-        if st.button("Timekeeping Tables"):
-            st.switch_page("pages/timekeeping_tables.py")
+        if st.button("Project Level Insights"):
+            st.switch_page("pages/Project-Level-Insights.py")
+        if st.button("Employee Monthly Stats"):
+            st.switch_page("pages/Monthly-Stats.py")
 
     with col3:
-        if st.button("Predictions"):
-            st.switch_page("pages/predictions.py")
-        if st.button("Project Stats"):
-            st.switch_page("pages/project_stats.py")
+        if st.button("General Tables"):
+            st.switch_page("pages/General-Tables.py")
+

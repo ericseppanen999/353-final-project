@@ -66,3 +66,4 @@ def summarize_time_and_cost_by_phase(df):
     grouped=grouped.sort_values('total_cost',ascending=False)
     return grouped
 
+

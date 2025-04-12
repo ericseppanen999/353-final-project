@@ -90,25 +90,16 @@ else:
         #print(kpi_df['percent_complete'].iloc[0])
         #print(kpi_df['amount_left_to_bill'].iloc[0])
         captain=kpi_df["project_captain"].iloc[0]
-        percent_complete_raw=kpi_df["percent_complete"].iloc[0]
         amount_left=kpi_df["amount_left_to_bill"].iloc[0]
 
-        if pd.isnull(percent_complete_raw) or percent_complete_raw<=0:
-            percent_complete_display="N/A"
-        elif percent_complete_raw>=1.0:
-            percent_complete_display="100%"
-        else:
-            percent_complete_display=f"{percent_complete_raw*100:.1f}%"
-        
-        # from analysis time cost phase
         df_hours=find_time_entries(selected_proj_no,db_path="../timekeeping.db")
         total_hours=df_hours["hours_worked"].sum()
 
-        col1,col2,col3,col4=st.columns(4) # KPI columns
+
+        col1,col2,col3=st.columns(3) # KPI columns
         col1.metric("Job Captain",captain if captain else "N/A")
-        col2.metric("Completion %",percent_complete_display)
-        col3.metric("Left to Bill",f"${amount_left:,.2f}" if pd.notnull(amount_left) and percent_complete_raw<1.0 else "Fully Billed")
-        col4.metric("Total Hours Logged",f"{total_hours:,.1f}")
+        col2.metric("Left to Bill",f"${amount_left:,.2f}" if pd.notnull(amount_left) else "Fully Billed")
+        col3.metric("Total Hours Logged",f"{total_hours:,.1f}")
     else:
         st.warning("No KPI data available for this project.")
 
@@ -211,3 +202,4 @@ else:
         st.plotly_chart(fig_all,use_container_width=True)
 
 conn.close()
+
