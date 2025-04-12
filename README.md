@@ -1,11 +1,15 @@
-# Timecard Project #
+### Instructions To Run ###
 
-
-hi eric I added a dashboard.
-used streamlit, lots of potential to do some cool stuff
-I've split into multiple pages so we can have different visualizations per page<br />
-
-How to run as of now
-	- Rerun requirements.txt to download new streamlit dependencies <br />
-	- Go to dashboard folder and open terminal <br /> 
- 	- Run the command: streamlit run main.py <br />
+First, clone the repository using:
+```
+git clone https://github.com/ericseppanen999/353-final-project
+```
+Then, open the directory on your machine and type:
+```
+cd Dashboard
+```
+Now, to run the dashboard:
+```
+streamlit run main.py
+```
+The data should already be loaded.
