@@ -55,6 +55,12 @@ def compute_burnout_metrics(df_daily,df_time,baseline=7.5*5*4):
          (agg_metrics['avg_monthly_excess']/50)+
          (agg_metrics['total_days']/10000)
     )
+    mean = agg_metrics["burnout_score"].mean()
+    std = agg_metrics["burnout_score"].std()
+
+    agg_metrics["z_burnout"]=(agg_metrics["burnout_score"]-mean)/std
+    agg_metrics["burnout_plus"]=(agg_metrics["z_burnout"]*15+100).round(1)
+
     return agg_metrics
 
 def get_burnout_analysis(db_path="timekeeping.db",baseline=7.5*5*4):
@@ -65,10 +71,3 @@ def get_burnout_analysis(db_path="timekeeping.db",baseline=7.5*5*4):
     df_daily=compute_daily_summary(df_time)
     burnout_metrics=compute_burnout_metrics(df_daily,df_time,baseline)
     return burnout_metrics
-
-if __name__=="__main__":
-    # print burnout analysis
-    analysis_df=get_burnout_analysis("timekeeping.db")
-    print("Burnout Analysis:")
-    print(analysis_df[['employee_id','name','total_days','avg_daily_hours','avg_daily_overtime',
-                         'weekend_frequency','avg_monthly_excess','burnout_score']])

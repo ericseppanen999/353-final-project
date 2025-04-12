@@ -18,7 +18,7 @@ def clean_project_no(project_no):
     return m.group(1)if m else s
 
 # get monthly expenditure
-def get_monthly_expenditure(project_no,db_path="timekeeping.db"):
+def get_monthly_expenditure(project_no,db_path="../timekeeping.db"):
     conn=sqlite3.connect(db_path)
     query=f"""
       SELECT strftime('%Y-%m',T.date)AS month,
@@ -47,44 +47,57 @@ def get_monthly_expenditure(project_no,db_path="timekeeping.db"):
     df['month_index']=np.arange(1,len(df)+1)
     return df
 
-# create lag features
-def create_lag_features(df,n_lags=5):
-    for lag in range(1,n_lags+1):
-        df[f'lag_{lag}']=df['expenditure'].shift(lag)
+def last_n_months(df,n=5):
+    for i in range(1,n+1):
+        df[f'lag_{i}']=df['expenditure'].shift(i)
     df=df.dropna().reset_index(drop=True)
     return df
 
 # forecast expenditure
 def forecast_expenditure(project_no,forecast_period=3,db_path="timekeeping.db"):
     df=get_monthly_expenditure(project_no,db_path)
+    #print(df.shape)
     if df.empty or len(df)<5:
         print("Not enough data to forecast.")
         return None
 
-    df_lag=create_lag_features(df.copy(),n_lags=5)
+    df_lnm=last_n_months(df.copy(),n=5)
+    # sorry about the for loop
     features=['month_index']+[f'lag_{i}'for i in range(1,6)]
-    X=df_lag[features]
-    y=df_lag['expenditure']
+    X=df_lnm[features]
+    y=df_lnm['expenditure']
     
+    #like in class:
     pipeline=make_pipeline(
         SimpleImputer(strategy='median'),
         StandardScaler(),
-        RandomForestRegressor(n_estimators=200,random_state=42)
+        RandomForestRegressor(n_estimators=200)
     )
+    # fit the model
+    #print(X.shape,y.shape)
     pipeline.fit(X,y)
 
+    # predict future values
     forecasts=[]
     last_month_index=df['month_index'].iloc[-1]
     last_expenditures=df['expenditure'].iloc[-5:].values.tolist()
     
     for i in range(1,forecast_period+1):
+        # for each month in the forecast period
+        # create new month index and features
+
+        #print(last_expenditures)
         new_index=last_month_index+i
         new_features=np.array([new_index]+last_expenditures).reshape(1,-1)
         y_pred=pipeline.predict(new_features)[0]
+        #print(y_pred)
+        # append new pred
         forecasts.append(y_pred)
+        # pop the first element and append the new pred
         last_expenditures.pop(0)
         last_expenditures.append(y_pred)
     
+    # create forecast dataframe
     last_date=df['ds'].max()
     forecast_dates=[last_date+pd.DateOffset(months=i)for i in range(1,forecast_period+1)]
     forecast_df=pd.DataFrame({'ds':forecast_dates,'forecast_expenditure':forecasts})
@@ -95,7 +108,10 @@ def forecast_expenditure(project_no,forecast_period=3,db_path="timekeeping.db"):
     return forecast_df
 
 # evaluate forecast expenditure
-def evaluate_forecast_expenditure(project_no,forecast_period=3,test_period=3,db_path="timekeeping.db"):
+def evaluate_forecast_expenditure(project_no,forecast_period=3,test_period=3,db_path="../timekeeping.db"):
+    
+    # split data into train and test sets,make sure to use the last 5 months,evaluate
+    
     df=get_monthly_expenditure(project_no,db_path)
     if len(df)<(forecast_period+test_period):
         print("Not enough data for evaluation.")
@@ -103,8 +119,8 @@ def evaluate_forecast_expenditure(project_no,forecast_period=3,test_period=3,db_
     
     train_df=df.iloc[:len(df)-test_period].copy()
     test_df=df.iloc[len(df)-test_period:].copy()
-    
-    train_df_lag=create_lag_features(train_df.copy(),n_lags=5)
+    # print(train_df.shape,test_df.shape)
+    train_df_lag=last_n_months(train_df.copy(),n=5)
     features=['month_index']+[f'lag_{i}'for i in range(1,6)]
     X_train=train_df_lag[features]
     y_train=train_df_lag['expenditure']
@@ -112,7 +128,7 @@ def evaluate_forecast_expenditure(project_no,forecast_period=3,test_period=3,db_
     pipeline=make_pipeline(
         SimpleImputer(strategy='median'),
         StandardScaler(),
-        RandomForestRegressor(n_estimators=200,random_state=32)
+        RandomForestRegressor(n_estimators=200)
     )
     pipeline.fit(X_train,y_train)
     
@@ -131,6 +147,8 @@ def evaluate_forecast_expenditure(project_no,forecast_period=3,test_period=3,db_
     test_df=test_df.reset_index(drop=True)
     forecast_array=np.array(forecasts)
     actual_array=test_df['expenditure'].values[:test_period]
+
+    # https://en.wikipedia.org/wiki/Mean_absolute_percentage_error
     mape=np.mean(np.abs(forecast_array-actual_array)/np.abs(actual_array))*100
     
     print("Evaluation Metrics:")
