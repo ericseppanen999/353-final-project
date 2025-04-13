@@ -26,7 +26,7 @@ def show_buttons(page_title, page_subtitle):
     with col_logo:
         st.text("")
         st.text("")
-        st.image(logo_path, width=180)#adjust width to fit logo
+        st.image(logo_path, width=180)
     with col_title:
         st.title(page_title)
         st.subheader(page_subtitle)
