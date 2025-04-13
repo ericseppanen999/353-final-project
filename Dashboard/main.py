@@ -31,7 +31,7 @@ logo_path = os.path.join(os.path.dirname(__file__), "assets", "logo.png")
 with col_logo:
     st.text("")
     st.text("")
-    st.image(logo_path, width=180)#adjust width to fit logo
+    #st.image(logo_path, width=180)#adjust width to fit logo
     
 with col_title:
     st.title("Welcome to the RWA Analytics Dashboard!")
@@ -68,7 +68,7 @@ col_left, col_center, col_right = st.columns([1, 2, 1])
 with col_center:
     st.text("")
     st.text("")
-    st.image("assets/image.jpg", width=1000)
+    #st.image("assets/image.jpg", width=1000)
     st.text("")
     st.text("")
 
