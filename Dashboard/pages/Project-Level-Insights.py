@@ -3,10 +3,10 @@ import sqlite3
 import pandas as pd
 import plotly.express as px
 from datetime import datetime
-from Dashboard.analysis.forecasting import forecast_expenditure,get_monthly_expenditure
+from analysis.forecasting import forecast_expenditure,get_monthly_expenditure
 from utils.header_navigation import show_buttons
-from Dashboard.analysis.time_cost_phase import load_phase_data,summarize_time_and_cost_by_phase,find_time_entries,get_project_summary
-from Dashboard.analysis.cluster import run_kmeans
+from analysis.time_cost_phase import load_phase_data,summarize_time_and_cost_by_phase,find_time_entries,get_project_summary
+from analysis.cluster import run_kmeans
 from sklearn.decomposition import PCA
 
 from utils.header_navigation import show_buttons#CUSTOM HEADER (utils folder)

@@ -4,10 +4,10 @@ import numpy as np
 import plotly.express as px
 import plotly.graph_objects as go
 from scipy.stats import ttest_1samp,shapiro,wilcoxon,mannwhitneyu
-from Dashboard.analysis.employee_clusters import load_annual_usage,cluster_data
-from Dashboard.analysis.senior_trends import get_top10_trends
-from Dashboard.analysis.seasonality import load_monthly_hours,month_to_season
-from Dashboard.analysis.burnout import get_burnout_analysis
+from analysis.employee_clusters import load_annual_usage,cluster_data
+from analysis.senior_trends import get_top10_trends
+from analysis.seasonality import load_monthly_hours,month_to_season
+from analysis.burnout import get_burnout_analysis
 from numpy import percentile
 
 
