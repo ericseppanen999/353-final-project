@@ -28,6 +28,10 @@ col_logo, col_title = st.columns([0.15, 1])#adjust the first value to change log
 
 
 logo_path = os.path.join(os.path.dirname(__file__), "assets", "logo.png")
+st.write("Working directory:", os.getcwd())
+st.write("Logo path:", os.path.abspath(logo_path))
+st.write("Working directory:", os.getcwd())
+st.write("Logo path:", os.path.abspath(logo_path))
 with col_logo:
     st.text("")
     st.text("")
