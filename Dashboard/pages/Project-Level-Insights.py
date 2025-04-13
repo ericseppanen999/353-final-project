@@ -1,3 +1,11 @@
+import sys
+import os
+
+dashboard_path = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
+if dashboard_path not in sys.path:
+    sys.path.append(dashboard_path)
+
+
 import streamlit as st
 import sqlite3
 import pandas as pd
