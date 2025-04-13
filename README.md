@@ -26,6 +26,10 @@ Now, to run the dashboard:
 ```
 streamlit run main.py
 ```
+Note, you may have to run depending on your setup.:
+```
+python -m streamlit run main.py
+```
 The data should already be loaded.
 
 **Cleaning**:
