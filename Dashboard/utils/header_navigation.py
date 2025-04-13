@@ -1,5 +1,5 @@
 import streamlit as st
-
+import os
 
 
 def show_buttons(page_title, page_subtitle):
@@ -22,11 +22,11 @@ def show_buttons(page_title, page_subtitle):
     #makes the logo and title side by side
     col_logo, col_title = st.columns([0.15, 1])#adjust the first value to change logo size
 
-
+    logo_path = os.path.join(os.path.dirname(__file__), "assets", "logo.png")
     with col_logo:
         st.text("")
         st.text("")
-        st.image("assets/logo.png", width=180)#adjust width to fit logo
+        st.image(logo_path, width=180)#adjust width to fit logo
     with col_title:
         st.title(page_title)
         st.subheader(page_subtitle)
