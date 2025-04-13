@@ -25,7 +25,7 @@ def show_buttons(page_title, page_subtitle):
     with col_logo:
         st.text("")
         st.text("")
-        st.image("assets/images", width=180)
+        st.image("assets/image", width=180)
     with col_title:
         st.title(page_title)
         st.subheader(page_subtitle)
