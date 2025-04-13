@@ -27,3 +27,13 @@ Now, to run the dashboard:
 streamlit run main.py
 ```
 The data should already be loaded.
+
+**Cleaning**:
+
+should you want to inspect the cleaning process, you can view clean_test.py
+
+**Loading**
+
+should you want to inspect the loading process, you can view load_projects.py/load_test.py
+
+I would warn against running either file, as they are very time consuming processes and the data is already loaded in the .db file.
