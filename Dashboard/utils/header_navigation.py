@@ -23,9 +23,17 @@ def show_buttons(page_title, page_subtitle):
     col_logo, col_title = st.columns([0.15, 1])#adjust the first value to change logo size
 
     logo_path = os.path.join(os.path.dirname(__file__), "assets", "logo.png")
+
+    
     with col_logo:
         st.text("")
         st.text("")
+        try:
+            with open(logo_path, "rb") as img_file:
+                img_bytes = img_file.read()
+                st.image(img_bytes, width=180)
+        except Exception as e:
+            st.warning("logo not fouind")
         #st.image(logo_path, width=180)
     with col_title:
         st.title(page_title)
