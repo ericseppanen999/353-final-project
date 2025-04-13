@@ -8,22 +8,18 @@ import glob
 import logging
 from datetime import datetime
 
-# Configure logging (if needed)
 logging.basicConfig(
     filename='missing_projects.log',
     level=logging.WARNING,
     format='%(asctime)s - %(levelname)s - %(message)s',
     filemode='a'
 )
-
-# ----- Helper: Revised filename parser (if needed elsewhere) -----
 def parse_filename(filename):
     valid_months = {
         "january", "february", "march", "april", "may", "june",
         "july", "august", "september", "october", "november", "december"
     }
     base = os.path.basename(filename)
-    # Remove suffix like "_projects.csv", "_summary.csv", etc.
     base = re.sub(r'(_(projects|summary))?\.xls(x)?$', '', base, flags=re.IGNORECASE)
     base = re.sub(r'(_(projects|summary))?\.csv$', '', base, flags=re.IGNORECASE)
     parts = base.split('_')
@@ -51,23 +47,16 @@ def parse_filename(filename):
     return (employee_name, month_year)
 
 def clean_project_no(project_no):
-    # Keep project number as string to allow values like "1004b"
-    # remove leading 0's
     project_no = str(project_no).strip()
-    project_no = re.sub(r'^[0]+', '', project_no)  # Remove leading zeros
+    project_no = re.sub(r'^[0]+', '', project_no)
     return project_no
-
-# ----- Connect to the Database -----
 db_path = 'timekeeping.db'
 conn = sqlite3.connect(db_path)
 cur = conn.cursor()
-
-# ----- Drop Existing Tables (if desired) -----
 cur.execute("DROP TABLE IF EXISTS projects")
 cur.execute("DROP TABLE IF EXISTS financial_data")
 conn.commit()
 
-# ----- Create the Projects Table -----
 cur.execute("""
     CREATE TABLE IF NOT EXISTS projects (
         project_no TEXT PRIMARY KEY,
@@ -78,8 +67,6 @@ cur.execute("""
     );
 """)
 conn.commit()
-
-# ----- Create the Financial Data Table -----
 cur.execute("""
     CREATE TABLE IF NOT EXISTS financial_data (
         project_no TEXT PRIMARY KEY,
@@ -184,4 +171,4 @@ conn.commit()
 
 conn.close()
 
-print("Processing complete.")
+print("processing projects complete")

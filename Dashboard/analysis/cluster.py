@@ -62,7 +62,7 @@ def run_kmeans(db_path,n_clusters=3):
         SimpleImputer(strategy="mean"),
         log_transformer,
         QuantileTransformer(output_distribution="normal"),
-        KMeans(n_clusters=n_clusters, random_state=42)
+        KMeans(n_clusters=n_clusters)
     )
     pipeline.fit(X)
 

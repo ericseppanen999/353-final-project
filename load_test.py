@@ -119,9 +119,8 @@ def load_master_employees(db_path,master_file):
             employee_id INTEGER PRIMARY KEY,
             name TEXT NOT NULL UNIQUE,
             billable_rate INTEGER,
-            position TEXT
-        )
-    """)
+            position TEXT)""")
+    
     for name,employee_id in master_employees.items():
         employee_rates=df.loc[df['Name']==name,'billable_rate']
         if employee_rates.empty:
