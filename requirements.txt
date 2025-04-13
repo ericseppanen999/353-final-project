@@ -5,6 +5,5 @@ pyxlsb
 streamlit
 matplotlib 
 plotly 
-sklearn
 scipy
 scikit-learn
