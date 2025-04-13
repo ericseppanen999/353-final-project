@@ -20,7 +20,7 @@ pip install -r requirements.txt
 ```
 Then, open the directory on your machine and type:
 ```
-cd Dashboard
+cd 353-final-project/Dashboard
 ```
 Now, to run the dashboard:
 ```
