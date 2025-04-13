@@ -55,8 +55,8 @@ with col1:
 with col2:
     if st.button("Project Level Insights"):
         st.switch_page("pages/Project-Level-Insights.py")
-    if st.button("Employee Monthly Stats"):
-        st.switch_page("pages/Monthly-Stats.py")
+    if st.button("Monthly Hours Analysis"):
+        st.switch_page("pages/Monthly-Hours-Analysis.py")
 
 with col3:
     if st.button("General Tables"):

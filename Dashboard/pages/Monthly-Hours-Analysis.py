@@ -7,7 +7,7 @@ import numpy as np
 
 from utils.header_navigation import show_buttons#CUSTOM HEADER (utils folder)
 
-show_buttons("Monthly Stats", "Insights into Monthly Business Trends & Productivity")
+show_buttons("Monthly Hours Analysis", "Insights into Monthly Employee Trends & Productivity")
 
 conn =sqlite3.connect('../timekeeping.db')
 
