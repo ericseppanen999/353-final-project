@@ -28,13 +28,7 @@ def show_buttons(page_title, page_subtitle):
     with col_logo:
         st.text("")
         st.text("")
-        try:
-            with open(logo_path, "rb") as img_file:
-                img_bytes = img_file.read()
-                st.image(img_bytes, width=180)
-        except Exception as e:
-            st.warning("logo not fouind")
-        #st.image(logo_path, width=180)
+        st.image(logo_path, width=180)
     with col_title:
         st.title(page_title)
         st.subheader(page_subtitle)
